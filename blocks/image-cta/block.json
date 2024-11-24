@@ -1,0 +1,13 @@
+{
+  "name": "acf/image-cta",
+  "title": "Image CTA",
+  "description": "An image above a title and text.",
+  "category": "client-blocks",
+  "icon": "external",
+  "keywords": ["cta"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "image-cta.php"
+  },
+  "supports": { }
+}

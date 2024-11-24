@@ -1,0 +1,63 @@
+/* CUSTOM CSS --------------------------------------------------- */
+.no-padding-top {
+  padding-top: 0;
+}
+.margin-center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+[class*='max-width-'] {
+  width: 100%;
+}
+.max-width-1450 {
+  max-width: 1450px !important;
+}
+.max-width-1000 {
+  max-width: 1000px !important;
+}
+.max-width-800 {
+  max-width: 800px !important;
+}
+.max-width-600 {
+  max-width: 600px !important;
+}
+ul.custom-list {
+  list-style-type: none;
+  padding: 0 0 0 18px;
+}
+ul.custom-list li {
+  padding-left: 30px;
+  margin: 0 0 0.75em;
+  background: transparent url('img/custom-bullet.png') left top 7px no-repeat;
+  background-size: 12px 12px;
+  font-size: 18px;
+}
+ul.custom-list li:last-child {
+  margin: 0;
+}
+
+/* SINGULAR GROUP ----------------------------------------------- */
+.wp-block-singular {  }
+
+/* headings */
+.wp-block-singular h1 { }
+.wp-block-singular h2 { }
+.wp-block-singular h3 { }
+
+
+/* other elements */
+.wp-block-singular p { }
+.wp-block-singular a { }
+.wp-block-singular a:hover { }
+
+
+/* SEPARATORS --------------------------------------------------- */
+.wp-block-singular .wp-block-separator { 
+  height: 2px !important;
+}
+
+
+
+
+
+

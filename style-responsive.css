@@ -1,0 +1,34 @@
+@media screen and (max-width: 782px) {
+
+  /* GLOBAL ------------------------------------------------------- */
+  /* #wpadminbar is 46px tall */
+  body.admin-bar #page {
+    padding-top: 46px;
+  }
+
+  /* HEADER ------------------------------------------------------- */
+  body.admin-bar #header.fixed,
+  body.admin-bar #header.sticky {
+    top: 46px;
+  }
+
+  /* BLOG FILTERING ----------------------------------------------- */
+  .post-grid-filtering {
+    -ms-flex-flow: column-reverse wrap;
+    -webkit-flex-flow: column-reverse wrap;
+    flex-flow: column-reverse wrap;
+  }
+  .post-grid-filtering .filter-category {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  /* WORDPRESS CORE OVERRIDES ------------------------------------- */
+  #wpadminbar {
+    position: fixed;
+  }
+
+}

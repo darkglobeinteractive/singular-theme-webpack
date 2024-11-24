@@ -1,0 +1,13 @@
+{
+  "name": "acf/color-block-cta",
+  "title": "Color Block CTA",
+  "description": "A solid color block with text and an arrow button in the corner",
+  "category": "client-blocks",
+  "icon": "external",
+  "keywords": ["cta"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "color-block-cta.php"
+  },
+  "supports": { }
+}

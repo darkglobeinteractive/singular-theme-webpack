@@ -1,0 +1,13 @@
+{
+  "name": "acf/testimonial",
+  "title": "Testimonial",
+  "description": "A full width block containing a testimonial.",
+  "category": "client-blocks",
+  "icon": "businessperson",
+  "keywords": ["testimoinal"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "testimonial.php"
+  },
+  "supports": { }
+}

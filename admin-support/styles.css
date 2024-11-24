@@ -1,0 +1,82 @@
+/* STS GLOBALS -------------------------------------------------- */
+.singular-theme-support-wrap {
+  position: relative;
+  margin-left: -20px;
+}
+.sts-wrap {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.sts-wrap > *:first-child {
+  margin-top: 0;
+}
+.sts-wrap > *:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 782px) {
+
+  .singular-theme-support-wrap {
+    margin-left: -10px;
+  }
+
+}
+
+/* STS HEADER --------------------------------------------------- */
+.sts-header {
+  background-color: #333;
+}
+.sts-header .sts-wrap {
+  padding: 20px;
+}
+.sts-header .title {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+/* STS NAVIGATION ----------------------------------------------- */
+.sts-navigation {
+  display: none;
+  background-color: #666;
+}
+.sts-navigation > ul {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.sts-navigation > ul > li { 
+  margin: 0;
+}
+.sts-navigation > ul > li > a {
+  display: block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
+}
+.sts-navigation > ul > li > a:hover {
+  background-color: #c00;
+}
+.sts-navigation > ul > li.home > a {
+  font-weight: 700;
+}
+
+/* STS CONTENT AREA --------------------------------------------- */
+.sts-content .sts-wrap {
+  padding: 20px;
+}
+.sts-content code {
+  display: block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #ccc;
+  line-height: 1.75em;
+}
