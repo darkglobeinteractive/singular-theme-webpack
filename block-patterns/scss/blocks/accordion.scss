@@ -1,0 +1,146 @@
+.wp-block-singular.accordion-container,
+.wp-block-singular.accordion-container * {
+  box-sizing: border-box;
+}
+.wp-block-singular.accordion-container { }
+.wp-block-singular.accordion-container > div { }
+
+.wp-block-singular.accordion-container .accordion-item { }
+.wp-block-singular.accordion-container .accordion-item + .accordion-item { 
+  margin-top: 3px;
+}
+.wp-block-singular.accordion-container .accordion-item.open {
+  margin-bottom: 26px;
+}
+.wp-block-singular.accordion-container .accordion-item.open::last-child {
+  margin-bottom: 0;
+}
+.wp-block-singular.accordion-container .accordion-item > div { }
+
+.wp-block-singular.accordion-container .accordion-item .accordion-item-title { }
+.wp-block-singular.accordion-container .accordion-item .accordion-item-title > div { 
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #002835;
+  padding: 15px 0 15px 40px;
+}
+.wp-block-singular.accordion-container .accordion-item .accordion-item-title .title { 
+  width: calc(100% - 100px);
+  margin: 0 !important;
+  color: #fff !important;
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  line-height: 1em !important;
+  text-transform: uppercase;
+}
+.wp-block-singular.accordion-container .accordion-item .accordion-item-title .toggle {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  width: 100px;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.wp-block-singular.accordion-container .accordion-item .accordion-item-title .toggle span {
+  display: block;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1em;
+  text-align: left;
+  text-decoration: none;
+  text-indent: -9999em
+}
+.wp-block-singular.accordion-container .accordion-item .accordion-item-title .toggle::before,
+.wp-block-singular.accordion-container .accordion-item .accordion-item-title .toggle::after {
+  content: '';
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  z-index: 1;
+  background-color: #fff;
+}
+.wp-block-singular.accordion-container .accordion-item .accordion-item-title .toggle::before {
+  margin: -2px -9px 0 0;  
+  height: 4px;
+  width: 18px;
+}
+.wp-block-singular.accordion-container .accordion-item.open .accordion-item-title .toggle::after {
+  display: none;
+}
+.wp-block-singular.accordion-container .accordion-item .accordion-item-title .toggle::after {
+  margin: -9px -2px 0 0;
+  height: 18px;
+  width: 4px;
+}
+.wp-block-singular.accordion-container .accordion-item .accordion-item-content { 
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: max-height 200ms ease-in-out;
+  -moz-transition: max-height 200ms ease-in-out;
+  -o-transition: max-height 200ms ease-in-out;
+  transition: max-height 200ms ease-in-out;
+}
+.wp-block-singular.accordion-container .accordion-item.open .accordion-item-content {
+  -webkit-transition: max-height 300ms ease-in-out;
+  -moz-transition: max-height 300ms ease-in-out;
+  -o-transition: max-height 300ms ease-in-out;
+  transition: max-height 300ms ease-in-out;
+}
+.wp-block-singular.accordion-container .accordion-item .accordion-item-content > div { 
+  padding: 40px;
+  background-color: #f3f5f5;
+}
+.wp-block-singular.accordion-container .accordion-item .accordion-item-content > div > *:first-child {
+  margin-top: 0;
+}
+.wp-block-singular.accordion-container .accordion-item .accordion-item-content > div > *:last-child {
+  margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+  .wp-block-singular.accordion-container .accordion-item .accordion-item-title > div { 
+    padding: 10px 0 10px 30px;
+  }
+  .wp-block-singular.accordion-container .accordion-item .accordion-item-title .title { 
+    width: calc(100% - 78px);
+  }
+  .wp-block-singular.accordion-container .accordion-item .accordion-item-title .toggle {
+    width: 78px;
+  }
+  .wp-block-singular.accordion-container .accordion-item .accordion-item-content > div { 
+    padding: 30px;
+  }
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+  .wp-block-singular.accordion-container .accordion-item .accordion-item-title > div { 
+    padding: 10px 0 10px 20px;
+  }
+  .wp-block-singular.accordion-container .accordion-item .accordion-item-title .title { 
+    width: calc(100% - 58px);
+  }
+  .wp-block-singular.accordion-container .accordion-item .accordion-item-title .toggle {
+    width: 58px;
+  }
+  .wp-block-singular.accordion-container .accordion-item .accordion-item-content > div { 
+    padding: 20px;
+  }
+
+}
