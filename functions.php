@@ -1,7 +1,7 @@
 <?php
 /* INCLUDES ----------------------------------------------------- */
 /* Un-comment the ones you'd like to use, each contains examples */
-// include( 'admin-support/index.php' );
+include( 'admin-support/index.php' );
 // include( 'inc/remove-comments.php' );
 // include( 'inc/wysiwyg-customizations.php' );
 // include( 'inc/shortcodes.php' );
@@ -100,27 +100,16 @@ function singular_styles() {
   wp_enqueue_style( 'modaal-css', get_template_directory_uri().'/libs/modaal/dist/css/modaal.min.css' );
   wp_enqueue_style( 'slickjs-css', get_template_directory_uri().'/libs/accessible-slick/slick/slick.min.css' );
   wp_enqueue_style( 'slickjs-theme_css', get_template_directory_uri().'/libs/accessible-slick/slick/accessible-slick-theme.min.css' );
-  wp_enqueue_style( 'slickjs-custom_css', get_template_directory_uri().'/css/slick-customizations.css' );
   wp_enqueue_style( 'mmenu-css', get_template_directory_uri().'/libs/mmenu/dist/mmenu.css' );
-  wp_enqueue_style( 'buttons-css', get_template_directory_uri().'/css/buttons.css', array(), singular_theme_filemtime('/css/buttons.css' ) );
-  wp_enqueue_style( 'svg-css', get_template_directory_uri().'/svg/style.css', array(), singular_theme_filemtime('/svg/style.css' ) );
-  wp_enqueue_style( 'color-palette-css', get_template_directory_uri().'/css/color-palette.css', array(), singular_theme_filemtime('/css/color-palette.css' ) );
-  // wp_enqueue_style( 'animation-css', get_template_directory_uri().'/css/animations.css', array(), singular_theme_filemtime('/css/animations.css' ) );
-  wp_enqueue_style( 'ninja-forms-css', get_template_directory_uri().'/css/ninja-forms.css', array(), singular_theme_filemtime('/css/ninja-forms.css' ) );
-  wp_enqueue_style( 'global-css', get_template_directory_uri().'/style.css', array(), singular_theme_filemtime('/style.css' ) );
-  wp_enqueue_style( 'menus-css', get_template_directory_uri().'/style-menus.css', array(), singular_theme_filemtime('/style-menus.css' ) );
-  wp_enqueue_style( 'responsive-css', get_template_directory_uri().'/style-responsive.css', array(), singular_theme_filemtime('/style-responsive.css' ) );
+  
+  wp_enqueue_style( 'public-css', get_template_directory_uri().'/assets/public.css', array(), singular_theme_filemtime('/assets/public.css' ) );
 }
 add_action( 'wp_enqueue_scripts', 'singular_styles' );
 
 
 /* ADMIN STYLES ------------------------------------------------- */
 function singular_admin_styles() {
-  wp_enqueue_style( 'admin-color-palette-css', get_template_directory_uri().'/css/color-palette.css', array(), singular_theme_filemtime('/css/color-palette.css' ) );
-  wp_enqueue_style( 'admin-buttons-css', get_template_directory_uri().'/css/buttons.css', array(), singular_theme_filemtime('/css/buttons.css' ) );
-  wp_enqueue_style( 'admin-primary-css', get_template_directory_uri().'/css/admin-styles.css', array(), singular_theme_filemtime('/css/admin-styles.css' ) );
-  wp_enqueue_style( 'admin-editor-css', get_template_directory_uri().'/css/editor-styles.css', array(), singular_theme_filemtime('/css/editor-styles.css' ) );
-  wp_enqueue_script( 'acf-api-js', get_template_directory_uri().'/js/acf-api.js', array( 'acf-input' ), singular_theme_filemtime('/js/acf-api.js' ) );
+  wp_enqueue_style( 'admin-css', get_template_directory_uri().'/assets/admin.css', array(), singular_theme_filemtime('/assets/admin.css' ) );
 }
 add_action( 'admin_enqueue_scripts', 'singular_admin_styles' );
 
@@ -142,7 +131,6 @@ function singular_scripts() {
   wp_enqueue_script( 'modaal-js', get_template_directory_uri().'/libs/modaal/dist/js/modaal.js', array( 'jquery' ) );
   wp_enqueue_script( 'slickjs-js', get_template_directory_uri().'/libs/accessible-slick/slick/slick.min.js', array( 'jquery' ) );
   wp_enqueue_script( 'mmenu-js', get_template_directory_uri().'/libs/mmenu/dist/mmenu.js', array( 'jquery' ) );
-	wp_enqueue_script( 'global-js', get_template_directory_uri().'/js/global.js', array( 'jquery', 'mmenu-js' ), singular_theme_filemtime('/js/global.js' ) );
   if ( !is_admin() ) {
     // wp_enqueue_script( 'gsap-js', get_template_directory_uri().'/libs/gsap/minified/gsap.min.js', array( 'jquery' ) );
     // wp_enqueue_script( 'gsap-scrolltrigger-js', get_template_directory_uri().'/libs/gsap/minified/ScrollTrigger.min.js', array( 'jquery' ) );
