@@ -1,0 +1,169 @@
+/* BASIC CONTENT WRAPPER OVERRIDES ------------------------------ */
+.wp-block-singular.multi-slider-block { }
+.wp-block-singular.multi-slider-block.full-width > .wp-block-group__inner-container {
+  max-width: 100%;
+  padding: 0 !important;
+}
+
+/* ADMIN PRESENTATION ------------------------------------------- */
+.admin-multi-slider { 
+  overflow: hidden;
+}
+.admin-multi-slider img {
+  display: block;
+  float: left;
+  width: 200px;
+  height: auto;
+  margin: 0 10px 10px;
+}
+
+/* SLIDER STYLES ------------------------------------------------ */
+.multi-slider {
+  display: none;
+  position: relative;
+}
+.multi-slider.show {
+  display: block;
+}
+.multi-slider > .wrap { }
+.multi-slider .slider .slick-slider {
+  margin-bottom: -4px;
+}
+
+/* individual slides */
+.multi-slider .slider .item,
+.multi-slider .slider .item * {
+  box-sizing: border-box;
+}
+.multi-slider .slider .item { }
+.multi-slider .slider .item > .wrap { 
+  display: block;
+  position: relative;
+}
+
+/* navigation */
+.multi-slider .slider-nav {
+  display: none;
+  -ms-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.multi-slider .slider-nav.show {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.multi-slider .slider-nav button {
+  display: block;
+  margin: 0 20px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #000;
+  font-size: 16px;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* block image slider */
+.wp-block-singular.multi-slider-block.block .multi-slider .slider .item .image-wrap {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 108%;
+}
+.wp-block-singular.multi-slider-block.block .multi-slider .slider .item .image-wrap .image {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: #000 url('../../img/spacer.gif') center center no-repeat;
+  background-size: cover;
+  transition: transform 200ms ease-in-out;
+  transform: scale(1);
+}
+.wp-block-singular.multi-slider-block.block .multi-slider .slider .item > a.wrap:hover .image-wrap .image {
+  transition: transform 200ms ease-in-out;
+  transform: scale(1.1);
+}
+
+/* modal images slider */
+.wp-block-singular.multi-slider-block.independent .multi-slider .slider .item .image-wrap {
+  display: block;
+  padding: 30px;
+}
+.wp-block-singular.multi-slider-block.independent .multi-slider .slider .item .image-wrap img {
+  display: block;
+  max-width: 100%;
+}
+
+/* modal window */
+.modaal-wrapper.multi-slider-modal-window { }
+.modaal-wrapper.multi-slider-modal-window .modaal-close { 
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.modaal-wrapper.multi-slider-modal-window .modaal-close:after, 
+.modaal-wrapper.multi-slider-modal-window .modaal-close:before {
+  background: #000;
+}
+.modaal-wrapper.multi-slider-modal-window .modaal-content-container {
+  padding: 50px 80px 90px;
+}
+.modaal-wrapper.multi-slider-modal-window .slider-modal-info {
+  font-size: 20px;
+  text-align: center;
+}
+.modaal-wrapper.multi-slider-modal-window .slider-modal-info a {
+  color: #000;
+  text-decoration: underline;
+}
+.modaal-wrapper.multi-slider-modal-window .slider-modal-info a:hover {
+  text-decoration: underline;
+}
+.modaal-wrapper.multi-slider-modal-window .slider-modal-info .big {
+  font-size: 32px;
+}
+.modaal-wrapper.multi-slider-modal-window .slider-modal-info .modal-image {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 700px) {
+
+  /* modal window */
+  .modaal-wrapper.multi-slider-modal-window .modaal-content-container {
+    padding: 40px 30px;
+  }
+  .modaal-wrapper.multi-slider-modal-window .slider-modal-info {
+    font-size: 16px;
+  }
+  .modaal-wrapper.multi-slider-modal-window .slider-modal-info .big {
+    font-size: 26px;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+
+  /* modal window */
+  .modaal-wrapper.multi-slider-modal-window .modaal-content-container {
+    padding: 30px 20px;
+  }
+
+}
