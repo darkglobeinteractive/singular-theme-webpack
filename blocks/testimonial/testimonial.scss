@@ -18,19 +18,19 @@
   z-index: 1;
   height: 242px;
   width: 300px;
-  background: transparent url('../../img/spacer.gif') 0 0 no-repeat;
+  background: transparent url('../img/spacer.gif') 0 0 no-repeat;
   background-size: 100% 100%;
   opacity: 0.2;
 }
 .wp-block-singular.testimonial .content-wrapper::before {
   top: 0;
   left: 0;
-  background-image: url('../../img/static-icons/quotation-mark-left.png');
+  background-image: url('../img/static-icons/quotation-mark-left.png');
 }
 .wp-block-singular.testimonial .content-wrapper::after {
   bottom: 0;
   right: 0;
-  background-image: url('../../img/static-icons/quotation-mark-right.png');
+  background-image: url('../img/static-icons/quotation-mark-right.png');
 }
 .wp-block-singular.testimonial .testimonial-quote { 
   position: relative;
