@@ -9,7 +9,7 @@
   height: 103px;
 }
 .svg-icon.arrow-in-circle svg > .wrap .circle circle {
-  stroke: #000;
+  stroke: var(--black);
   fill: transparent;
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
@@ -17,7 +17,7 @@
   transition: all 200ms ease-in-out;
 }
 .svg-icon.arrow-in-circle svg > .wrap .arrow {
-  fill: #000;
+  fill: var(--black);
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
@@ -63,14 +63,14 @@
   -moz-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  fill: #000;
+  fill: var(--black);
 }
 .svg-icon.slider-arrow:hover .path {
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  fill: #f00;
+  fill: var(--brand-primary);
 }
 
 /* SOCIAL MEDIA ICONS ------------------------------------------- */
@@ -97,11 +97,11 @@
   transition: all 200ms ease-in-out;
 }
 .svg-icon.social-media-icon .foreground {
-  fill: #fff;
+  fill: var(--white);
 }
 .svg-icon.social-media-icon .background {
-  fill: #000;
+  fill: var(--black);
 }
 .svg-icon.social-media-icon:hover .background {
-  fill: #f00;
+  fill: var(--brand-primary);
 }

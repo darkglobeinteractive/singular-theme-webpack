@@ -36,7 +36,7 @@ $block_styles = ' style="'.implode( '; ', $styles_array ).'"';
 ?>
 <style>
   .<?php echo $unique_class; ?>:hover .svg-icon.arrow-in-circle svg > .wrap .circle circle {
-    fill: #000;
+    fill: var(--black);
   }
   .<?php echo $unique_class; ?>:hover .svg-icon.arrow-in-circle svg > .wrap .arrow {
     fill: <?php echo $bgcolor_hex; ?>;

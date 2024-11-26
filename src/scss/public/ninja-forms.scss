@@ -53,8 +53,8 @@
 #page .nf-form-content input:not([type="button"]):not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
 #page .nf-form-content textarea {
   height: 36px;
-  background: #fff;
-  border: 1px solid #ccc;
+  background: var(--white);
+  border: 1px solid var(--black);
   border-radius: 0;
   box-shadow: none;
   color: #787878;
@@ -78,11 +78,11 @@
 }
 #page .nf-form-content .list-select-wrap .nf-field-element > div,
 #page .nf-form-content .listcountry-wrap .nf-field-element > div {
-  background: #fff;
-  border: 1px solid #c4c4c4;
+  background: var(--white);
+  border: 1px solid var(--black);
   border-radius: 0;
   box-shadow: none;
-  color: #787878;
+  color: var(--black);
 }
 #page .nf-form-content .list-select-wrap > div div,
 #page .nf-form-content .listcountry-wrap > div div {
@@ -117,8 +117,8 @@
 .list-select-wrap select:focus + div,
 .listcountry-wrap select:active + div,
 .listcountry-wrap select:focus + div {
-  background: #fff!important;
-  border-color: #919191!important;
+  background: var(--white) !important;
+  border-color: var(--black) !important;
   transition: all .5s;
 }
 

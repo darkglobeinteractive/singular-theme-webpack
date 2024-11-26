@@ -33,7 +33,7 @@
   display: block;
   position: relative;
   padding: 0.5em 1em;
-  color: #000;
+  color: var(--black);
   font-size: 16px;
 }
 #navigation ul.menu > li:first-child > a,
@@ -51,7 +51,7 @@
   position: absolute;
   visibility: hidden;
   opacity: 0;
-  background: #ccc;
+  background: var(--white);
   -webkit-transition-property: opacity, visibility;
   -moz-transition-property: opacity, visibility;
   -o-transition-property: opacity, visibility;
@@ -83,7 +83,7 @@
   display: block;
   min-width: 15em;
   padding: 0.5em 1em;
-  color: #000;
+  color: var(--black);
   background-color: transparent;
   -webkit-transition: background-color 200ms ease-in-out;
   -moz-transition: background-color 200ms ease-in-out;
@@ -92,7 +92,7 @@
 }
 #navigation ul.menu > li > ul > li:hover > a,
 #navigation ul.menu > li > ul > li:hover > .no-link {
-  background-color: #aaa;
+  background-color: var(--black);
 }
 
 /* third tier */
@@ -103,7 +103,7 @@
   visibility: hidden;
   top: 0;
   left: 100%;
-  background: #ccc;
+  background: var(--white);
   -webkit-transition-property: opacity, visibility;
   -moz-transition-property: opacity, visibility;
   -o-transition-property: opacity, visibility;
@@ -135,7 +135,7 @@
   display: block;
   min-width: 15em;
   padding: 0.5em 1em;
-  color: #000;
+  color: var(--black);
   background-color: transparent;
   -webkit-transition: background-color 200ms ease-in-out;
   -moz-transition: background-color 200ms ease-in-out;
@@ -144,7 +144,7 @@
 }
 #navigation ul.menu > li > ul > li > ul > li:hover > a,
 #navigation ul.menu > li > ul > li > ul > li:hover > .no-link {
-  background-color: #aaa;
+  background-color: var(--black);
 }
 
 
@@ -202,7 +202,7 @@ body.mm-wrapper--opened #mm-trigger {
   left: 0;
   height: 6px;
   width: 100%;
-  background: #000;
+  background: var(--black);
   border-radius: 0px;
   opacity: 1;
   -webkit-transform: rotate(0deg);
@@ -247,10 +247,10 @@ body.mm-wrapper--opened #mm-trigger .trigger-container span:nth-child(3) {
 /* MOBILE MENU OVERRIDES ---------------------------------------- */
 /* #wpadminbar is 32px tall */
 .mm-menu {
-  /* --mm-color-background: #fff; */
-  /* --mm-color-border: #000; */
-  /* --mm-color-text-dimmed: #000; */
-  /* --mm-color-text: #000; */
+  /* --mm-color-background: var(--white); */
+  /* --mm-color-border: var(--black); */
+  /* --mm-color-text-dimmed: var(--black); */
+  /* --mm-color-text: var(--black); */
 }
 #mm-clone-navigation {
   display: none;

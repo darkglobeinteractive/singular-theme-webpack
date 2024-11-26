@@ -33,7 +33,7 @@
 .wp-block-singular.accordion-container .accordion-item .accordion-item-title .title { 
   width: calc(100% - 100px);
   margin: 0 !important;
-  color: #fff !important;
+  color: var(--white) !important;
   font-size: 26px !important;
   font-weight: 700 !important;
   line-height: 1em !important;
@@ -55,7 +55,7 @@
 }
 .wp-block-singular.accordion-container .accordion-item .accordion-item-title .toggle span {
   display: block;
-  color: #ffffff;
+  color: var(--white);
   font-size: 16px;
   line-height: 1em;
   text-align: left;
@@ -69,7 +69,7 @@
   right: 50%;
   top: 50%;
   z-index: 1;
-  background-color: #fff;
+  background-color: var(--white);
 }
 .wp-block-singular.accordion-container .accordion-item .accordion-item-title .toggle::before {
   margin: -2px -9px 0 0;  

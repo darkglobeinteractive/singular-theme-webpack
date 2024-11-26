@@ -13,7 +13,7 @@
 }
 /* ACCORDION OVERRIDES ------------------------------------------ */
 .editor-styles-wrapper .wp-block.wp-block-singular.accordion-container { 
-  border: 1px solid #000;
+  border: 1px solid var(--black);
   padding: 10px;
 }
 .editor-styles-wrapper .wp-block.singular-accordion-container::before,
@@ -43,7 +43,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid #000;
+  border: 1px solid var(--black);
 }
 .editor-styles-wrapper .wp-block.wp-block-singular.accordion-container .wp-block.accordion-item > .wp-block-group__inner-container { }
 .editor-styles-wrapper .wp-block.wp-block-singular.accordion-container .wp-block.accordion-item-title { 

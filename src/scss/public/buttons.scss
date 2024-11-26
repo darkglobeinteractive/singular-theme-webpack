@@ -10,8 +10,8 @@ input[type="submit"],
   padding: 1em 2em;
   border: none;
   outline: none;
-  background: #ccc;
-  color: #000;
+  background: var(--white);
+  color: var(--black);
   font-size: 16px;
   line-height: 1em;
   text-align: center;
@@ -25,5 +25,6 @@ input[type="submit"],
 input[type="submit"]:hover,
 .wp-block-button .wp-block-button__link:hover,
 .editor-styles-wrapper .wp-block-button .wp-block-button__link:hover {
-  background: #eee;
+  background: var(--black);
+  color: var(--white);
 }
