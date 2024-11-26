@@ -88,12 +88,10 @@ function singular_add_google_fonts() {
 }
 add_action( 'wp_head', 'singular_add_google_fonts' );
 
-/* STYLES ------------------------------------------------------- */
-/*
-To dynamically set a version, use the singula˜r_theme_filemtime() function:
-wp_enqueue_style( 'global-css', get_template_directory_uri().'/style.css', array(), singular_theme_filemtime( '/style.css' ) );
-*/
-function singular_styles() {
+/* PUBLIC STYLES + SCRIPTS -------------------------------------- */
+function singular_public_styles_scripts() {
+  
+  /* styles */
   // wp_enqueue_style( 'custom-fontastic-icons', 'https://file.myfontastic.com/U9FqFSWAktJNmqp9Dd93ZG/icons.css', false );
   // wp_enqueue_style( 'local-fontastic-icons', get_template_directory_uri().'/fonts/styles.css' );
   // wp_enqueue_style( 'custom-fonts-css', get_template_directory_uri().'/fonts/style.css', array(), singular_theme_filemtime('/fonts/style.css' ) );
@@ -101,15 +99,25 @@ function singular_styles() {
   wp_enqueue_style( 'slickjs-css', get_template_directory_uri().'/libs/accessible-slick/slick/slick.min.css' );
   wp_enqueue_style( 'slickjs-theme_css', get_template_directory_uri().'/libs/accessible-slick/slick/accessible-slick-theme.min.css' );
   wp_enqueue_style( 'mmenu-css', get_template_directory_uri().'/libs/mmenu/dist/mmenu.css' );
-  
   wp_enqueue_style( 'public-css', get_template_directory_uri().'/assets/public.css', array(), singular_theme_filemtime('/assets/public.css' ) );
+
+  /* scripts */
+  // wp_enqueue_script( 'gsap-js', get_template_directory_uri().'/libs/gsap/minified/gsap.min.js', array( 'jquery' ) );
+  // wp_enqueue_script( 'gsap-scrolltrigger-js', get_template_directory_uri().'/libs/gsap/minified/ScrollTrigger.min.js', array( 'jquery' ) );
+  // wp_enqueue_script( 'animations-js', get_template_directory_uri().'/js/animations.js', array( 'gsap-js', 'gsap-scrolltrigger-js' ), singular_theme_filemtime('/js/animations.js' ) );
+  wp_enqueue_script( 'modaal-js', get_template_directory_uri().'/libs/modaal/dist/js/modaal.js', array( 'jquery' ) );
+  wp_enqueue_script( 'slickjs-js', get_template_directory_uri().'/libs/accessible-slick/slick/slick.min.js', array( 'jquery' ) );
+  wp_enqueue_script( 'mmenu-js', get_template_directory_uri().'/libs/mmenu/dist/mmenu.js', array( 'jquery' ) );
+  wp_enqueue_script( 'public-js', get_template_directory_uri().'/assets/public.min.js', array( 'jquery', 'modaal-js', 'slickjs-js', 'mmenu-js' ), singular_theme_filemtime('/assets/public.min.js' ) );
+
 }
-add_action( 'wp_enqueue_scripts', 'singular_styles' );
+add_action( 'wp_enqueue_scripts', 'singular_public_styles_scripts' );
 
 
-/* ADMIN STYLES ------------------------------------------------- */
+/* ADMIN STYLES + SCRIPTS --------------------------------------- */
 function singular_admin_styles() {
   wp_enqueue_style( 'admin-css', get_template_directory_uri().'/assets/admin.css', array(), singular_theme_filemtime('/assets/admin.css' ) );
+  wp_enqueue_script( 'admin-js', get_template_directory_uri().'/assets/admin.min.js', array( 'jquery' ), singular_theme_filemtime('/assets/admin.min.js' ) );
 }
 add_action( 'admin_enqueue_scripts', 'singular_admin_styles' );
 
@@ -124,20 +132,6 @@ function singular_login_url() {
   return '/';
 }
 add_filter( 'login_headerurl', 'singular_login_url' );
-
-
-/* SCRIPTS ------------------------------------------------------ */
-function singular_scripts() {
-  wp_enqueue_script( 'modaal-js', get_template_directory_uri().'/libs/modaal/dist/js/modaal.js', array( 'jquery' ) );
-  wp_enqueue_script( 'slickjs-js', get_template_directory_uri().'/libs/accessible-slick/slick/slick.min.js', array( 'jquery' ) );
-  wp_enqueue_script( 'mmenu-js', get_template_directory_uri().'/libs/mmenu/dist/mmenu.js', array( 'jquery' ) );
-  if ( !is_admin() ) {
-    // wp_enqueue_script( 'gsap-js', get_template_directory_uri().'/libs/gsap/minified/gsap.min.js', array( 'jquery' ) );
-    // wp_enqueue_script( 'gsap-scrolltrigger-js', get_template_directory_uri().'/libs/gsap/minified/ScrollTrigger.min.js', array( 'jquery' ) );
-    // wp_enqueue_script( 'animations-js', get_template_directory_uri().'/js/animations.js', array( 'gsap-js', 'gsap-scrolltrigger-js' ), singular_theme_filemtime('/js/animations.js' ) );
-  }
-}
-add_action( 'wp_enqueue_scripts', 'singular_scripts' );
 
 
 /* GLOBALLY SHARED VARIABLES ------------------------------------ */
