@@ -6,7 +6,7 @@
   "icon": "external",
   "keywords": ["cta"],
   "acf": {
-      "mode": "preview",
+      "mode": "edit",
       "renderTemplate": "image-cta.php"
   },
   "supports": { }

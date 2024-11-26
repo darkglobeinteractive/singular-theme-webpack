@@ -6,7 +6,7 @@
   "icon": "external",
   "keywords": ["cta"],
   "acf": {
-      "mode": "preview",
+      "mode": "edit",
       "renderTemplate": "color-block-cta.php"
   },
   "supports": { }

@@ -6,7 +6,7 @@
   "icon": "businessperson",
   "keywords": ["testimoinal"],
   "acf": {
-      "mode": "preview",
+      "mode": "edit",
       "renderTemplate": "testimonial.php"
   },
   "supports": { }
