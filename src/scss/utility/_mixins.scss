@@ -1,0 +1,22 @@
+// Create flexbox with needed prefixing
+@mixin flexbox-gen($direction: false, $wrap: false, $align-items: false, $justify-content: false, $gap: false, $show-display: true) {
+  @if $show-display {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  @if $direction and $wrap {
+    -ms-flex-flow: $direction $wrap;
+    -webkit-flex-flow: $direction $wrap;
+    flex-flow: $direction $wrap;
+  }
+  @if $align-items {
+    align-items: $align-items;
+  }
+  @if $gap {
+    gap: $gap;
+  }
+  @if $justify-content {
+    justify-content: $justify-content;
+  }
+}

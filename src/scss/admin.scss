@@ -1,3 +1,7 @@
+// Include Utilities
+@import "utility/_functions";
+@import "utility/_mixins";
+
 // Block Patterns + Custom Blocks
 @import "../../block-patterns/scss/block-patterns-admin";
 @import "../../blocks/blocks-admin";

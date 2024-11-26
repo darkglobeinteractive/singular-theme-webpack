@@ -19,14 +19,7 @@
 
 .wp-block-singular.accordion-container .accordion-item .accordion-item-title { }
 .wp-block-singular.accordion-container .accordion-item .accordion-item-title > div { 
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-flow: row nowrap;
-  -webkit-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
+  @include flexbox-gen(row, nowrap, center, space-between);
   background-color: #002835;
   padding: 15px 0 15px 40px;
 }

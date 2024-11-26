@@ -44,16 +44,11 @@
 /* navigation */
 .multi-slider .slider-nav {
   display: none;
-  -ms-flex-flow: row nowrap;
-  -webkit-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
+  @include flexbox-gen(row, nowrap, $justify-content: flex-end, $show-display: false);
   padding: 20px;
 }
 .multi-slider .slider-nav.show {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+  @include flexbox-gen();
 }
 .multi-slider .slider-nav button {
   display: block;

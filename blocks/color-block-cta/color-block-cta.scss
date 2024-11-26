@@ -3,10 +3,7 @@
   box-sizing: border-box;
 }
 .color-block-cta {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: flex-end;
+  @include flexbox-gen($align-items: flex-end);
   position: relative;
   width: 100%;
   min-height: 625px;

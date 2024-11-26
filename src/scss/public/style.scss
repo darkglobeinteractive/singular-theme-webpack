@@ -73,12 +73,7 @@ ul.social-media * {
   box-sizing: border-box;
 }
 ul.social-media {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-flow: row nowrap;
-  -webkit-flex-flow: row nowrap;
-  flex-flow: row nowrap;
+  @include flexbox-gen(row, nowrap);
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -145,14 +140,7 @@ body.admin-bar #header.sticky {
   position: sticky;
 }
 #header > .wrap {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-flow: row nowrap;
-  -webkit-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
+  @include flexbox-gen(row, nowrap, center, space-between);
   position: relative;
   height: 120px;
   width: 100%;
@@ -205,21 +193,13 @@ body.admin-bar #header.sticky {
   opacity: 0.5;
 }
 .banner-rich > .wrap { 
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-flow: row nowrap;
-  -webkit-flex-flow: row nowrap;
-  flex-flow: row nowrap;
+  @include flexbox-gen(row, nowrap);
   position: relative;
   z-index: 3;
   min-height: 887px;
 }
 .banner-rich .content { 
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
+  @include flexbox-gen($align-items: center);
   width: 100%;
   padding: 210px;
 }
@@ -270,9 +250,7 @@ body.admin-bar #header.sticky {
   padding: 0;
 }
 .banner-rich.image-left > .wrap {
-  -ms-flex-flow: row-reverse nowrap;
-  -webkit-flex-flow: row-reverse nowrap;
-  flex-flow: row-reverse nowrap;
+  @include flexbox-gen($direction: row-reverse, $wrap: nowrap, $show-display: false);
 }
 .banner-rich.image-aligned .content {
   position: relative;
@@ -419,12 +397,7 @@ body.admin-bar #header.sticky {
   box-sizing: border-box;
 }
 .blog-list article.post {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-flow: row nowrap;
-  -webkit-flex-flow: row nowrap;
-  flex-flow: row nowrap;
+  @include flexbox-gen(row, nowrap);
   padding-bottom: 2em;
   border-bottom: 1px solid var(--black);
   margin-bottom: 2em;
@@ -476,14 +449,7 @@ body.admin-bar #header.sticky {
   box-sizing: border-box;
 }
 .post-grid-filtering {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-flow: row nowrap;
-  -webkit-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  gap: 30px 50px;
-  justify-content: space-between;
+  @include flexbox-gen(row, nowrap, $justify-content: space-between, $gap: 30px 50px);
   width: 100%;
   margin: 0 0 80px;
 }
