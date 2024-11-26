@@ -152,4 +152,6 @@ $block_styles = ' style="'.implode( '; ', $styles_array ).'"';
       </div>
     </div>
   <?php endif; ?>
+<?php elseif ( is_admin() ): ?>
+  <p>Edit this block to add slides</p>
 <?php endif; ?>
