@@ -6,6 +6,9 @@ const config = {
   entry: {
     public: [
       './src/scss/public.scss',
+      './libs/modaal/dist/js/modaal.js',
+      './libs/mmenu/dist/mmenu.js',
+      './libs/accessible-slick/slick/slick.min.js',
       './block-patterns/js/block-patterns.js',
       './blocks/blocks.js',
       './src/js/global.js'
@@ -19,6 +22,9 @@ const config = {
     path: path.resolve(__dirname, 'assets'),
     filename: '[name].min.js',
     clean: true
+  },
+  externals: {
+    'jquery': 'jQuery'
   },
   devtool: "source-map",
   module: {
