@@ -3,6 +3,12 @@
 @import "utility/_functions";
 @import "utility/_mixins";
 
+// Libraries
+@import "../../libs/modaal/dist/css/modaal.min.css";
+@import "../../libs/accessible-slick/slick/slick.min.css";
+@import "../../libs/accessible-slick/slick/accessible-slick-theme.min.css";
+@import "../../libs/mmenu/dist/mmenu.css";
+
 // Block Patterns + Custom Blocks
 @import "../../block-patterns/scss/block-patterns-public";
 @import "../../blocks/blocks-public";
