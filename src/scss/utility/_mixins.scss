@@ -1,5 +1,5 @@
-// Create flexbox with needed prefixing
-@mixin flexbox-gen($direction: false, $wrap: false, $align-items: false, $justify-content: false, $gap: false, $show-display: true) {
+// FLEXBOX GENERATION: Creates prefixed flexbox blocks ---------- */
+@mixin flexbox-gen($direction: null, $wrap: null, $align-items: null, $justify-content: null, $gap: null, $show-display: true) {
   @if $show-display {
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -19,4 +19,18 @@
   @if $justify-content {
     justify-content: $justify-content;
   }
+}
+
+/* FONT SMOOTHING: Creates the necessary font smoothing rules */
+@mixin font-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* PREFIX GENERATION: Creates compatibility prefixing */
+@mixin prefix-gen($title, $values...) {
+  -webkit-#{title}: $values;
+  -moz-#{$title}: $values;
+  -o-#{$title}: $values;
+  #{$title}: $values;
 }
