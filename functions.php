@@ -91,10 +91,7 @@ function singular_public_styles_scripts() {
   // wp_enqueue_script( 'gsap-js', get_template_directory_uri().'/libs/gsap/minified/gsap.min.js', array( 'jquery' ) );
   // wp_enqueue_script( 'gsap-scrolltrigger-js', get_template_directory_uri().'/libs/gsap/minified/ScrollTrigger.min.js', array( 'jquery' ) );
   // wp_enqueue_script( 'animations-js', get_template_directory_uri().'/js/animations.js', array( 'gsap-js', 'gsap-scrolltrigger-js' ), singular_theme_filemtime('/js/animations.js' ) );
-  wp_enqueue_script( 'modaal-js', get_template_directory_uri().'/libs/modaal/dist/js/modaal.js', array( 'jquery' ) );
-  wp_enqueue_script( 'slickjs-js', get_template_directory_uri().'/libs/accessible-slick/slick/slick.min.js', array( 'jquery' ) );
-  wp_enqueue_script( 'mmenu-js', get_template_directory_uri().'/libs/mmenu/dist/mmenu.js', array( 'jquery' ) );
-  wp_enqueue_script( 'public-js', get_template_directory_uri().'/assets/public.min.js', array( 'jquery', 'modaal-js', 'slickjs-js', 'mmenu-js' ), singular_theme_filemtime('/assets/public.min.js' ) );
+  wp_enqueue_script( 'public-js', get_template_directory_uri().'/assets/public.min.js', array( 'jquery' ), singular_theme_filemtime('/assets/public.min.js' ) );
 
 }
 add_action( 'wp_enqueue_scripts', 'singular_public_styles_scripts' );
