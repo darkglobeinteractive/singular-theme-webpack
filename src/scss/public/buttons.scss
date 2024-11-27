@@ -19,6 +19,7 @@ input[type="submit"],
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
+  @include prefix-gen(transition, color 200ms ease-in-out, background 200ms ease-in-out);
 }
 .btn:hover,
 .btn-wrap a:hover,
