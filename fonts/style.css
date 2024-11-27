@@ -2,40 +2,40 @@
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
-  src: url("OpenSans-Light.ttf") format("opentype");
+  src: url("../fonts/OpenSans-Light.ttf") format("opentype");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("OpenSans-Regular.ttf") format("opentype");
+  src: url("../fonts/OpenSans-Regular.ttf") format("opentype");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-style: italic;
   font-weight: 400;
-  src: url("OpenSans-Italic.ttf") format("opentype");
+  src: url("../fonts/OpenSans-Italic.ttf") format("opentype");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
-  src: url("OpenSans-SemiBold.ttf") format("opentype");
+  src: url("../fonts/OpenSans-SemiBold.ttf") format("opentype");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("OpenSans-Bold.ttf") format("opentype");
+  src: url("../fonts/OpenSans-Bold.ttf") format("opentype");
 }
 
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 800;
-  src: url("OpenSans-ExtraBold.ttf") format("opentype");
+  src: url("../fonts/OpenSans-ExtraBold.ttf") format("opentype");
 }
