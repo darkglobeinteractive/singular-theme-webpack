@@ -1,42 +1,41 @@
-
 @font-face {
-  font-family: "CeraPro";
-  font-style: normal;
-  font-weight: 100;
-  src: url("CeraProThin.woff") format("woff");
-}
-
-@font-face {
-  font-family: "CeraPro";
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
-  src: url("CeraProLight.woff") format("woff");
+  src: url("OpenSans-Light.ttf") format("opentype");
 }
 
 @font-face {
-  font-family: "CeraPro";
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("CeraProRegular.woff") format("woff");
+  src: url("OpenSans-Regular.ttf") format("opentype");
 }
 
 @font-face {
-  font-family: "CeraPro";
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("OpenSans-Italic.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Open Sans";
   font-style: normal;
-  font-weight: 500;
-  src: url("CeraProMedium.woff") format("woff");
+  font-weight: 600;
+  src: url("OpenSans-SemiBold.ttf") format("opentype");
 }
 
 @font-face {
-  font-family: "CeraPro";
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("CeraProBold.woff") format("woff");
+  src: url("OpenSans-Bold.ttf") format("opentype");
 }
 
 @font-face {
-  font-family: "CeraPro";
+  font-family: "Open Sans";
   font-style: normal;
-  font-weight: 900;
-  src: url("CeraProBlack.woff") format("woff");
+  font-weight: 800;
+  src: url("OpenSans-ExtraBold.ttf") format("opentype");
 }
