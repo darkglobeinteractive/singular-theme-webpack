@@ -87,12 +87,12 @@
   margin: 0;
   background: var(--black) url('../../img/spacer.gif') center center no-repeat;
   background-size: cover;
-  transition: transform 200ms ease-in-out;
-  transform: scale(1);
+  @include prefix-gen(transition, transform 200ms ease-in-out);
+  @include prefix-gen(transform, scale(1));
 }
 .wp-block-singular.multi-slider-block.block .multi-slider .slider .item > a.wrap:hover .image-wrap .image {
-  transition: transform 200ms ease-in-out;
-  transform: scale(1.1);
+  @include prefix-gen(transition, transform 200ms ease-in-out);
+  @include prefix-gen(transform, scale(1.1));
 }
 
 /* modal images slider */

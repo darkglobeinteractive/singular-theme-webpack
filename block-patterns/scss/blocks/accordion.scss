@@ -80,16 +80,10 @@
 .wp-block-singular.accordion-container .accordion-item .accordion-item-content { 
   overflow: hidden;
   max-height: 0;
-  -webkit-transition: max-height 200ms ease-in-out;
-  -moz-transition: max-height 200ms ease-in-out;
-  -o-transition: max-height 200ms ease-in-out;
-  transition: max-height 200ms ease-in-out;
+  @include prefix-gen(transition, max-height 200ms ease-in-out);
 }
 .wp-block-singular.accordion-container .accordion-item.open .accordion-item-content {
-  -webkit-transition: max-height 300ms ease-in-out;
-  -moz-transition: max-height 300ms ease-in-out;
-  -o-transition: max-height 300ms ease-in-out;
-  transition: max-height 300ms ease-in-out;
+  @include prefix-gen(transition, max-height 300ms ease-in-out);
 }
 .wp-block-singular.accordion-container .accordion-item .accordion-item-content > div { 
   padding: 40px;

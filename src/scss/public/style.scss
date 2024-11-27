@@ -283,56 +283,53 @@ body.admin-bar #header.sticky {
   transform: translateX(-50%) translateY(-50%);
   background: url('img/spacer.gif') no-repeat;
   background-size: cover;
-  -webkit-transition: 1s opacity;
-  -moz-transition: 1s opacity;
-  -o-transition: 1s opacity;
-  transition: 1s opacity;
+  @include prefix-gen(transition, 1s opacity);
 }
 .banner-rich.video .video-bg.horizontal-left.vertical-top {
   left: 0;
   top: 0;
-  transform: translateX(0) translateY(0);
+  @include prefix-gen(transform, translateX(0) translateY(0));
 }
 .banner-rich.video .video-bg.horizontal-center.vertical-top {
   left: 50%;
   top: 0;
-  transform: translateX(-50%) translateY(0);
+  @include prefix-gen(transform, translateX(-50%) translateY(0));
 }
 .banner-rich.video .video-bg.horizontal-right.vertical-top {
   left: auto;
   right: 0;
   top: 0;
-  transform: translateX(0) translateY(0);
+  @include prefix-gen(transform, translateX(0) translateY(0));
 }
 .banner-rich.video .video-bg.horizontal-left.vertical-center {
   left: 0;
   top: 50%;
-  transform: translateX(0) translateY(-50%);
+  @include prefix-gen(transform, translateX(0) translateY(-50%));
 }
 .banner-rich.video .video-bg.horizontal-right.vertical-center {
   left: auto;
   right: 0;
   top: 50%;
-  transform: translateX(0) translateY(-50%);
+  @include prefix-gen(transform, translateX(0) translateY(-50%));
 }
 .banner-rich.video .video-bg.horizontal-left.vertical-bottom {
   left: 0;
   top: auto;
   bottom: 0;
-  transform: translateX(0) translateY(0);
+  @include prefix-gen(transform, translateX(0) translateY(0));
 }
 .banner-rich.video .video-bg.horizontal-center.vertical-bottom {
   left: 50%;
   top: auto;
   bottom: 0;
-  transform: translateX(-50%) translateY(0);
+  @include prefix-gen(transform, translateX(-50%) translateY(0));
 }
 .banner-rich.video .video-bg.horizontal-right.vertical-bottom {
   left: auto;
   top: auto;
   bottom: 0;
   right: 0;
-  transform: translateX(0) translateY(0);
+  @include prefix-gen(transform, translateX(0) translateY(0));
 }
 
 
@@ -680,7 +677,6 @@ a.skip-main:active {
 
 /* FONTS -------------------------------------------------------- */
 body {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: $font-standard;
+  @include font-smoothing();
 }

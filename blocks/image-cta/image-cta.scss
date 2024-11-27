@@ -27,12 +27,12 @@
   margin: -50% 0 0 -50%;
   background: var(--black) url('../../img/spacer.gif') center center no-repeat;
   background-size: cover;
-  transition: transform 200ms ease-in-out;
-  transform: scale(1);
+  @include prefix-gen(transition, transform 200ms ease-in-out);
+  @include prefix-gen(transform, scale(1));
 }
 a.image-cta:hover .image-wrap .image {
-  transition: transform 300ms ease-in-out;
-  transform: scale(1.1);
+  @include prefix-gen(transition, transform 300ms ease-in-out);
+  @include prefix-gen(transform, scale(1.1));
 }
 .image-cta .content { 
   display: block;

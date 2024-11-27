@@ -11,17 +11,11 @@
 .svg-icon.arrow-in-circle svg > .wrap .circle circle {
   stroke: var(--black);
   fill: transparent;
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  @include prefix-gen(transition, all 200ms ease-in-out);
 }
 .svg-icon.arrow-in-circle svg > .wrap .arrow {
   fill: var(--black);
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  @include prefix-gen(transition, all 200ms ease-in-out);
 }
 
 /* MAGNIFYING GLASS --------------------------------------------- */
@@ -35,17 +29,11 @@
 }
 .svg-icon.magnifying-glass .path {
   fill: var(--brand-primary);
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  @include prefix-gen(transition, all 200ms ease-in-out);
 }
 .svg-icon.magnifying-glass:hover .path {
   fill: var(--brand-secondary);
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  @include prefix-gen(transition, all 200ms ease-in-out);
 }
 
 /* SLIDER ARROW ------------------------------------------------- */
@@ -59,17 +47,11 @@
   height: 29px;
 }
 .svg-icon.slider-arrow .path {
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  @include prefix-gen(transition, all 200ms ease-in-out);
   fill: var(--black);
 }
 .svg-icon.slider-arrow:hover .path {
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  @include prefix-gen(transition, all 200ms ease-in-out);
   fill: var(--brand-primary);
 }
 
@@ -84,17 +66,11 @@
 }
 .svg-icon.social-media-icon .foreground,
 .svg-icon.social-media-icon .background {
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  @include prefix-gen(transition, all 200ms ease-in-out);
 }
 .svg-icon.social-media-icon:hover .foreground,
 .svg-icon.social-media-icon:hover .background {
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  @include prefix-gen(transition, all 200ms ease-in-out);
 }
 .svg-icon.social-media-icon .foreground {
   fill: var(--white);
