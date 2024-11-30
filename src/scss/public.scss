@@ -4,10 +4,10 @@
 @import "utility/_mixins";
 
 // Libraries
+@import "../../libs/mmenu/dist/mmenu.css";
 @import "../../libs/modaal/dist/css/modaal.min.css";
 @import "../../libs/accessible-slick/slick/slick.min.css";
 @import "../../libs/accessible-slick/slick/accessible-slick-theme.min.css";
-@import "../../libs/mmenu/dist/mmenu.css";
 
 // Block Patterns + Custom Blocks
 @import "../../block-patterns/scss/block-patterns-public";
@@ -16,7 +16,7 @@
 // Theme-Based Styles
 @import "../../fonts/style.css";
 @import "public/color-palette";
-// @import "public/animations";
+@import "public/animations";
 @import "public/buttons";
 @import "../../svg/style";
 @import "public/slick-customizations";
