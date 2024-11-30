@@ -15,7 +15,7 @@
   margin: 0 auto;
   padding: 120px 100px;
 }
-.wp-block-singular:not(.has-background):not(.wp-block-cover) + .wp-block-singular:not(.has-background) > .wp-block-group__inner-container {
+.wp-block-singular:not(.has-background):not(.wp-block-cover):not(.multi-slider-block) + .wp-block-singular:not(.has-background) > .wp-block-group__inner-container {
   padding-top: 0;
 }
 .wp-block-singular .wp-block-group__inner-container > *:first-child,
