@@ -12,5 +12,4 @@ node_modules/
 .Trashes
 ehthumbs.db
 Thumbs.db
-libs*
 *.code-workspace
