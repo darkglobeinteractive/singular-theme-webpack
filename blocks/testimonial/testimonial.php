@@ -1,6 +1,6 @@
 <?php
 // Declare block level variables
-$classes_array = array( 'wp-block-group', 'wp-block-singular', 'testimonial', 'has-cherish-red-background-color' );
+$classes_array = array( 'wp-block-group', 'wp-block-singular', 'testimonial' );
 $classes_inner_array = array( 'wp-block-group__inner-container', 'is-layout-constrained', 'wp-block-group-is-layout-constrained' );
 $styles_array = array();
 
