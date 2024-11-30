@@ -30,7 +30,7 @@
   padding: 20px;
 }
 .sts-header .title {
-  color: #fff;
+  color: var(--white);
   font-size: 26px;
   font-weight: 700;
   line-height: 1em;
@@ -59,19 +59,36 @@
   display: block;
   padding: 10px 20px;
   background-color: transparent;
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
 }
 .sts-navigation > ul > li > a:hover {
-  background-color: #c00;
+  background-color: var(--brand-primary);
 }
 .sts-navigation > ul > li.home > a {
   font-weight: 700;
 }
 
 /* STS CONTENT AREA --------------------------------------------- */
+.sts-content {
+  font-size: 16px;
+}
 .sts-content .sts-wrap {
   padding: 20px;
+}
+.sts-content h1 {
+  font-size: 1.75em;
+}
+.sts-content h2 {
+  font-size: 1.5em;
+}
+.sts-content h3 {
+  font-size: 1.25em;
+}
+.sts-content ul,
+.sts-content ol,
+.sts-content p {
+  font-size: 1em;
 }
 .sts-content code {
   display: block;
@@ -79,4 +96,8 @@
   background-color: #333;
   color: #ccc;
   line-height: 1.75em;
+}
+.sts-content ul {
+  list-style-type: disc;
+  padding-left: 1em;
 }
