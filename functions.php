@@ -66,11 +66,13 @@ function singular_setup_theme_supported_features() {
 }
 add_action( 'after_setup_theme', 'singular_setup_theme_supported_features' );
 
+
 /* ADD BANNER BG TO SRCSET -------------------------------------- */
 function singular_banner_bg_max( $max_width, $size_array ) {
   return 2560;
 }
 add_filter( 'max_srcset_image_width', 'singular_banner_bg_max', 10, 2 );
+
 
 /* FIX HEADER BUMP ---------------------------------------------- */
 /* WordPress core adds top margin to html element by default -- incompatible with mmenu mobile menu library */
@@ -79,19 +81,17 @@ function singular_remove_admin_login_header() {
 }
 add_action( 'get_header', 'singular_remove_admin_login_header' );
 
+
 /* PUBLIC STYLES + SCRIPTS -------------------------------------- */
 function singular_public_styles_scripts() {
   
   /* styles */
-  // wp_enqueue_style( 'custom-fontastic-icons', 'https://file.myfontastic.com/U9FqFSWAktJNmqp9Dd93ZG/icons.css', false );
-  // wp_enqueue_style( 'local-fontastic-icons', get_template_directory_uri().'/fonts/styles.css' );
   wp_enqueue_style( 'public-css', get_template_directory_uri().'/assets/public.css', array(), singular_theme_filemtime('/assets/public.css' ) );
 
   /* scripts */
-  // wp_enqueue_script( 'gsap-js', get_template_directory_uri().'/libs/gsap/minified/gsap.min.js', array( 'jquery' ) );
-  // wp_enqueue_script( 'gsap-scrolltrigger-js', get_template_directory_uri().'/libs/gsap/minified/ScrollTrigger.min.js', array( 'jquery' ) );
-  // wp_enqueue_script( 'animations-js', get_template_directory_uri().'/js/animations.js', array( 'gsap-js', 'gsap-scrolltrigger-js' ), singular_theme_filemtime('/js/animations.js' ) );
-  wp_enqueue_script( 'public-js', get_template_directory_uri().'/assets/public.min.js', array( 'jquery' ), singular_theme_filemtime('/assets/public.min.js' ) );
+  wp_enqueue_script( 'public-js', get_template_directory_uri().'/assets/public.min.js', array( 'jquery' ), singular_theme_filemtime( '/assets/public.min.js' ) );
+  // Deferring Enqueued Files: https://make.wordpress.org/core/2023/07/14/registering-scripts-with-async-and-defer-attributes-in-wordpress-6-3/
+  wp_enqueue_script( 'defer-js', get_template_directory_uri().'/assets/defer.min.js', array( 'jquery' ), singular_theme_filemtime( '/assets/defer.min.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
 
 }
 add_action( 'wp_enqueue_scripts', 'singular_public_styles_scripts' );
