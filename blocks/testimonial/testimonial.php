@@ -10,6 +10,11 @@ if ( is_admin() ) {
   array_push( $classes_inner_array, 'block-editor-block-list__layout' );
 }
 
+// Add classes from block editor's Additional CSS Class(es) field
+if ( !empty( $block['className'] ) ) {
+  $classes_array = array_merge( $classes_array, explode( ' ', trim( $block['className'] ) ) );
+}
+
 // Grab variables
 $testimonial_quote = ( get_field( 'testimonial_quote' ) ?: '' );
 $testimonial_author = ( get_field( 'testimonial_author' ) ?: '' );

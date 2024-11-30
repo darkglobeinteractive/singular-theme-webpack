@@ -9,6 +9,11 @@ if ( is_admin() ) {
   array_push( $classes_inner_array, 'block-editor-block-list__layout' );
 }
 
+// Add classes from block editor's Additional CSS Class(es) field
+if ( !empty( $block['className'] ) ) {
+  $classes_array = array_merge( $classes_array, explode( ' ', trim( $block['className'] ) ) );
+}
+
 // Handle grid variables
 $pb_categories = ( get_field( 'pb_categories' ) ?: '' );
 $pb_quantity = ( get_field( 'pb_quantity' ) ?: 9 );

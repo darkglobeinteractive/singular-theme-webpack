@@ -9,6 +9,11 @@ if ( is_admin() ) {
   array_push( $classes_inner_array, 'block-editor-block-list__layout' );
 }
 
+// Add classes from block editor's Additional CSS Class(es) field
+if ( !empty( $block['className'] ) ) {
+  $classes_array = array_merge( $classes_array, explode( ' ', trim( $block['className'] ) ) );
+}
+
 // Determine type of slider we're working with
 $image_slider_type = get_field( 'image_slider_type' );
 $classes_array[] = $image_slider_type;
