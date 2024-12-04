@@ -9,6 +9,17 @@ https://github.com/darkglobeinteractive/singular-theme
 Singular Theme Installation Notes
 ===================================
 
+# Remove Remote Repositories From Git
+
+Run the following command to remove the origin for the repository:
+$ git remove rm origin
+
+
+# Remove assets/* from .gitignore
+
+You will want to remove this from .gitignore because you will definitely want to be pushing these to the server.
+
+
 # mmenu (v.9.3)
 
 mmenu is used to handle the mobile menus in this theme. Documentation can be found here:
@@ -24,15 +35,6 @@ Admin > Appearance > Menus
 3. [ ] Assign the new menu to the Manage Locations > Main Menu Navigation theme location
 
 
-# Create Pages / Modify Templates
-
-1. [ ] Create search form page and update template file to reflect page ID
-2. [ ] If you're not using Yoast SEO, create the sitemap page and update template file (page-search.php) to use page ID (page-[id].php)
-       [ ] If you ARE using Yoast SEO, delete the sitemap page template 
-3. [ ] Create home page and use customizer to set this page to the front page
-4. [ ] Delete existing widgets
-
-
 # Required Plugin Installation Notes
 
 Advanced Custom Fields PRO is required by this theme.
@@ -44,7 +46,33 @@ Advanced Custom Fields PRO is required by this theme.
               [ ] /singular-theme/_configurations/acf-json/acf-options-pages.json
               [ ] /singular-theme/_configuration/acf-json/acf-base-import.json
               [ ] /singular-theme/_configutation/acf-json/acf-custom-blocks.json
+        [ ] Double-check the Settings > Show this field group if... settings for each block
+        [ ] Once theme is activated, save each of these field groups in order to create the local /acf-json/ files
 2. [ ] Install "Filebird" (https://wordpress.org/plugins/filebird/)
+3. [ ] Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
+       [ ] Change the default separator to a pipe so it matches the header.php title separator -or- change the header.php title separator to a hyphen
+       [ ] Add site name and image to the Yoast SEO admin
+       [ ] Remove sitemap page and template file if using Yoast SEO
+4. [ ] Install "ACF Content Analysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
+5. [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/)
+       [ ] Add redirect from /user to /wp-admin
+6. [ ] Install "Wordfence"
+       [ ] Send license information to hello@[clientaddress]
+       [ ] Request Google reCAPTCHA keys and install them
+               [ ] Admin > Wordfence > Login Security > Settings > reCAPTCHA section
+       [ ] Set brute force login limit to 5 attempts:
+               [ ] Admin > Wordfence > Firewall > All Firewall Options > Brute Force Protection
+
+
+# Create Pages / Modify Templates
+
+1. [ ] Create a Block Pattern Guide and use the code in /configuration/code/block-pattern-guide.html to create it
+        [ ] Modify this as needed to get page to display
+1. [ ] Create search form page and update template file to reflect page ID
+2. [ ] If you're not using Yoast SEO, create the sitemap page and update template file (page-search.php) to use page ID (page-[id].php)
+        [ ] If you ARE using Yoast SEO, delete the sitemap page template 
+3. [ ] Create home page and use customizer to set this page to the front page
+4. [ ] Delete existing widgets
 
 
 # Login Page Customizations
@@ -122,23 +150,6 @@ To disable GreenSock animation:
             [ ] './libs/gsap/minified/ScrollTrigger.min.js'
 2. [ ] Remove the following lines from /src/scss/public.scss:
         [ ] @import "public/animations";
-
-
-# CLIENT 1 REQUESTS
-
-1. [ ] Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
-       [ ] Change the default separator to a pipe so it matches the header.php title separator -or- change the header.php title separator to a hyphen
-       [ ] Add site name and image to the Yoast SEO admin
-       [ ] Remove sitemap page and template file if using Yoast SEO
-2. [ ] Install "ACF Content Analysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
-3. [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/)
-       [ ] Add redirect from /user to /wp-admin
-4. [ ] Install "Wordfence"
-       [ ] Send license information to hello@[clientaddress]
-       [ ] Request Google reCAPTCHA keys and install them
-               [ ] Admin > Wordfence > Login Security > Settings > reCAPTCHA section
-       [ ] Set brute force login limit to 5 attempts:
-               [ ] Admin > Wordfence > Firewall > All Firewall Options > Brute Force Protection
 
 
 # QUALITY ASSURANCE / WRAP-UP / MISC NOTES
