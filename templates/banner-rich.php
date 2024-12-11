@@ -25,9 +25,17 @@ if ( $rich_banner_type == 'full' ) {
   // Add full background type to classes array
   $classes_array[] = $rich_banner_background_type;
 
-  // Check for background video files
+  // Check for background video files and placement
   if ( $rich_banner_background_type == 'video' ) {
+
+    // Check for videos
     $rich_banner_videos = ( have_rows( 'rich_banner_videos', $gv['qid'] ) ? true : false );
+
+    // Set video background position
+    $rich_banner_videos_horizontal = ( get_field( 'rich_banner_videos_horizontal', $gv['qid'] ) ?: 'horizontal-center' );
+    $rich_banner_videos_vertical = ( get_field( 'rich_banner_videos_vertical', $gv['qid'] ) ?: 'vertical-center' );
+    $rich_banner_videos_background_position = $rich_banner_videos_horizontal.' '.$rich_banner_videos_vertical;
+
   }
 
   // Set banner mask
@@ -46,10 +54,10 @@ if ( $rich_banner_image ) {
   $styles_array[] = 'background-image: url('.$rich_banner_image['sizes']['banner-bg'].')';
 }
 
-// Handle background position, defaulting to 'center center'
+// Handle static image background position, defaulting to 'center center'
 $rich_banner_background_position = ( get_field( 'rich_banner_background_position', $gv['qid'] ) ?: 'center center' );
 
-// Add background position to the styles array
+// Add static image background position to the styles array
 $styles_array[] = 'background-position: '.$rich_banner_background_position;
 
 // Create classes and styles code
@@ -78,7 +86,7 @@ $rich_banner_button = ( get_field( 'rich_banner_button', $gv['qid'] ) ? singular
     <?php endif; ?>
   </div>
   <?php if ( $rich_banner_type == 'full' && $rich_banner_background_type == 'video' && $rich_banner_videos ): ?>
-    <video class="video-bg <?php echo $rich_banner_background_position; ?>" autoplay loop muted width="100%">
+    <video class="video-bg <?php echo $rich_banner_videos_background_position; ?>" autoplay loop muted width="100%">
       <?php while ( have_rows( 'rich_banner_videos', $gv['qid'] ) ): the_row(); ?>
         <?php 
         // Get url to video file
