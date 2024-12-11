@@ -41,13 +41,9 @@ Advanced Custom Fields PRO is required by this theme.
 
 1. [ ] Install "Advanced Custom Fields PRO" and do the following:
        [ ] Add ACF Pro license and update plugin
-       [ ] Create an Options Page named "Global Options"
-       [ ] Import the following JSON files into ACF PRO:
-              [ ] /singular-theme/_configurations/acf-json/acf-options-pages.json
-              [ ] /singular-theme/_configuration/acf-json/acf-base-import.json
-              [ ] /singular-theme/_configutation/acf-json/acf-custom-blocks.json
-        [ ] Double-check the Settings > Show this field group if... settings for each block
-        [ ] Once theme is activated, save each of these field groups in order to create the local /acf-json/ files
+       [ ] After activating ACF Pro license, edit and save all field groups
+           [ ] Double-check the Settings > Show this field group if... settings for each block
+       [ ] Double-check the need to sync the field groups
 2. [ ] Install "Filebird" (https://wordpress.org/plugins/filebird/)
 3. [ ] Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
        [ ] Change the default separator to a pipe so it matches the header.php title separator -or- change the header.php title separator to a hyphen

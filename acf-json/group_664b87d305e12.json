@@ -1,0 +1,473 @@
+{
+    "key": "group_664b87d305e12",
+    "title": "Rich Banner",
+    "fields": [
+        {
+            "key": "field_665f1372a4b5b",
+            "label": "Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_664b87d3bab6d",
+            "label": "Add rich banner to page?",
+            "name": "rich_banner_add",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Yes": "Yes",
+                "No": "No"
+            },
+            "default_value": "No",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_664b8812bab6e",
+            "label": "Rich Banner Type",
+            "name": "rich_banner_type",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_664b87d3bab6d",
+                        "operator": "==",
+                        "value": "Yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "full": "Full Width Image\/Video",
+                "image-left": "Static Image Left",
+                "image-right": "Static Image Right"
+            },
+            "default_value": "full",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_665f00fa35f0b",
+            "label": "Full Width Background Type",
+            "name": "rich_banner_background_type",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_664b87d3bab6d",
+                        "operator": "==",
+                        "value": "Yes"
+                    },
+                    {
+                        "field": "field_664b8812bab6e",
+                        "operator": "==",
+                        "value": "full"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "static-image": "Static Image",
+                "video": "Video Loop"
+            },
+            "default_value": "static-image",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_674345e924a95",
+            "label": "Video Loop Files",
+            "name": "rich_banner_videos",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "It is recommended to upload an MP4 and a WEBM video file for maximum compatibility.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_664b87d3bab6d",
+                        "operator": "==",
+                        "value": "Yes"
+                    },
+                    {
+                        "field": "field_664b8812bab6e",
+                        "operator": "==",
+                        "value": "full"
+                    },
+                    {
+                        "field": "field_665f00fa35f0b",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 1,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Video",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_674348e168862",
+                    "label": "Video File",
+                    "name": "video_file",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "parent_repeater": "field_674345e924a95"
+                }
+            ]
+        },
+        {
+            "key": "field_67599c448149e",
+            "label": "Video Background Horizontal Position",
+            "name": "rich_banner_videos_horizontal",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_664b87d3bab6d",
+                        "operator": "==",
+                        "value": "Yes"
+                    },
+                    {
+                        "field": "field_664b8812bab6e",
+                        "operator": "==",
+                        "value": "full"
+                    },
+                    {
+                        "field": "field_665f00fa35f0b",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "horizontal-left": "Left",
+                "horizontal-center": "Center",
+                "horizontal-right": "Right"
+            },
+            "default_value": "horizontal-center",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_67599cb9814a2",
+            "label": "Video Background Vertical Position",
+            "name": "rich_banner_videos_vertical",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_664b87d3bab6d",
+                        "operator": "==",
+                        "value": "Yes"
+                    },
+                    {
+                        "field": "field_664b8812bab6e",
+                        "operator": "==",
+                        "value": "full"
+                    },
+                    {
+                        "field": "field_665f00fa35f0b",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "vertical-top": "Top",
+                "vertical-center": "Center",
+                "vertical-bottom": "Bottom"
+            },
+            "default_value": "vertical-center",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_664b88c9bab71",
+            "label": "Image",
+            "name": "rich_banner_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "This image will provide a backup for video loop background types.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_664b87d3bab6d",
+                        "operator": "==",
+                        "value": "Yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_6657456a350a7",
+            "label": "Background Position",
+            "name": "rich_banner_background_position",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_664b87d3bab6d",
+                        "operator": "==",
+                        "value": "Yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "center center",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_665f11f40d2ba",
+            "label": "Add opaque mask to background image\/video?",
+            "name": "rich_banner_mask",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_664b87d3bab6d",
+                        "operator": "==",
+                        "value": "Yes"
+                    },
+                    {
+                        "field": "field_664b8812bab6e",
+                        "operator": "==",
+                        "value": "full"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Yes": "Yes",
+                "No": "No"
+            },
+            "default_value": "No",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_665f13a8a4b5c",
+            "label": "Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_664b87d3bab6d",
+                        "operator": "==",
+                        "value": "Yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_664b8891bab6f",
+            "label": "Text",
+            "name": "rich_banner_text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_664b87d3bab6d",
+                        "operator": "==",
+                        "value": "Yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_664b88b2bab70",
+            "label": "Button",
+            "name": "rich_banner_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_664b87d3bab6d",
+                        "operator": "==",
+                        "value": "Yes"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1733927259
+}
