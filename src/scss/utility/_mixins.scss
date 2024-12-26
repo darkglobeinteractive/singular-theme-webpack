@@ -29,8 +29,16 @@
 
 /* PREFIX GENERATION: Creates compatibility prefixing */
 @mixin prefix-gen($title, $values...) {
-  -webkit-#{title}: $values;
+  -webkit-#{$title}: $values;
   -moz-#{$title}: $values;
   -o-#{$title}: $values;
   #{$title}: $values;
+}
+
+/* PSEUDO ELEMENT GENERATION */
+@mixin pseudo-gen($content, $display, $position, $z-index) {
+  content: $content;
+  display: $display;
+  position: $position;
+  z-index: $z-index;
 }
