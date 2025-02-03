@@ -46,7 +46,7 @@ if ( $pb_pagination ) {
   $pb_args['posts_per_page'] = $pb_quantity;
 } else {
   $pb_args['no_found_rows'] = true;
-  $pb_args['pages'] = false;
+  $pb_args['paged'] = false;
   $pb_args['posts_per_page'] = $pb_quantity;
 }
 
