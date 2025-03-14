@@ -28,6 +28,9 @@
 #navigation ul.menu > li {
   float: left;
 }
+#navigation ul.menu > li.mobile-only {
+  display: none;
+}
 #navigation ul.menu > li > a,
 #navigation ul.menu > li > .no-link {
   display: block;
