@@ -1,4 +1,4 @@
-<div class="blog-list-pagination">
+<div class="post-list-pagination">
 <?php
 the_posts_pagination ( array (
   'mid_size' => 3,

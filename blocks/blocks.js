@@ -121,7 +121,7 @@ jQuery(document).ready(function($) {
 
     // Declare variables
     $container = $(this);
-    $filter = $('.post-grid-filtering', $container);
+    $filter = $('.post-list-filtering', $container);
     $category_filter = $('select[name="filter-category"]', $filter);
     $text_search = $('input[name="filter-text"]', $filter);
 

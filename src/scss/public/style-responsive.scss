@@ -13,10 +13,10 @@
   }
 
   /* BLOG FILTERING ----------------------------------------------- */
-  .post-grid-filtering {
+  .post-list-filtering {
     @include flexbox-gen(column-reverse, wrap, $show-display: false);
   }
-  .post-grid-filtering .filter-category {
+  .post-list-filtering .filter-category {
     width: 100%;
   }
 

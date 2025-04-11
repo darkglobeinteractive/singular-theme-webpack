@@ -63,7 +63,7 @@ $block_styles = ' style="'.implode( '; ', $styles_array ).'"';
   <div<?php echo $block_classes_inner; ?>>    
 
     <?php if ( $pb_filtering ): ?>
-      <form class="post-grid-filtering" action="<?php echo get_permalink(); ?>" method="get">
+      <form class="post-list-filtering" action="<?php echo get_permalink(); ?>" method="get">
         <div class="filter-category">
           <label class="visually-hidden" for="filter-category">Filter by Category</label>
           <select id="filter-category" name="filter-category" class="select-css">
@@ -85,7 +85,7 @@ $block_styles = ' style="'.implode( '; ', $styles_array ).'"';
 
     <?php if ( $pb_query->have_posts() ): ?>
 
-      <div class="blog-list">
+      <div class="post-list">
 
         <?php while ( $pb_query->have_posts() ) : $pb_query->the_post(); ?>
           <?php include( locate_template( 'templates/blog-post.php', false, false ) ); ?>
@@ -95,7 +95,7 @@ $block_styles = ' style="'.implode( '; ', $styles_array ).'"';
 
     <?php else: ?>
 
-      <div class="blog-list empty">
+      <div class="post-list empty">
         <p>Not posts were found</p>
       </div>
     <?php endif; ?>

@@ -16,7 +16,7 @@
       ?>
       <?php if ( $query->have_posts() ) : ?>
 
-        <div class="blog-list">
+        <div class="post-list">
 
           <?php while ( $query->have_posts() ) : $query->the_post(); ?>
             <?php include( locate_template( 'templates/blog-post.php', false, false ) ); ?>

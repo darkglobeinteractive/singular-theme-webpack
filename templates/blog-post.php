@@ -11,7 +11,7 @@ if ( has_post_thumbnail() ) {
 
 $blurb = ( has_excerpt() ? get_the_excerpt() : substr( get_the_excerpt(), 0, 250 ).'[...]' );
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'item' ); ?>>
 
   <?php if ( !is_admin() ): ?>
     <?php edit_post_link( 'Edit', '<div class="edit-link">', '</div>', get_the_ID() ); ?>
