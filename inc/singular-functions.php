@@ -183,6 +183,23 @@ function singular_feed_reader( $feed_url, $article_limit = false ) {
 
 }
 
+// RANDOM ID: Generates a random ID
+// $length: The number of characters to use in the ID
+// $prefix: An optional prefix to include at the beginning of the string
+function singular_random_id( $length = 10, $prefix = '' ) {
+
+  $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  $charactersLength = strlen( $characters );
+  $randomString = '';
+
+  for ( $i = 0; $i < $length; $i++ ) {
+    $randomString .= $characters[random_int( 0, $charactersLength - 1 )];
+  }
+
+  return $prefix.$randomString;
+
+}
+
 
 // THEME FILEMTIME: This returns the timestamp of a file's modification time within the theme
 // $file: Relative path to the theme file
