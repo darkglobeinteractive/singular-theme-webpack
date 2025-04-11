@@ -94,6 +94,45 @@ jQuery(document).ready(function($) {
   });
 
 
+  /* SEARCH FORM FUNCTIONALITY ---------------------------------- */
+  $('.search-form').each(function() {
+
+    // Declare variables
+    var $search_form = $(this);
+    var $search_input = $('input[type="text"]', $search_form);
+    var $search_submit = $('button[type="submit"]', $search_form);
+    var placeholder_text = 'Enter your search term';
+
+    // Set default placeholder appearance of input field
+    if ($search_input.val() == '') {
+      $search_input.val(placeholder_text);
+    }
+    
+    // Handle focusing and blur of the field
+    $search_input.on('focus', function() {
+
+      if ($(this).val() == placeholder_text) {
+        $(this).val('');
+      }
+
+    }).on('blur', function() {
+
+      if ($(this).val() == '') {
+        $(this).val(placeholder_text);
+      }
+      
+    });
+
+    // Handle submit, preventing it if the placeholder is still in-place
+    $search_form.on('submit', function(e) {
+      if ($search_input.val() == placeholder_text) {
+        e.preventDefault();
+      }
+    });
+
+  });
+
+
   /* SMOOTH SCROLLING ------------------------------------------- */
   $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[href*="#modal"]').click(function(t){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){
 
