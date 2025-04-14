@@ -19,7 +19,7 @@
         <div class="post-list">
 
           <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-            <?php include( locate_template( 'templates/blog-post.php', false, false ) ); ?>
+            <?php include( locate_template( 'templates/post-item.php', false, false ) ); ?>
           <?php endwhile; ?>
 
         </div>

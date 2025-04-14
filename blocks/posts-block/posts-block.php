@@ -88,7 +88,7 @@ $block_styles = ' style="'.implode( '; ', $styles_array ).'"';
       <div class="post-list">
 
         <?php while ( $pb_query->have_posts() ) : $pb_query->the_post(); ?>
-          <?php include( locate_template( 'templates/blog-post.php', false, false ) ); ?>
+          <?php include( locate_template( 'templates/post-item.php', false, false ) ); ?>
         <?php endwhile; ?>
 
       </div>
