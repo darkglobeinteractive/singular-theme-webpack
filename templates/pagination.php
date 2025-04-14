@@ -1,4 +1,4 @@
-<div class="post-list-pagination">
+<div class="global-pagination">
 <?php
 the_posts_pagination ( array (
   'mid_size' => 3,
