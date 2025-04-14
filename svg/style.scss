@@ -36,6 +36,31 @@
   @include prefix-gen(transition, all 200ms ease-in-out);
 }
 
+/* PLAY BUTTON -------------------------------------------------- */
+.svg-icon.play-button,
+.svg-icon.play-button * {
+  box-sizing: border-box;
+}
+.svg-icon.play-button {
+  display: block;
+  width: 124px;
+  height: 124px;
+}
+.svg-icon.play-button svg .circle {
+  fill: var(--brand-primary);
+  @include prefix-gen(transition, all 200ms ease-in-out);
+}
+.svg-icon.play-button svg .path {
+  fill: var(--white);
+  @include prefix-gen(transition, all 200ms ease-in-out);
+}
+.svg-icon.play-button:hover svg .circle {
+  fill: var(--brand-secondary);
+}
+.svg-icon.play-button:hover svg .path {
+  fill: var(--white);
+}
+
 /* SLIDER ARROW ------------------------------------------------- */
 .svg-icon.slider-arrow,
 .svg-icon.slider-arrow * {
