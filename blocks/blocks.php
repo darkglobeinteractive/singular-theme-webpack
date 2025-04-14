@@ -19,6 +19,7 @@ add_filter( 'block_categories_all', 'singular_register_block_category' );
 function singular_register_acf_blocks() {
 	register_block_type( __DIR__ .'/color-block-cta' );
   register_block_type( __DIR__ .'/image-cta' );  
+  register_block_type( __DIR__ .'/linkable-image-background' );  
   register_block_type( __DIR__ .'/multi-slider' );
   register_block_type( __DIR__ .'/posts-block' );
   register_block_type( __DIR__ .'/testimonial' );  
