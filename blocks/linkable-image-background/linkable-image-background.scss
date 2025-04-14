@@ -1,0 +1,45 @@
+.linkable-image-background {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+// Note: The linkable-image-background-container must be added to all parent blocks in Gutenberg to work
+.linkable-image-background-container > .acf-block-preview,
+.linkable-image-background .image {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.linkable-image-background .image {
+  background: transparent url('../img/spacer.gif') center center no-repeat;
+  background-size: cover
+}
+.linkable-image-background .image .svg-icon.play-button,
+.linkable-image-background .image .admin-play-button {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  margin: -62px 0 0 -62px;
+}
+.linkable-image-background .image .admin-play-button {
+  height: 128px;
+  width: 128px;
+  background: transparent url('../img/static-icons/play-button.png') center center no-repeat;
+  background-size: 100% 100%;
+}
+
+@media screen and (max-width: 800px) {
+
+  .linkable-image-background .image .svg-icon.play-button,
+  .linkable-image-background .image .admin-play-button {
+    height: 80px;
+    width: 80px;
+    margin: -40px 0 0 -40px;
+  }
+
+}

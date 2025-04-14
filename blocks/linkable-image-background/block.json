@@ -1,0 +1,13 @@
+{
+  "name": "acf/linkable-image-background",
+  "title": "Linkable Image Background",
+  "description": "Creates a full width background image that can link to another page or open a modal window.",
+  "category": "client-pattern-blocks",
+  "icon": "format-image",
+  "keywords": ["image","background","modal"],
+  "acf": {
+      "mode": "edit",
+      "renderTemplate": "linkable-image-background.php"
+  },
+  "supports": { }
+}
