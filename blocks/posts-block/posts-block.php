@@ -1,4 +1,7 @@
 <?php
+// Generate unique id so submission of block refreshes page at top of the block
+$pb_id = ( isset( $_GET['block-anchor'] ) ? $_GET['block-anchor'] : singular_random_id( 10, 'pb-' ) );;
+
 // Declare block level variables
 $classes_array = array( 'wp-block-group', 'wp-block-singular', 'posts-block' );
 $classes_inner_array = array( 'wp-block-group__inner-container', 'is-layout-constrained', 'wp-block-group-is-layout-constrained' );
@@ -59,11 +62,11 @@ $block_classes_inner = ' class="'.implode( ' ', $classes_inner_array ).'"';
 $block_styles = ' style="'.implode( '; ', $styles_array ).'"';
 ?>
 
-<div<?php echo $block_classes; ?><?php echo $block_styles; ?>>
+<div id="<?php echo $pb_id; ?>"<?php echo $block_classes; ?><?php echo $block_styles; ?>>
   <div<?php echo $block_classes_inner; ?>>    
 
     <?php if ( $pb_filtering ): ?>
-      <form class="post-list-filtering" action="<?php echo get_permalink(); ?>" method="get">
+      <form class="post-list-filtering" action="<?php echo get_permalink(); ?>#<?php echo $pb_id; ?>" method="get">
         <div class="filter-category">
           <label class="visually-hidden" for="filter-category">Filter by Category</label>
           <select id="filter-category" name="filter-category" class="select-css">
@@ -80,6 +83,7 @@ $block_styles = ' style="'.implode( '; ', $styles_array ).'"';
             <?php include( locate_template( 'svg/magnifying-glass.php', false, false ) ); ?>
           </button>
         </div>
+        <input type="hidden" name="block-anchor" value="<?php echo $pb_id; ?>" />
       </form>
     <?php endif; ?>
 
