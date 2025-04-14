@@ -2,7 +2,7 @@
   "name": "acf/testimonial",
   "title": "Testimonial",
   "description": "A full width block containing a testimonial.",
-  "category": "client-blocks",
+  "category": "client-full-width-blocks",
   "icon": "businessperson",
   "keywords": ["testimoinal"],
   "acf": {

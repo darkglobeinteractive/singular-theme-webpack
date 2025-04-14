@@ -2,7 +2,7 @@
   "name": "acf/image-cta",
   "title": "Image CTA",
   "description": "An image above a title and text.",
-  "category": "client-blocks",
+  "category": "client-pattern-blocks",
   "icon": "external",
   "keywords": ["cta"],
   "acf": {

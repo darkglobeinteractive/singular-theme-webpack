@@ -1,10 +1,16 @@
 <?php
 // Register the custom block categories
 function singular_register_block_category( $cats ) {
-  array_unshift( $cats, array(
-    'slug' => 'client-blocks',
-    'title' => '[CLIENT] Blocks'
-  ) );
+  array_unshift( $cats, 
+    array(
+      'slug' => 'client-full-width-blocks',
+      'title' => '[CLIENT] Full-Width Blocks'
+    ),
+    array(
+      'slug' => 'client-pattern-blocks',
+      'title' => '[CLIENT] Pattern Blocks'
+    ) 
+  );
   return $cats;
 }
 add_filter( 'block_categories_all', 'singular_register_block_category' );

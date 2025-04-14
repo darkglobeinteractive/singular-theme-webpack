@@ -2,7 +2,7 @@
   "name": "acf/posts-block",
   "title": "Posts Block",
   "description": "Block used to insert posts into the block editor.",
-  "category": "client-blocks",
+  "category": "client-full-width-blocks",
   "icon": "grid-view",
   "keywords": ["posts"],
   "acf": {
