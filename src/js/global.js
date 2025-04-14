@@ -32,6 +32,13 @@ jQuery(document).ready(function($) {
   }));  
   */
 
+  /* MODAAL FUNCTIONALITY --------------------------------------- */
+
+  // For text/image columns with a video button
+  $('a.modaal-video').modaal({
+    type: 'video'
+  });
+
 
   /* NAVIGATION ------------------------------------------------- */
   $('#navigation').each(function() {
