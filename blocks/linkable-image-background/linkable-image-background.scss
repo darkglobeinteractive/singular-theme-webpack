@@ -1,9 +1,12 @@
-.linkable-image-background {
+// Note: The linkable-image-background-container must be added to all parent blocks in Gutenberg to work
+.linkable-image-background-container {
   position: relative;
+}
+.linkable-image-background {
+  position: absolute;
   height: 100%;
   width: 100%;
 }
-// Note: The linkable-image-background-container must be added to all parent blocks in Gutenberg to work
 .linkable-image-background-container > .acf-block-preview,
 .linkable-image-background .image {
   position: absolute;
