@@ -5,6 +5,7 @@
 }
 .wp-block-singular.cols-image-text { }
 .wp-block-singular.cols-image-text > .wp-block-group__inner-container {
+  max-width: 100%;
   padding: 0;
 }
 .wp-block-singular.cols-image-text .wp-block-columns {
@@ -31,6 +32,10 @@
   }
   .wp-block-singular.cols-image-text .wp-block-columns .col-content {
     padding: 100px 50px;
+  }
+  .wp-block-singular.cols-image-text .wp-block-columns .col-image {
+    height: 0;
+    padding: 0 0 65%;
   }
 
 }
