@@ -9,11 +9,10 @@ $gv = singular_global_vars();
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php
-		if ( is_plugin_active( 'wordpress-seo/wp-seo.php' ) || is_plugin_active( 'wordpress-seo-premium/wp-seo-premium.php' ) ) {
+		if ( $gv['qoc'] && get_field ( 'custom_page_title', $gv['qid']) ) {
+			echo get_field ( 'custom_page_title', $gv['qid'] );
+		} elseif ( is_plugin_active( 'wordpress-seo/wp-seo.php' ) || is_plugin_active( 'wordpress-seo-premium/wp-seo-premium.php' ) ) {
 			wp_title();
-		} elseif ( $gv['qoc'] && get_field ( 'custom_page_title', $gv['qid']) ) {
-			echo get_field ( 'custom_page_title', $gv['qid'] ).' | ';
-			bloginfo();
 		} else {
 			wp_title( '|', true, 'right' );
 			bloginfo();
