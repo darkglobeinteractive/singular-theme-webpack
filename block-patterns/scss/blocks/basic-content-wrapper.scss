@@ -38,6 +38,9 @@
 .wp-block-singular .wp-block-column > *:last-child {
   margin-bottom: 0;
 }
+.wp-block-singular .wp-block-buttons + .wp-block-buttons {
+  margin-top: 1.5em;
+}
 
 
 @media screen and (max-width: 1500px) { /* margins @ 100px */
