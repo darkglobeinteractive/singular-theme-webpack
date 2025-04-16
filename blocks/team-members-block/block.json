@@ -1,0 +1,13 @@
+{
+    "name": "acf/team-members-block",
+    "title": "Team Members Block",
+    "description": "Generates a grid or block of team members based-on category.",
+    "category": "client-pattern-blocks",
+    "icon": "admin-users",
+    "keywords": ["tean"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "team-members-block.php"
+    },
+    "supports": { }
+}
