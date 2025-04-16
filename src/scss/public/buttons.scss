@@ -29,3 +29,25 @@ input[type="submit"]:hover,
   background: var(--black);
   color: var(--white);
 }
+
+/* SPECIALTY BUTTONS -------------------------------------------- */
+button.close-modal {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: 30px;
+  width: 30px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--black);
+  font-size: 16px;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+button.close-modal .svg-icon.close-button { }
