@@ -149,4 +149,16 @@ jQuery(document).ready(function($) {
 
   });
 
+
+  /* TEAM MEMBERS ----------------------------------------------- */
+  $('.team-member > a.wrap').modaal({
+    'background': '#000000',
+    'overlay_opacity': 0.75,
+    'custom_class': 'team-member-modal',
+    'hide_close': true
+  });
+  $('.team-member-modal-content button.close-modal').on('click', function() {
+    $('.team-member > a.wrap').modaal('close');
+  });
+
 });
