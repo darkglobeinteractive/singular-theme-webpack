@@ -1,19 +1,5 @@
-<?php
-function singular_register_bps_basic_content_wrapper() {
-
-  register_block_pattern(
-    'singular-plugin/base-wrapper',
-    array(
-      'title'       => 'Basic Content Wrapper',
-      'categories'  => array( 'singular-all', 'singular-blocks' ),
-      'keywords'    => array( 'wrapper' ),
-      'description' => 'A blank block including the required padding and margins.',
-      'content'     => "<!-- wp:group -->
-      <div class=\"wp-block-group wp-block-singular\"></div>
-      <!-- /wp:group -->"
-    )
-  );
-
-}
-add_action( 'init', 'singular_register_bps_basic_content_wrapper' );
-?>
+<!-- wp:group {"metadata":{"name":"Basic Content Wrapper"},"className":"wp-block-singular","layout":{"type":"constrained"}} -->
+<div class="wp-block-group wp-block-singular"><!-- wp:paragraph -->
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus massa elit, quis tempor nibh lobortis sed. Donec id tempus dui, vitae semper odio. Sed molestie sem nec ex ultrices, ut gravida enim efficitur.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
