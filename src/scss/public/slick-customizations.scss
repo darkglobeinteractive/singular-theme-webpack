@@ -1,22 +1,47 @@
-#page .slick-slider.slick-dotted {
+.slick-slider.slick-dotted {
   margin-bottom: 50px;
 }
-#page .slick-dots {
+.slick-dots {
   bottom: -50px;
 }
-#page .slick-dots li {
+.slick-dots li {
   height: 20px;
   width: 20px;
 }
-#page .slick-dots li button {
+.slick-dots li button {
   height: 100%;
   width: 100%;
   border-radius: 100%;
   background-color: rgba(0, 0, 0, 0.75);
 }
-#page .slick-dots li button .slick-dot-icon {
+.slick-dots li button .slick-dot-icon {
   display: none;
 }
-#page .slick-dots li.slick-active button {
+.slick-dots li.slick-active button {
   background-color: rgba(0, 0, 0, 1);
+}
+.slick-autoplay-toggle-button {
+  bottom: 12px;
+  left: 12px;
+  opacity: 1;
+  padding: 0;
+}
+.slick-autoplay-toggle-button .slick-play-icon:before,
+.slick-autoplay-toggle-button .slick-pause-icon::before {
+  @include pseudo-gen('', block, relative, 10);
+  overflow: hidden;
+  height: 20px;
+  width: 20px;
+  background: transparent url('../img/spacer.gif') 0 0 no-repeat;
+  background-size: 100% 100%;
+  text-align: left;
+  text-indent: -9999em;
+}
+.slick-autoplay-toggle-button .slick-play-icon:before { 
+  content: 'Start Slider';
+  background-image: url('../img/static-icons/toggle-play.png');
+}
+.slick-autoplay-toggle-button .slick-pause-icon::before { 
+  content: 'Pause Slider';
+  background-image: url('../img/static-icons/toggle-pause.png');
 }
