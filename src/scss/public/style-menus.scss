@@ -55,30 +55,15 @@
   visibility: hidden;
   opacity: 0;
   background: var(--white);
-  -webkit-transition-property: opacity, visibility;
-  -moz-transition-property: opacity, visibility;
-  -o-transition-property: opacity, visibility;
-  transition-property: opacity, visibility;
-  -webkit-transition-duration: 200ms, 0s;
-  -moz-transition-duration: 200ms, 0s;
-  -o-transition-duration: 200ms, 0s;
-  transition-duration: 200ms, 0s;
-  -webkit-transition-timing-function: ease-in-out, linear;
-  -moz-transition-timing-function: ease-in-out, linear;
-  -o-transition-timing-function: ease-in-out, linear;
-  transition-timing-function: ease-in-out, linear;
-  -webkit-transition-delay: 0s, 200ms;
-  -moz-transition-delay: 0s, 200ms;
-  -o-transition-delay: 0s, 200ms;
-  transition-delay: 0s, 200ms;
+  @include prefix-gen(transition-property, opacity, visibility);
+  @include prefix-gen(transition-duration, 200ms, 0s);
+  @include prefix-gen(transition-timing-function, ease-in-out, linear);
+  @include prefix-gen(transition-delay, 0s, 200ms);
 }
 #navigation ul.menu > li:hover > ul {
   visibility: visible;
   opacity: 1;
-  -webkit-transition-delay: 0s, 0s;
-  -moz-transition-delay: 0s, 0s;
-  -o-transition-delay: 0s, 0s;
-  transition-delay: 0s, 0s;
+  @include prefix-gen(transition-delay, 0s, 0s);
 }
 #navigation ul.menu > li > ul > li { }
 #navigation ul.menu > li > ul > li > a,
@@ -88,10 +73,7 @@
   padding: 0.5em 1em;
   color: var(--black);
   background-color: transparent;
-  -webkit-transition: background-color 200ms ease-in-out;
-  -moz-transition: background-color 200ms ease-in-out;
-  -o-transition: background-color 200ms ease-in-out;
-  transition: background-color 200ms ease-in-out;
+  @include prefix-gen(transition, background-color 200ms ease-in-out);
 }
 #navigation ul.menu > li > ul > li:hover > a,
 #navigation ul.menu > li > ul > li:hover > .no-link {
