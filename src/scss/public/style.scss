@@ -16,7 +16,10 @@ ol { }
 ol li { }
 a { }
 a:hover { }
-img { max-width: 100%; }
+img { 
+  height: auto;
+  max-width: 100%; 
+}
 
 
 /* CUSTOM CLASSES ----------------------------------------------- */
