@@ -40,6 +40,8 @@ if ( isset( $_GET['filter-category'] ) ) {
   }
 } elseif ( is_array( $pb_categories ) ) {
   $pb_args['category__in'] = $pb_categories;
+} else {
+  $pb_args['category__not_in'] = array( 1 );
 }
 
 // Handle pagination
@@ -71,7 +73,18 @@ $block_styles = ' style="'.implode( '; ', $styles_array ).'"';
           <label class="visually-hidden" for="filter-category">Filter by Category</label>
           <select id="filter-category" name="filter-category" class="select-css">
             <option value="">Filter by Category</option>
-            <?php foreach ( get_terms( array( 'taxonomy' => 'category', 'hide_empty' => true ) ) as $cat ): ?>
+            <?php
+            $get_terms_args = array( 
+              'taxonomy' => 'category', 
+              'hide_empty' => true
+            );
+            if ( $pb_categories ) {
+              $get_terms_args['include'] = $pb_categories;
+            } else {
+              $get_terms_args['exclude'] = array( 1 );
+            }
+            ?>
+            <?php foreach ( get_terms( $get_terms_args ) as $cat ): ?>
               <option value="<?php echo $cat->term_id; ?>"<?php echo ( isset( $_GET['filter-category'] ) && $_GET['filter-category'] == $cat->term_id ? ' selected="selected"' : '' ); ?>><?php echo $cat->name; ?></option>
             <?php endforeach; ?>
           </select>
