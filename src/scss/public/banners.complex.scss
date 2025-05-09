@@ -1,0 +1,180 @@
+/* BANNER ------------------------------------------------------- */
+.banner,
+.banner * {
+  box-sizing: border-box;
+}
+.banner { }
+.banner > .wrap { }
+.banner .content { }
+.banner .content > *:first-child {
+  margin-top: 0;
+}
+.banner .content > *:last-child {
+  margin-bottom: 0;
+}
+.banner .banner-title { }
+.banner .banner-title .copy { }
+
+
+/* RICH BANNER -------------------------------------------------- */
+.banner-rich,
+.banner-rich * {
+  box-sizing: border-box;
+}
+.banner-rich { 
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background: var(--black) url('../img/spacer.gif') center center no-repeat;
+  background-size: cover;
+}
+.banner-rich .mask {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--black);
+  opacity: 0.5;
+}
+.banner-rich > .wrap { 
+  @include flexbox-gen(row, nowrap);
+  position: relative;
+  z-index: 3;
+  min-height: 887px;
+}
+.banner-rich .content { 
+  @include flexbox-gen($align-items: center);
+  width: 100%;
+  padding: 210px;
+}
+.banner-rich .content .content-wrap {
+  max-width: 600px;
+  color: var(--white);
+  font-size: 20px;
+  line-height: 1.4em;
+}
+.banner-rich .content .content-wrap > *:first-child {
+  margin-top: 0;
+}
+.banner-rich .content .content-wrap > *:last-child {
+  margin-bottom: 0;
+}
+.banner-rich .content .content-wrap h1 {
+  margin-bottom: 0.25em;
+  color: var(--white);
+  font-size: 86px;
+  font-weight: 800;
+  line-height: 1.16279em;
+}
+.banner-rich .content .content-wrap .big {
+  font-size: 30px;
+  line-height: 1.25em;
+}
+.banner-rich .content .content-wrap p a {
+  color: var(--white);
+  text-decoration: none;
+}
+.banner-rich .content .content-wrap p a:hover {
+  text-decoration: underline;
+}
+.banner-rich .content .content-wrap .button-wrap { 
+  margin-top: 60px;
+}
+.banner-rich .content .content-wrap .button-wrap .btn {
+  margin: 0;
+}
+
+/* full width image banners */
+.banner-rich.full .content { 
+  background-color: transparent;
+}
+
+/* image-aligned banners */
+.banner-rich.image-aligned > .wrap {
+  padding: 0;
+}
+.banner-rich.image-left > .wrap {
+  @include flexbox-gen($direction: row-reverse, $wrap: nowrap, $show-display: false);
+}
+.banner-rich.image-aligned .content {
+  position: relative;
+  z-index: 2;
+  width: 47%;
+  padding: 150px;
+}
+.banner-rich.image-aligned .content .content-wrap {
+  max-width: 100%;
+}
+.banner-rich.image-aligned .image {
+  position: relative;
+  z-index: 1;
+  width: 53%;
+  background: transparent url('../img/spacer.gif') center center no-repeat;
+  background-size: cover;
+}
+
+/* video loop backgrounds */
+.banner-rich.video .video-bg {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  transform: translateX(-50%) translateY(-50%);
+  background: url('../img/spacer.gif') no-repeat;
+  background-size: cover;
+  @include prefix-gen(transition, 1s opacity);
+}
+.banner-rich.video .video-bg.horizontal-left.vertical-top {
+  left: 0;
+  top: 0;
+  @include prefix-gen(transform, translateX(0) translateY(0));
+}
+.banner-rich.video .video-bg.horizontal-center.vertical-top {
+  left: 50%;
+  top: 0;
+  @include prefix-gen(transform, translateX(-50%) translateY(0));
+}
+.banner-rich.video .video-bg.horizontal-right.vertical-top {
+  left: auto;
+  right: 0;
+  top: 0;
+  @include prefix-gen(transform, translateX(0) translateY(0));
+}
+.banner-rich.video .video-bg.horizontal-left.vertical-center {
+  left: 0;
+  top: 50%;
+  @include prefix-gen(transform, translateX(0) translateY(-50%));
+}
+.banner-rich.video .video-bg.horizontal-right.vertical-center {
+  left: auto;
+  right: 0;
+  top: 50%;
+  @include prefix-gen(transform, translateX(0) translateY(-50%));
+}
+.banner-rich.video .video-bg.horizontal-left.vertical-bottom {
+  left: 0;
+  top: auto;
+  bottom: 0;
+  @include prefix-gen(transform, translateX(0) translateY(0));
+}
+.banner-rich.video .video-bg.horizontal-center.vertical-bottom {
+  left: 50%;
+  top: auto;
+  bottom: 0;
+  @include prefix-gen(transform, translateX(-50%) translateY(0));
+}
+.banner-rich.video .video-bg.horizontal-right.vertical-bottom {
+  left: auto;
+  top: auto;
+  bottom: 0;
+  right: 0;
+  @include prefix-gen(transform, translateX(0) translateY(0));
+}

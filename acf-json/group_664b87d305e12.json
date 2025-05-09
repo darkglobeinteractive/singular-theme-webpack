@@ -1,6 +1,6 @@
 {
     "key": "group_664b87d305e12",
-    "title": "Rich Banner",
+    "title": "Rich Banner: Complex",
     "fields": [
         {
             "key": "field_665f1372a4b5b",
@@ -464,8 +464,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737473960
+    "modified": 1746802249
 }
