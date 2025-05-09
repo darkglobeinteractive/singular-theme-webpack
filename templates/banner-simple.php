@@ -1,7 +1,6 @@
 <?php
 // Grab global variables from custom function.php function
 $gv = singular_global_vars();
-$qo = $gv['queried_object'];
 
 // Set default page title
 $banner_title = get_the_title();
@@ -14,14 +13,14 @@ if ( is_search() ) {
 } elseif ( is_404() ) {
   $banner_title = 'Page Not Found';
 // Blog category or tag listing pages
-} elseif ( is_category() || is_tag() ) {
-  $banner_title = 'Blog: '.$qo->name;
+} elseif ( $gv['qoc'] && ( is_category() || is_tag() ) ) {
+  $banner_title = 'Blog: '. $gv['queried_object']->name;
 // All blog posts have the same title
 } elseif ( get_post_type() === 'post' ) {
   $banner_title = 'Blog';
 // Override title if Custom Fields custom_page_title exists
-} elseif ( get_field( 'custom_page_title', $qo ) ) {
-  $banner_title = get_field( 'custom_page_title', $qo );
+} elseif ( $gv['qoc'] && get_field( 'custom_page_title', $gv['qid'] ) ) {
+  $banner_title = get_field( 'custom_page_title', $gv['qid'] );
 }
 
 // Build the title element
