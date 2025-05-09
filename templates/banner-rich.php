@@ -3,7 +3,7 @@
 $gv = singular_global_vars();
 
 // Create arrays for banner classes and styles
-$classes_array = array( 'banner-rich' );
+$classes_array = array( 'banner-rich', 'has-black-background-color', 'has-background' );
 $styles_array = array();
 $btn_array = array( 'btn' );
 
