@@ -43,6 +43,23 @@
   z-index: $z-index;
 }
 
+/* REMOVE DEFAULT BUTTON STYLES */
+@mixin remove-button-styles() {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  color: var(--black);
+  font-size: 16px;
+  line-height: 1em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
 /* VISUALLY HIDDEN */
 @mixin visually-hidden() {
   border: 0;
