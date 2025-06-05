@@ -130,6 +130,13 @@ function singular_global_vars() {
 add_action( 'template_redirect', 'singular_global_vars' );
 
 
+/* SHORTCODE TO DISPLAY SEARCH FORM ----------------------------- */
+function singular_display_search_form() {
+	return get_search_form(false);
+}
+add_shortcode( 'display_search_form', 'singular_display_search_form' );
+
+
 /* WP CORE CUSTOM FIELDS ---------------------------------------- */
 /* Un-comment the following line if you need to use WordPress core "Custom Fields" */
 /* The "Advanced Custom Themes" plugin hides the option by default */
