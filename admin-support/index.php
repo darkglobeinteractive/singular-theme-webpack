@@ -1,12 +1,4 @@
 <?php
-
-/* LOAD STYLE SHEET --------------------------------------------- */
-function singular_support_styles( $hook ) {
-  wp_enqueue_style( 'singular-support-css', get_template_directory_uri().'/admin-support/styles.css', array(), singular_theme_filemtime( '/admin-support/styles.css' ) );
-}
-add_action( 'admin_enqueue_scripts', 'singular_support_styles' );
-
-
 /* CREATE ADMIN MENU STRUCTURE ---------------------------------- */
 function singular_support_menu() {
 	add_menu_page( 
