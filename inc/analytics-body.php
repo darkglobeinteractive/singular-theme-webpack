@@ -1,1 +1,0 @@
-<?php echo ( get_field( 'analytics_code_body', 'option' ) ?: '' ); ?>
