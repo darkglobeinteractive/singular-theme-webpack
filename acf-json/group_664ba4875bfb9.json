@@ -322,11 +322,11 @@
         },
         {
             "key": "field_66d084dfd8f20",
-            "label": "Body Element Code",
-            "name": "analytics_code_body",
+            "label": "Body Element Code (Top)",
+            "name": "analytics_code_body_top",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "This code will be placed in the &lt;body&gt; element of the theme.",
+            "instructions": "This code will be placed at the top of the &lt;body&gt; element of the theme.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -336,6 +336,28 @@
             },
             "default_value": "",
             "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_689b4efaa132f",
+            "label": "Body Element Code (Bottom)",
+            "name": "analytics_code_body_bottom",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "This code will be placed at the bottom of the &lt;body&gt; element of the theme.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
             "rows": "",
             "placeholder": "",
             "new_lines": ""
@@ -359,5 +381,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1733927255
+    "modified": 1755008819
 }

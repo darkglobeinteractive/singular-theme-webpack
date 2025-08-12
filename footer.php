@@ -9,5 +9,6 @@
     </footer>
   </div>
 <?php wp_footer(); ?>
+<?php include( locate_template( 'inc/analytics-body-bottom.php', false, false ) ); ?>
 </body>
 </html>
