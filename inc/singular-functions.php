@@ -201,6 +201,40 @@ function singular_random_id( $length = 10, $prefix = '' ) {
 }
 
 
+// RETURN PRIMARY CATEGORY: Return the primary category's name for a post
+// $cat_array: The array that wp_get_post_categories( $post->ID ) returns
+// $pid: The $post->ID
+// $default_cat: The default category we want to return (defaults to 1 "Uncategorized")
+function singular_return_primary_category( $cat_array, $pid, $default_cat = 1 ) {
+
+  // Set default value
+  $return_cat = get_category( $default_cat )->name;
+
+  // If there's only a single item in the arry -or- Yoast SEO is not installed, return the first item in the array
+  if ( count( $cat_array ) == 1 || ( !is_plugin_active( 'wordpress-seo/wp-seo.php' ) && !is_plugin_active( 'wordpress-seo-premium/wp-seo-premium.php' ) ) ) {
+
+    $return_cat = ( get_category( $cat_array[0] ) ? get_category( $cat_array[0] )->name : 'Article' );
+
+  } else {
+
+    // Iterate over each item in the array
+    foreach ( $cat_array as $r ) {
+
+      // If the ID matches Yoast's primary category, return it
+      if ( get_post_meta( $pid, '_yoast_wpseo_primary_category', true ) == $r ) {
+        $return_cat = get_category( $r )->name;
+      }
+
+    } 
+
+  }
+
+  // Return the category
+  return $return_cat;
+
+}
+
+
 // THEME FILEMTIME: This returns the timestamp of a file's modification time within the theme
 // $file: Relative path to the theme file
 function singular_theme_filemtime( $file ) {
