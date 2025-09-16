@@ -60,6 +60,13 @@
   -webkit-appearance: none;
 }
 
+/* REMOVE DEFAULT LIST STYLES */
+@mixin remove-list-styles() {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* VISUALLY HIDDEN */
 @mixin visually-hidden() {
   border: 0;
