@@ -59,9 +59,9 @@ if ( $pb_pagination ) {
 $pb_query = new WP_Query( $pb_args );
 
 // Handle styles and classes
-$block_classes = ' class="'.implode( ' ', $classes_array ).'"';
-$block_classes_inner = ' class="'.implode( ' ', $classes_inner_array ).'"';
-$block_styles = ' style="'.implode( '; ', $styles_array ).'"';
+$block_classes = singular_attribute_builder( $classes_array, 'class' );
+$block_classes_inner = singular_attribute_builder( $classes_inner_array, 'class' );
+$block_styles = singular_attribute_builder( $styles_array, 'style' );
 ?>
 
 <div id="<?php echo $pb_id; ?>"<?php echo $block_classes; ?><?php echo $block_styles; ?>>

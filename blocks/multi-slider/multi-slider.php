@@ -34,9 +34,9 @@ if ( $autoplay_check ) {
 }
 
 // Handle styles and classes
-$block_classes = ' class="'.implode( ' ', $classes_array ).'"';
-$block_classes_inner = ' class="'.implode( ' ', $classes_inner_array ).'"';
-$block_styles = ' style="'.implode( '; ', $styles_array ).'"';
+$block_classes = singular_attribute_builder( $classes_array, 'class' );
+$block_classes_inner = singular_attribute_builder( $classes_inner_array, 'class' );
+$block_styles = singular_attribute_builder( $styles_array, 'style' );
 ?>
 
 <?php if ( have_rows( 'image_slider' ) ): ?>

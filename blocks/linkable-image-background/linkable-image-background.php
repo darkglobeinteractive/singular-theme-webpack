@@ -1,7 +1,6 @@
 <?php
 // Declare block level variables
 $classes_array = array( 'linkable-image-background' );
-$image_styles_array = array();
 
 // Handle the image
 $image_src = ( get_field( 'lib_image' ) ? get_field( 'lib_image' )['sizes']['large'] : get_template_directory_uri().'/img/placeholder-image.png' );
@@ -38,7 +37,7 @@ if ( $link_check && $link ) {
 }
 
 // Handle styles and classes
-$block_classes = ' class="'.implode( ' ', $classes_array ).'"';
+$block_classes = singular_attribute_builder( $classes_array, 'class' );
 ?>
 
 <div<?php echo $block_classes; ?>>

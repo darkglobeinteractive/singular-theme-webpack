@@ -61,8 +61,8 @@ $rich_banner_background_position = ( get_field( 'rich_banner_background_position
 $styles_array[] = 'background-position: '.$rich_banner_background_position;
 
 // Create classes and styles code
-$block_classes = ' class="'.implode( ' ', $classes_array ).'"';
-$block_styles = ' style="'.implode( '; ', $styles_array ).'"';
+$block_classes = singular_attribute_builder( $classes_array, 'class' );
+$block_styles = singular_attribute_builder( $styles_array, 'style' );
 $btn_classes = implode( ' ', $btn_array );
 
 // Handle banner text and button

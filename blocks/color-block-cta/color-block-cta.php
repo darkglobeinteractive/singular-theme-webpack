@@ -31,8 +31,8 @@ $unique_class = 'aic-'.md5( $heading.$text.$href.$target );
 $classes_array[] = $unique_class;
 
 // Handle styles and classes
-$block_classes = ' class="'.implode( ' ', $classes_array ).'"';
-$block_styles = ' style="'.implode( '; ', $styles_array ).'"';
+$block_classes = singular_attribute_builder( $classes_array, 'class' );
+$block_styles = singular_attribute_builder( $styles_array, 'style' );
 ?>
 <style>
   .<?php echo $unique_class; ?>:hover .svg-icon.arrow-in-circle svg > .wrap .circle circle {

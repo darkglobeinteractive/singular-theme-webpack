@@ -21,8 +21,8 @@ if ( $link ) {
 }
 
 // Handle styles and classes
-$block_classes = ' class="'.implode( ' ', $classes_array ).'"';
-$block_styles = ' style="'.implode( '; ', $styles_array ).'"';
+$block_classes = singular_attribute_builder( $classes_array, 'class' );
+$block_styles = singular_attribute_builder( $styles_array, 'style' );
 ?>
 
 <?php if ( is_admin() || !$link ): ?>
