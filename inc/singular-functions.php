@@ -57,6 +57,29 @@ function singular_color_palette_class( $hex, $type ) {
 }
 
 
+// ATTRIBUTE BUILDER: Builds an element's attribute from an array
+// $attr_array: An array of items for the attribute
+// $attr: The attribute we're building
+function singular_attribute_builder( $attr_array, $attr ) {
+
+  if ( !is_array( $attr_array ) || !$attr ) {
+    return '';
+  } else {
+
+    // Handle different attributes
+    if ( $attr == 'class' ) {
+      return ' class="'.implode( ' ', $attr_array ).'"';
+    } elseif ( $attr == 'style' ) {
+      return ' style="'.implode( '; ', $attr_array ).'"';
+    } else {
+      return ' '.$attr.'="'.implode( ' ', $attr_array ).'"';
+    }
+
+  }
+
+}
+
+
 // CUSTOM DEBUGGING: Generates an element describing a field for debugging purposes
 // $field: The raw field data
 // $field_type: The type of field (e.g. text, array, etc.)
