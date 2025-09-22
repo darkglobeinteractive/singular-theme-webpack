@@ -10,7 +10,8 @@ const config = {
       './src/js/animations.js',
       './block-patterns/js/block-patterns.js',
       './blocks/blocks.js',
-      './src/js/global.js'
+      './src/js/global.js',
+      './src/js/ninja-forms.js'
     ],
     defer: [
       './libs/modaal/dist/js/modaal.js',
