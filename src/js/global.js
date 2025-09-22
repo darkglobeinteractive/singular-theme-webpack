@@ -6,6 +6,16 @@ jQuery(document).ready(function($) {
   */
   function st_throttle(e,f,j,i){var c=undefined;var h,d=0;if(typeof f!=="boolean"){i=j;j=f;f=c}function g(){var o=this,m=+new Date()-d,n=arguments;function l(){d=+new Date();j.apply(o,n)}function k(){h=c}if(i&&!h){l()}h&&clearTimeout(h);if(i===c&&m>e){l()}else{if(f!==true){h=setTimeout(i?k:l,i===c?e-m:e)}}}if($.guid){g.guid=j.guid=j.guid||$.guid++}return g}
 
+  // Global function that works with dynamically generated content on the page
+  function applyWhenElementExists(selector, myFunction, intervalTime) {
+    var interval = setInterval(function() {
+      if (jQuery(selector).length > 0) {
+        myFunction();
+        clearInterval(interval);
+      }
+    }, intervalTime);
+  }
+
   /*
   $(window).on('scroll', st_throttle(500, function() {
     console.log('do something');
