@@ -1,0 +1,100 @@
+.alert-banner,
+.alert-banner * {
+  box-sizing: border-box;
+}
+.alert-banner {
+  color: var(--white);
+  font-size: 18px;
+  line-height: 1.15em;
+  text-align: center;
+}
+.alert-banner.has-black-background-color,
+.alert-banner.has-black-background-color a {
+  color: var(--white);
+}
+.alert-banner.has-white-background-color,
+.alert-banner.has-white-background-color a {
+  color: var(--black);
+}
+.alert-banner .wrap { 
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 12px 100px;
+}
+.alert-banner.include-icon .content {
+  padding-left: 40px;
+  background: transparent url('../img/spacer.gif') left center no-repeat;
+  background-size: 28px auto;
+}
+.alert-banner.has-black-background-color.exclamation-point-icon .content {
+  background-image: url('../img/alert-banner-icon/exclamation-point-white.png');
+}
+.alert-banner.has-white-background-color.exclamation-point-icon .content {
+  background-image: url('../img/alert-banner-icon/exclamation-point-black.png');
+}
+.alert-banner.no-icon .content {
+  padding-left: none;
+}
+.alert-banner .content > *:first-child {
+  margin-top: 0;
+}
+.alert-banner .content > *:last-child {
+  margin-bottom: 0;
+}
+.alert-banner .content p {
+  line-height: 1.25em;
+}
+.alert-banner .content a {
+  text-decoration: underline;
+}
+.alert-banner .content a:hover {
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 1200px) { /* margins @ 75px */
+
+  .alert-banner .wrap {
+    padding: 12px 75px;
+  }
+
+}
+
+@media screen and (max-width: 1024px) { /* margins @ 50px */
+
+  .alert-banner .wrap {
+    padding: 12px 50px;
+  }
+
+}
+
+@media screen and (max-width: 800px) { /* margins @ 40px */
+
+  .alert-banner .wrap {
+    padding: 12px 40px;
+  }
+
+}
+
+@media screen and (max-width: 600px) { /* margins @ 30px */
+
+  .alert-banner .wrap {
+    padding: 12px 30px;
+  }
+
+}
+
+@media screen and (max-width: 400px) { /* margins @ 20px */
+
+  .alert-banner .wrap {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+}
