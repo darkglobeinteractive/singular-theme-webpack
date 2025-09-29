@@ -258,6 +258,16 @@ function singular_return_primary_category( $cat_array, $pid, $default_cat = 1 ) 
 }
 
 
+// TIME EXPIRATION: Checks to see if a timestamp 
+// $compare_date: The date we're checking against time()
+function singular_time_expiration( $compare_date ) {
+
+  // Return whether or not the current time is greater than the expiration time
+  return time() > ( strtotime( $compare_date ) + 14400 );
+
+}
+
+
 // THEME FILEMTIME: This returns the timestamp of a file's modification time within the theme
 // $file: Relative path to the theme file
 function singular_theme_filemtime( $file ) {
