@@ -27,6 +27,7 @@ $gv = singular_global_vars();
 		<?php include( locate_template( 'inc/analytics-body-top.php', false, false ) ); ?>
 		<a href="#main" class="skip-main">Skip to Main Content</a>		
     <div id="page">
+			<?php include( locate_template( 'templates/alert-banner.php', false, false ) ); ?>
       <header id="header">
 				<div class="wrap">
 	        <?php include( locate_template( 'templates/logo.php', false, false ) ); ?>
