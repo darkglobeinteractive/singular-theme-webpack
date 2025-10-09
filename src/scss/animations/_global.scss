@@ -1,0 +1,70 @@
+/* GLOBAL ELEMENTS ---------------------------------------------- */
+#footer > .wrap {
+  opacity: 0;
+}
+
+
+/* STAGGER ANIMATION CSS ---------------------------------------- */
+.st-animate { }
+
+
+// fade-in
+.st-animate.fade-in {
+  opacity: 0;
+}
+
+
+/* IMMEDIATE ANIMATION CSS -------------------------------------- */
+.im-animate { }
+
+// fade-in
+.im-animate.fade-in {
+  opacity: 0;
+}
+
+// stagger fade
+.im-animate.stagger-fade {
+  opacity: 0;
+}
+
+
+/* GLOBAL/STANDARD BLOCKS AND SITUATIONS ------------------------ */
+
+// basic content wrapper
+.wp-block-singular > .wp-block-group__inner-container {
+  opacity: 0;
+}
+
+// accordions
+.wp-block-singular.accordion-container > .wp-block-group__inner-container {
+  opacity: 1;
+}
+.wp-block-singular.accordion-container .accordion-item { 
+  opacity: 0;
+}
+
+// post banners
+#banner-post .content-wrap > *,
+#banner-post .post-banner-section {
+  opacity: 0;
+}
+#banner-post .content-wrap > * {
+  position: relative;
+}
+
+// rich banners 
+.banner-rich .content-wrap > * {
+  opacity: 0;
+  position: relative;
+}
+
+// search results
+#search-results .search-result {
+  opacity: 0;
+}
+
+// simple banner
+.banner .content > * {
+  opacity: 0;
+  position: relative;
+}

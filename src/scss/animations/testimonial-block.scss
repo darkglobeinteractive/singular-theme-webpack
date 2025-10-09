@@ -1,0 +1,11 @@
+.wp-block-singular.testimonial-block > .wp-block-group__inner-container {
+  opacity: 1;
+}
+
+// testimonials block
+.wp-block-singular.testimonial-block .image {
+  opacity: 0;
+}
+.wp-block-singular.testimonial-block .content-item {
+  opacity: 0;
+}

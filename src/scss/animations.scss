@@ -1,0 +1,9 @@
+// Include Needed Utilities
+@import "utility/_mixins";
+
+// Animations SCSS Files
+@import "animations/_global";
+@import "animations/color-block-cta-columns";
+@import "animations/image-cta-columns";
+@import "animations/team-members-block";
+@import "animations/testimonial-block";
