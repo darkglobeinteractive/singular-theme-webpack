@@ -11,8 +11,8 @@ const config = {
       './blocks/blocks.js',
       './src/js/global.js',
       './src/js/ninja-forms.js',
-      './src/scss/animations.scss',
-      './src/js/animations.js',
+      // './src/scss/animations.scss',
+      // './src/js/animations.js',
     ],
     defer: [
       './libs/modaal/dist/js/modaal.js',

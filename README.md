@@ -136,16 +136,13 @@ The theme contains a handful of custom blocks.
 GreenSock is the animation library we'd like to focus on using:
 https://greensock.com/docs/
 
-To disable GreenSock animation:
+To enable GreenSock animation:
 
-1. [ ] Remove the following lines from webpack.config.js:
-        [ ] config.entry.public
-            [ ] './src/js/animations.js'
-        [ ] config.entry.defer
-            [ ] './libs/gsap/minifired/gsap.min.js'
-            [ ] './libs/gsap/minified/ScrollTrigger.min.js'
-2. [ ] Remove the following lines from /src/scss/public.scss:
-        [ ] @import "public/animations";
+1. [ ] Uncomment the following lines in the config.entry.public array of the webpack.config.js file:
+        [ ] './src/scss/animations.scss'
+        [ ] './src/scss/animations.js'
+
+NOTE: This handles the blocks and patterns that are built-into the theme, but you'll definitely need to add/modify/delete these based-on the changes you make.
 
 
 # QUALITY ASSURANCE / WRAP-UP / MISC NOTES
@@ -181,6 +178,10 @@ Notes: We're beginning to try-out this modal library because it's proven to be s
 ===================================
 Version Notes (A little late to this party...)
 ===================================
+
+# General Notes (v.2.1) (October 9, 2025)
+
+Extensive default animations were added to handle basic fades, slides and staggers for the existing core sections, block patterns and custom blocks included in the theme.
 
 # General Notes (v.2.0) (November 30, 2024)
 
