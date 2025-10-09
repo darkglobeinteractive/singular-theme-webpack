@@ -1,5 +1,15 @@
 jQuery(document).ready(function($) {
 
+  // Global function that works with dynamically generated content on the page
+  function applyWhenElementExists(selector, myFunction, intervalTime) {
+    var interval = setInterval(function() {
+      if (jQuery(selector).length > 0) {
+        myFunction();
+        clearInterval(interval);
+      }
+    }, intervalTime);
+  }
+
   // Replaces input field submit buttons with button fields
   applyWhenElementExists('.nf-form-cont', function() {
 
