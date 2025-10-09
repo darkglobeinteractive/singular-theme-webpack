@@ -7,11 +7,12 @@ const config = {
     public: [
       './src/scss/public.scss',
       './libs/mmenu/dist/mmenu.js',
-      './src/js/animations.js',
       './block-patterns/js/block-patterns.js',
       './blocks/blocks.js',
       './src/js/global.js',
-      './src/js/ninja-forms.js'
+      './src/js/ninja-forms.js',
+      './src/scss/animations.scss',
+      './src/js/animations.js',
     ],
     defer: [
       './libs/modaal/dist/js/modaal.js',
