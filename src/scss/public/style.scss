@@ -35,6 +35,9 @@ img {
 .visually-hidden { 
   @include visually-hidden();
 }
+.position-relative {
+  position: relative;
+}
 
 
 /* SITE LOGO ---------------------------------------------------- */
