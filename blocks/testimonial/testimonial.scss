@@ -1,17 +1,17 @@
-.wp-block-singular.testimonial,
-.wp-block-singular.testimonial * {
+.wp-block-singular.testimonial-block,
+.wp-block-singular.testimonial-block * {
   box-sizing: border-box;
 }
-.wp-block-singular.testimonial { }
-.wp-block-singular.testimonial .content-wrapper { 
+.wp-block-singular.testimonial-block { }
+.wp-block-singular.testimonial-block .content-wrapper { 
   position: relative;
   max-width: 1100px;
   margin: 0 auto;
   padding: 150px 50px 50px;
   text-align: center;
 }
-.wp-block-singular.testimonial .content-wrapper::before,
-.wp-block-singular.testimonial .content-wrapper::after {
+.wp-block-singular.testimonial-block .content-wrapper::before,
+.wp-block-singular.testimonial-block .content-wrapper::after {
   content: '';
   display: block;
   position: absolute;
@@ -22,17 +22,17 @@
   background-size: 100% 100%;
   opacity: 0.2;
 }
-.wp-block-singular.testimonial .content-wrapper::before {
+.wp-block-singular.testimonial-block .content-wrapper::before {
   top: 0;
   left: 0;
   background-image: url('../img/static-icons/quotation-mark-left.png');
 }
-.wp-block-singular.testimonial .content-wrapper::after {
+.wp-block-singular.testimonial-block .content-wrapper::after {
   bottom: 0;
   right: 0;
   background-image: url('../img/static-icons/quotation-mark-right.png');
 }
-.wp-block-singular.testimonial .testimonial-quote { 
+.wp-block-singular.testimonial-block .testimonial-quote { 
   position: relative;
   z-index: 2;
   margin: 0 0 30px;
@@ -40,34 +40,34 @@
   font-weight: 500;
   line-height: 1.25em;
 }
-.wp-block-singular.testimonial .testimonial-info { 
+.wp-block-singular.testimonial-block .testimonial-info { 
   position: relative;
   z-index: 2;
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
 }
-.wp-block-singular.testimonial .testimonial-info .testimonial-author { }
-.wp-block-singular.testimonial .testimonial-info .testimonial-title { }
-.wp-block-singular.testimonial .testimonial-info .testimonial-title::before {
+.wp-block-singular.testimonial-block .testimonial-info .testimonial-author { }
+.wp-block-singular.testimonial-block .testimonial-info .testimonial-title { }
+.wp-block-singular.testimonial-block .testimonial-info .testimonial-title::before {
   content: ' - ';
   display: inline;
 }
 
 @media screen and (max-width: 1200px) {
 
-  .wp-block-singular.testimonial .content-wrapper { 
+  .wp-block-singular.testimonial-block .content-wrapper { 
     padding: 100px 30px 30px;
   }
-  .wp-block-singular.testimonial .content-wrapper::before,
-  .wp-block-singular.testimonial .content-wrapper::after {
+  .wp-block-singular.testimonial-block .content-wrapper::before,
+  .wp-block-singular.testimonial-block .content-wrapper::after {
     height: 161px;
     width: 200px;
   }
-  .wp-block-singular.testimonial .testimonial-quote { 
+  .wp-block-singular.testimonial-block .testimonial-quote { 
     font-size: 36px;
   }
-  .wp-block-singular.testimonial .testimonial-info { 
+  .wp-block-singular.testimonial-block .testimonial-info { 
     font-size: 18px;
   }
 
@@ -75,18 +75,18 @@
 
 @media screen and (max-width: 600px) {
 
-  .wp-block-singular.testimonial .content-wrapper { 
+  .wp-block-singular.testimonial-block .content-wrapper { 
     padding: 50px 20px 20px;
   }
-  .wp-block-singular.testimonial .content-wrapper::before,
-  .wp-block-singular.testimonial .content-wrapper::after {
+  .wp-block-singular.testimonial-block .content-wrapper::before,
+  .wp-block-singular.testimonial-block .content-wrapper::after {
     height: 80px;
     width: 100px;
   }
-  .wp-block-singular.testimonial .testimonial-quote { 
+  .wp-block-singular.testimonial-block .testimonial-quote { 
     font-size: 30px;
   }
-  .wp-block-singular.testimonial .testimonial-info { 
+  .wp-block-singular.testimonial-block .testimonial-info { 
     font-size: 16px;
   }
 

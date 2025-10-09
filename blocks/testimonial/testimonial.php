@@ -1,6 +1,6 @@
 <?php
 // Declare block level variables
-$classes_array = array( 'wp-block-group', 'wp-block-singular', 'testimonial' );
+$classes_array = array( 'wp-block-group', 'wp-block-singular', 'testimonial-block' );
 $classes_inner_array = array( 'wp-block-group__inner-container', 'is-layout-constrained', 'wp-block-group-is-layout-constrained' );
 $styles_array = array();
 
@@ -30,10 +30,10 @@ $block_styles = singular_attribute_builder( $styles_array, 'style' );
   <div<?php echo $block_classes_inner; ?>>
     <div class="content-wrapper">
       <?php if ( $testimonial_quote ): ?>
-        <div class="testimonial-quote"><?php echo $testimonial_quote; ?></div>
+        <div class="testimonial-quote testimonial-section"><?php echo $testimonial_quote; ?></div>
       <?php endif; ?>
       <?php if ( $testimonial_author ): ?>
-        <div class="testimonial-info">
+        <div class="testimonial-info testimonial-section">
           <span class="testimonial-author"><?php echo $testimonial_author; ?></span>
           <?php if ( $testimonial_author_title ): ?>
             <span class="testimonial-title"><?php echo $testimonial_author_title; ?></span>
