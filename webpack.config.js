@@ -11,14 +11,15 @@ const config = {
       './blocks/blocks.js',
       './src/js/global.js',
       './src/js/ninja-forms.js',
+      // './src/js/counterup.js', // GSAP and ScrollTrigger are required for Counter Up to work
       // './src/scss/animations.scss',
       // './src/js/animations.js',
     ],
     defer: [
       './libs/modaal/dist/js/modaal.js',
       './libs/accessible-slick/slick/slick.min.js',
-      './libs/gsap/minified/gsap.min.js',
-      './libs/gsap/minified/ScrollTrigger.min.js',
+      // './libs/gsap/minified/gsap.min.js',
+      // './libs/gsap/minified/ScrollTrigger.min.js',
     ],
     admin: [
       './src/scss/admin.scss',
