@@ -273,4 +273,40 @@ function singular_time_expiration( $compare_date ) {
 function singular_theme_filemtime( $file ) {
   return filemtime( get_template_directory().$file );
 }
+
+
+// YOUTUBE THUMBNAIL: This returns the thumbnail of a YouTube video
+// https://support.advancedcustomfields.com/forums/topic/youtube-thumbnail-object-with-oembed-field/
+// https://stackoverflow.com/questions/34763547/youtube-maxresdefault-thumbnails
+// $oembed: The oembed code
+function singular_youtube_thumbnail( $oembed ) {
+  
+  // Pull the src attribute from the oembed code
+  preg_match('/src="(.+?)"/', $oembed, $matches_url );
+
+  // Just pull the URL from the src attribute
+  $src = $matches_url[1];	
+
+  // Do a rough check to confirm that the URL is a youtube embed src
+  if ( str_contains( $src, 'you' ) || str_contains( $src, 'tube' ) ) {
+
+    // Pull just the portion containing the ID
+    preg_match('/embed(.*?)?feature/', $src, $matches_id );
+
+    // Pull the ID from the previous string
+    $id = $matches_id[1];
+
+    // Replace anything before the code with nothing
+    $id = str_replace( str_split( '?/' ), '', $id );
+
+    // Return the highest resolution thumbnail image
+    return '<img src="http://img.youtube.com/vi/'.$id.'/maxresdefault.jpg">';
+
+  } else {
+
+    return false;
+
+  }
+
+}
 ?>
