@@ -151,7 +151,12 @@ jQuery(document).ready(function($) {
 
 
   /* SMOOTH SCROLLING ------------------------------------------- */
-  $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[href*="#modal"]').click(function(t){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){
+  $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[href*="#modal"]').click(function(t){
+    
+    // Set variable determining if this is a keyboard click or a mouse click
+    var event_type = t.originalEvent.detail;
+
+    if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){
 
     var e = $(this.hash);
 
@@ -167,6 +172,17 @@ jQuery(document).ready(function($) {
 
   (e=e.length?e:$("[name="+this.hash.slice(1)+"]")).length&&(t.preventDefault(),$("html, body").animate({
     scrollTop:e_offset_top
-  },1e3,function(){var t=$(e);if(t.focus(),t.is(":focus"))return!1;t.attr("tabindex","-1"),t.focus()}))}});
+  },1e3,function(){
+    var t=$(e);
+
+    // If this is a standard mouse click, set focusVisible to false
+    if (event_type == 1) {
+      if(t.focus({ focusVisible: false }),t.is(":focus"))return!1;
+      t.attr("tabindex","-1"),t.focus({ focusVisible: false })
+    } else {
+      if(t.focus(),t.is(":focus"))return!1;
+      t.attr("tabindex","-1"),t.focus()
+    }
+  }))}});
 
 });
