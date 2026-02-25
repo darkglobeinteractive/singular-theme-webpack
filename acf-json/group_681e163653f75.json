@@ -225,22 +225,14 @@
             "aria-label": "",
             "type": "image",
             "instructions": "This image will provide a backup for video loop background types.",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_681e163665317",
-                        "operator": "==",
-                        "value": "Yes"
-                    }
-                ]
-            ],
+            "required": 0,
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
+            "return_format": "id",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -412,5 +404,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1746803723
+    "display_title": "",
+    "modified": 1772051648
 }

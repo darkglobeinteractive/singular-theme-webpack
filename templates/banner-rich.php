@@ -32,17 +32,11 @@ if ( $rich_banner_background_type == 'video' ) {
 // Set banner mask
 $rich_banner_mask = ( get_field( 'rich_banner_mask', $gv['qid'] ) == 'Yes' ? true : false );
 
-// Handle banner image
-$rich_banner_image = ( get_field( 'rich_banner_image', $gv['qid'] ) ?: false );
-if ( $rich_banner_image ) {
-  $styles_array[] = 'background-image: url('.$rich_banner_image['sizes']['banner-bg'].')';
-}
-
 // Handle static image background position, defaulting to 'center center'
 $rich_banner_background_position = ( get_field( 'rich_banner_background_position', $gv['qid'] ) ?: 'center center' );
 
-// Add static image background position to the styles array
-$styles_array[] = 'background-position: '.$rich_banner_background_position;
+// Handle banner image
+$rich_banner_image_object = ( get_field( 'rich_banner_image', $gv['qid'] ) ? wp_get_attachment_image( get_field( 'rich_banner_image', $gv['qid'] ), 'banner-bg', false, array( 'class' => 'banner-bg-image', 'style' => 'object-position: '.$rich_banner_background_position ) ) : '' );
 
 // Create classes and styles code
 $block_classes = singular_attribute_builder( $classes_array, 'class' );
@@ -82,4 +76,5 @@ $rich_banner_button = ( get_field( 'rich_banner_button', $gv['qid'] ) ? singular
   <?php if ( $rich_banner_mask ): ?>
     <div class="mask"></div>
   <?php endif; ?>
+  <?php echo $rich_banner_image_object; ?>
 </div>
