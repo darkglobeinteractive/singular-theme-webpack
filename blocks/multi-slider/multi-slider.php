@@ -44,16 +44,9 @@ $block_styles = singular_attribute_builder( $styles_array, 'style' );
     <div class="admin-multi-slider">
       <?php while ( have_rows( 'image_slider' ) ): the_row(); ?>
         <?php 
-        // Handle the image
-        if ( get_sub_field( 'image' ) ) {
-          $image_src = get_sub_field( 'image' )['sizes']['medium_large'];
-          $image_alt = get_sub_field( 'image' )['alt'];
-        } else {
-          $image_src = get_template_directory_uri().'/img/placeholder-image.png' ;
-          $image_alt = 'Placeholder Image';
-        } 
+        $image_id = ( get_sub_field( 'image' ) ?: get_field( 'default_image_placeholder', 'option' ) );
+        echo wp_get_attachment_image( $image_id, 'medium' ); 
         ?>
-        <img src="<?php echo $image_src; ?>" />
       <?php endwhile; ?>
     </div>
   <?php else: ?>
@@ -81,13 +74,9 @@ $block_styles = singular_attribute_builder( $styles_array, 'style' );
 
                   <?php 
                   // Handle the image
-                  if ( get_sub_field( 'image' ) ) {
-                    $image_src = get_sub_field( 'image' )['sizes']['medium_large'];
-                    $image_alt = get_sub_field( 'image' )['alt'];
-                  } else {
-                    $image_src = get_template_directory_uri().'/img/placeholder-image.png' ;
-                    $image_alt = 'Placeholder Image';
-                  } 
+                  $image_id = ( get_sub_field( 'image' ) ?: get_field( 'default_image_placeholder', 'option' ) );
+                  $image_class = ( $image_slider_image_type == 'block' ? 'image-bg' : 'image-element' );
+                  $image_object = wp_get_attachment_image( $image_id, 'medium', false, array( 'class' => $image_class ) ); 
 
                   $link = ( $image_slider_type == 'images' && get_sub_field( 'link' ) ? get_sub_field( 'link' ) : '' );
                   if ( $link ) {
@@ -96,7 +85,7 @@ $block_styles = singular_attribute_builder( $styles_array, 'style' );
                   }
                   $modal_content = ( $image_slider_type == 'modal' && get_sub_field( 'modal_content' ) ? get_sub_field( 'modal_content' ) : '' );
                   if ( $modal_content ) {
-                    $modal_id = 'modal-'.md5( $image_src.$modal_content );
+                    $modal_id = 'modal-'.md5( $image_id.$modal_content );
                   }
                   $modal_image = ( $image_slider_type == 'modal' && get_sub_field( 'modal_image' ) == 'Yes' ? true : false );
                   ?>
@@ -112,11 +101,7 @@ $block_styles = singular_attribute_builder( $styles_array, 'style' );
                     <?php endif; ?>
 
                       <span class="image-wrap">
-                        <?php if ( $image_slider_image_type == 'block' ): ?>
-                          <span class="image" style="background-image: url('<?php echo $image_src; ?>')"></span>
-                        <?php else: ?>
-                          <img src="<?php echo $image_src; ?>" alt="<?php echo $image_alt; ?>" />
-                        <?php endif; ?>
+                        <?php echo $image_object; ?>
                       </span>
 
                     <?php if ( $link || $modal_content ): ?>
@@ -132,7 +117,7 @@ $block_styles = singular_attribute_builder( $styles_array, 'style' );
                             <div class="wrap">
                               <?php if ( $modal_image ): ?>
                                 <div class="modal-image">
-                                  <img src="<?php echo $image_src; ?>" alt="<?php echo $image_alt; ?>" />
+                                  <?php echo $image_object; ?>
                                 </div>
                               <?php endif; ?>
                               <div class="modal-content">

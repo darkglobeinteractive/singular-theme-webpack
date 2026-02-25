@@ -76,7 +76,7 @@
   height: 0;
   padding: 0 0 108%;
 }
-.wp-block-singular.multi-slider-block.block .multi-slider .slider .item .image-wrap .image {
+.wp-block-singular.multi-slider-block.block .multi-slider .slider .item .image-wrap .image-bg {
   display: block;
   position: absolute;
   z-index: 1;
@@ -85,12 +85,12 @@
   height: 100%;
   width: 100%;
   margin: 0;
-  background: var(--black) url('../../img/spacer.gif') center center no-repeat;
-  background-size: cover;
+  object-fit: cover;
+  object-position: center center;
   @include prefix-gen(transition, transform 200ms ease-in-out);
   @include prefix-gen(transform, scale(1));
 }
-.wp-block-singular.multi-slider-block.block .multi-slider .slider .item > a.wrap:hover .image-wrap .image {
+.wp-block-singular.multi-slider-block.block .multi-slider .slider .item > a.wrap:hover .image-wrap .image-bg {
   @include prefix-gen(transition, transform 200ms ease-in-out);
   @include prefix-gen(transform, scale(1.1));
 }
@@ -100,7 +100,7 @@
   display: block;
   padding: 30px;
 }
-.wp-block-singular.multi-slider-block.independent .multi-slider .slider .item .image-wrap img {
+.wp-block-singular.multi-slider-block.independent .multi-slider .slider .item .image-wrap .image-element {
   display: block;
   max-width: 100%;
 }
