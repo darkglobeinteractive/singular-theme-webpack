@@ -184,6 +184,10 @@ Notes: We're beginning to try-out this modal library because it's proven to be s
 Version Notes (A little late to this party...)
 ===================================
 
+# General Notes (v.2.2) (February 25, 2026)
+
+Replacing the use of background images with core WordPress responsive images throughout the site. Made these changes for accessibility reasons and compatibility with next gen images down the road.
+
 # General Notes (v.2.1) (October 9, 2025)
 
 Extensive default animations were added to handle basic fades, slides and staggers for the existing core sections, block patterns and custom blocks included in the theme.
