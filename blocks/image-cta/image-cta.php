@@ -4,7 +4,7 @@ $classes_array = array( 'image-cta' );
 $styles_array = array();
 
 // Handle the image
-$image_src = ( get_field( 'image_cta_img' ) ? get_field( 'image_cta_img' )['sizes']['large'] : get_template_directory_uri().'/img/placeholder-image.png' );
+$image_id = ( get_field( 'image_cta_img' ) ?: get_field( 'default_image_post', 'option' ) );
 
 // Handle heading and text
 $heading = ( get_field( 'image_cta_heading' ) ?: '' );
@@ -31,7 +31,7 @@ $block_styles = singular_attribute_builder( $styles_array, 'style' );
   <a href="<?php echo $href; ?>"<?php echo $block_classes; ?><?php echo $block_styles; ?><?php echo $target; ?>>
 <?php endif; ?>
   <span class="image-wrap">
-    <span class="image" style="background-image: url('<?php echo $image_src; ?>')"></span>
+    <?php echo wp_get_attachment_image( $image_id, 'large', false, array( 'class' => 'image', 'fetchpriority' => 'low' ) ); ?>
   </span>
   <span class="content">
     <?php if ( $heading ): ?>
