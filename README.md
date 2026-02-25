@@ -60,6 +60,11 @@ Advanced Custom Fields PRO is required by this theme.
                [ ] Admin > Wordfence > Firewall > All Firewall Options > Brute Force Protection
 
 
+# Add Global Images
+
+1. [ ] Global Options > Global Images (tab): Upload a default image for use in each scenario
+
+
 # Create Pages / Modify Templates
 
 1. [ ] Create a Block Pattern Guide and use the code in /configuration/code/block-pattern-guide.html to create it
