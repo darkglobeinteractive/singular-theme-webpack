@@ -43,6 +43,11 @@ function singular_setup_theme_supported_features() {
       'color' => '#000000'
     ),
     array(
+      'name'  => 'Grey',
+      'slug'  => 'grey',
+      'color' => '#cccccc'
+    ),
+    array(
       'name'  => 'White',
       'slug'  => 'white',
       'color' => '#ffffff'
