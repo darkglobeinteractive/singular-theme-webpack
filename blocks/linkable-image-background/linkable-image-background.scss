@@ -8,7 +8,7 @@
   width: 100%;
 }
 .linkable-image-background-container > .acf-block-preview,
-.linkable-image-background .image {
+.linkable-image-background .image-wrap {
   position: absolute;
   z-index: 1;
   left: 0;
@@ -16,30 +16,42 @@
   height: 100%;
   width: 100%;
 }
-.linkable-image-background .image {
-  background: transparent url('../img/spacer.gif') center center no-repeat;
-  background-size: cover
-}
-.linkable-image-background .image .svg-icon.play-button,
-.linkable-image-background .image .admin-play-button {
+.linkable-image-background .image-wrap .image {
   display: block;
   position: absolute;
   z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.linkable-image-background .image-wrap .svg-icon.play-button,
+.linkable-image-background .image-wrap .admin-play-button {
+  display: block;
+  position: absolute;
+  z-index: 2;
   left: 50%;
   top: 50%;
   margin: -62px 0 0 -62px;
 }
-.linkable-image-background .image .admin-play-button {
+.linkable-image-background .image-wrap .admin-play-button {
   height: 128px;
   width: 128px;
   background: transparent url('../img/static-icons/play-button.png') center center no-repeat;
   background-size: 100% 100%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 782px) {
 
-  .linkable-image-background .image .svg-icon.play-button,
-  .linkable-image-background .image .admin-play-button {
+  .linkable-image-background {
+    position: relative;
+    height: 0;
+    padding: 0 0 100%;
+  }
+  .linkable-image-background .image-wrap .svg-icon.play-button,
+  .linkable-image-background .image-wrap .admin-play-button {
     height: 80px;
     width: 80px;
     margin: -40px 0 0 -40px;
