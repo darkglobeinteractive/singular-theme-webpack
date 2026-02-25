@@ -54,7 +54,8 @@ $block_styles = singular_attribute_builder( $styles_array, 'style' );
 			$information = ( get_the_content( $tmid ) ? true : false );
 
 			// Handle image
-			$image_styles = ( has_post_thumbnail( $tmid ) ? ' style="background-image: url(\''.get_the_post_thumbnail_url( $tmid, 'medium_large' ).'\');"' : '' );
+			$image_array = array( 'class' => 'image', 'fetchpriority' => 'low' );
+			$image_element = ( has_post_thumbnail( $tmid ) ? get_the_post_thumbnail( $tmid, 'medium_large', $image_array ) : wp_get_attachment_image( get_field( 'default_image_team_member', 'option' ), 'medium_large', false, $image_array ) );
 			?>
 			<div class="team-member">
 				<?php if ( $information && !is_admin() ): ?>
@@ -63,7 +64,9 @@ $block_styles = singular_attribute_builder( $styles_array, 'style' );
 					<div class="wrap">
 				<?php endif; ?>
 				<?php if ( $tmb_type == 'grid' ): ?>
-					<span class="image-wrap"><span class="image"<?php echo $image_styles; ?>></span></span>
+					<span class="image-wrap">
+						<?php echo $image_element; ?>
+					</span>
 				<?php endif; ?>
 				<?php if ( $tm_name || $tm_title || $tm_board_info ): ?>
 					<span class="content">
