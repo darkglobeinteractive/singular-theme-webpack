@@ -1,34 +1,78 @@
-/* BUTTONS ------------------------------------------------------ */
+/* CUSTOM & EXTERNAL BUTTONS ------------------------------------ */
 .btn,
-.btn-wrap a,
-input[type="submit"],
+input[type="submit"] {
+  @include buttons-base();
+  @include buttons-normal();
+
+  &:hover {
+    @include buttons-hover();
+  }
+
+}
+
+.btn-wrap {
+
+  a {
+    @include buttons-base();
+    @include buttons-normal();
+
+    &:hover {
+      @include buttons-hover();
+    }
+
+  }
+
+}
+
+
+/* BLOCK BUILDER BUTTONS ---------------------------------------- */
 .wp-block-button .wp-block-button__link,
 .editor-styles-wrapper .wp-block-button .wp-block-button__link {
-  display: inline-block;
-  height: auto;
-  margin: 0 0 0.5em;
-  padding: 1em 2em;
-  border: none;
-  outline: none;
-  background: var(--white);
-  color: var(--black);
-  font-size: 16px;
-  line-height: 1em;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  @include prefix-gen(transition, color 200ms ease-in-out, background 200ms ease-in-out);
+  @include buttons-base();
+  @include buttons-normal();
+
+  &:hover {
+    @include buttons-hover();
+  }
+
+  &.has-red-background-color {
+    @include buttons-normal(red, var(--white));
+
+    &:hover {
+      @include buttons-hover(var(--black), var(--white));
+    }
+    
+  }
+
+  &.has-black-background-color {
+    @include buttons-normal($color: var(--white));
+
+    &:hover {
+      @include buttons-hover(var(--white) !important, var(--black));
+    }
+    
+  }
+
 }
-.btn:hover,
-.btn-wrap a:hover,
-input[type="submit"]:hover,
-.wp-block-button .wp-block-button__link:hover,
-.editor-styles-wrapper .wp-block-button .wp-block-button__link:hover {
-  background: var(--black);
-  color: var(--white);
+
+.has-black-background-color,
+.editor-styles-wrapper .has-black-background-color {
+    
+  .wp-block-button .wp-block-button__link {
+
+    &.has-black-background-color {
+      @include buttons-normal($background-color: var(--white) !important, $color: var(--black));
+
+      &:hover {
+        @include buttons-hover(red !important, var(--white));
+      }
+      
+    }
+
+  }
+
 }
+
 
 /* SPECIALTY BUTTONS -------------------------------------------- */
 button.close-modal {
