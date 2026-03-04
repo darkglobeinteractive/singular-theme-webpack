@@ -151,7 +151,11 @@ jQuery(document).ready(function($) {
 
 
   /* SMOOTH SCROLLING ------------------------------------------- */
-  $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[href*="#modal"]').click(function(t){
+
+  // Create an array of items not to smooth scroll
+  var no_smooth_scrolling = '[href="#"], [href="#0"], [href*="#modal"], .mm-btn, .mm-wrapper__blocker';
+  
+  $('a[href*="#"]').not(no_smooth_scrolling).click(function(t){
     
     // Set variable determining if this is a keyboard click or a mouse click
     var event_type = t.originalEvent.detail;
