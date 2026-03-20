@@ -23,69 +23,69 @@ mmenu is used to handle the mobile menus in this theme. [Documentation can be fo
 Located in admin menu:<br>
 *Admin > Appearance > Menus*
 
-1. [ ] Create "Main Menu"
-2. [ ] Add something to the menu tree so it appears correctly on the front-end
-3. [ ] Assign the new menu to the *Manage Locations > Main Menu Navigation* theme location
+1. Create "Main Menu"
+2. Add something to the menu tree so it appears correctly on the front-end
+3. Assign the new menu to the *Manage Locations > Main Menu Navigation* theme location
 
 ## Required Plugin Installation Notes
 
 Advanced Custom Fields PRO is required by this theme.
 
-1. [ ] Install "Advanced Custom Fields PRO" and do the following:
-    - [ ] Add ACF Pro license and update plugin
-    - [ ] After activating ACF Pro license, edit and save all field groups
-    - [ ] Double-check the *Settings > Show this field group if...* settings for each block
-    - [ ] Double-check the need to sync the field groups
-2. [ ] Install "Filebird" (https://wordpress.org/plugins/filebird/)
-3. [ ] Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
-    - [ ] Change the default separator to a pipe so it matches the ~header.php~ title separator -or- change the ~header.php~ title separator to a hyphen
-    - [ ] Add site name and image to the Yoast SEO admin
-    - [ ] Remove sitemap page and template file if using Yoast SEO
-4. [ ] Install "ACF Content Analysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
-5. [ ] Install "Redirection" (https://wordpress.org/plugins/redirection/)
+1. Install "Advanced Custom Fields PRO" and do the following:
+    - Add ACF Pro license and update plugin
+    - After activating ACF Pro license, edit and save all field groups
+    - Double-check the *Settings > Show this field group if...* settings for each block
+    - Double-check the need to sync the field groups
+2. Install "Filebird" (https://wordpress.org/plugins/filebird/)
+3. Install "Yoast SEO" (https://wordpress.org/plugins/wordpress-seo/)
+    - Change the default separator to a pipe so it matches the ~header.php~ title separator -or- change the ~header.php~ title separator to a hyphen
+    - Add site name and image to the Yoast SEO admin
+    - Remove sitemap page and template file if using Yoast SEO
+4. Install "ACF Content Analysis for Yoast SEO" (https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/)
+5. Install "Redirection" (https://wordpress.org/plugins/redirection/)
     - Add redirect from */user* to */wp-admin*
-6. [ ] Install "Wordfence"
-    - [ ] Send license information to hello@clientaddress
-    - [ ] Request Google reCAPTCHA keys and install them
-        - [ ] *Admin > Wordfence > Login Security > Settings > reCAPTCHA* section
-    - [ ] Set brute force login limit to 5 attempts:
-        - [ ] *Admin > Wordfence > Firewall > All Firewall Options > Brute Force Protection*
+6. Install "Wordfence"
+    - Send license information to hello@clientaddress
+    - Request Google reCAPTCHA keys and install them
+        - *Admin > Wordfence > Login Security > Settings > reCAPTCHA* section
+    - Set brute force login limit to 5 attempts:
+        - *Admin > Wordfence > Firewall > All Firewall Options > Brute Force Protection*
 
 ## Add Global Images
 
-1. [ ] *Global Options > Global Images* (tab): Upload a default image for use in each scenario
+1. *Global Options > Global Images* (tab): Upload a default image for use in each scenario
 
 ## Create Pages / Modify Templates
 
-1. [ ] Create a Block Pattern Guide and use the code in */configuration/code/block-pattern-guide.html* to create it
-    - [ ] Modify this as needed to get page to display
-1. [ ] Create search form page and update template file to reflect page ID
-2. [ ] If you're not using Yoast SEO, create the sitemap page and update template file (*page-search.php*) to use page ID (page-[id].php)
-    - [ ] If you ARE using Yoast SEO, delete the sitemap page template 
-3. [ ] Create home page and use customizer to set this page to the front page
-4. [ ] Delete existing widgets
+1. Create a Block Pattern Guide and use the code in */configuration/code/block-pattern-guide.html* to create it
+    - Modify this as needed to get page to display
+1. Create search form page and update template file to reflect page ID
+2. If you're not using Yoast SEO, create the sitemap page and update template file (*page-search.php*) to use page ID (page-[id].php)
+    - If you ARE using Yoast SEO, delete the sitemap page template 
+3. Create home page and use customizer to set this page to the front page
+4. Delete existing widgets
 
 ## Login Page Customizations
 
-1. [ ] Update the image located at */singular-theme/img/login-logo.png*
-2. [ ] Modify the styles at */singular-theme/css/login.css*
+1. Update the image located at */singular-theme/img/login-logo.png*
+2. Modify the styles at */singular-theme/css/login.css*
 
 ## General Notes
 
 1. The *Settings > Reading* blog listing is limited to 3 items for testing purposes. The custom WP_Query post limit must match this for the blog listing to display the desired number of items.
-2. [ ] Disable admin-based Theme Editor (*Appearance > Theme Editor*)
-    - [ ] In *wp-config.php* file == `define('DISALLOW_FILE_EDIT', true);`
-3. [ ] Double-check that commenting is completely turned-off
+2. Disable admin-based Theme Editor (*Appearance > Theme Editor*)
+    - In *wp-config.php* file == `define('DISALLOW_FILE_EDIT', true);`
+3. Double-check that commenting is completely turned-off
 
 ## Disabling Comments
 
 If this site will not allow discussions, follow these instructions for effectively removing the functionality from the site:
 
-1. [ ] Goto *Admin > Settings > Discussion* and uncheck the checkbox for *"Allow people to submit comments on new posts"*
-2. [ ] Uncomments the following line in *functions.php*:
-    - [ ] `include( 'inc/remove-comments.php' );`
-3. [ ] Enable the site support section which contains information on the fact that comments have been disabled and how to enable them in necessary. To do this, uncomment the following line in functions.php:
-    - [ ] `include( 'admin-support/index.php' );`
+1. Goto *Admin > Settings > Discussion* and uncheck the checkbox for *"Allow people to submit comments on new posts"*
+2. Uncomments the following line in *functions.php*:
+    - `include( 'inc/remove-comments.php' );`
+3. Enable the site support section which contains information on the fact that comments have been disabled and how to enable them in necessary. To do this, uncomment the following line in functions.php:
+    - `include( 'admin-support/index.php' );`
 
 ## Fixed Header Notes
 
@@ -93,18 +93,17 @@ The "Smooth Scrolling" functionality in the */js/global.js* file contains a head
 
 If a fixed header is used on the site, you'll want to change this from "0" to `$('#header').innerHeight()` and possibly adjust the `scroll_top_padding` variable as well.
 
-
 ## Custom Block Patterns
 
 Custom block patterns should be created and managed via core WordPress functionality in the block editor. There are two blocks which should manually migrated into the block editor. Follow these instructions:
 
-1. [ ] Update the block pattern category name (`[CLIENT] Patterns`) in the following file to use the client name:
-    - [ ] Line 12: */block-patterns/block-patterns.php*
-2. [ ] Migrate the following block pattern code into the block editor and save as WP Core patterns:
-    - [ ] */block-patterns/blocks/accordion.php*
-    - [ ] */block-patterns/blocks/basic-content-wrapper.php*<br>
+1. Update the block pattern category name (`[CLIENT] Patterns`) in the following file to use the client name:
+    - Line 12: */block-patterns/block-patterns.php*
+2. Migrate the following block pattern code into the block editor and save as WP Core patterns:
+    - */block-patterns/blocks/accordion.php*
+    - */block-patterns/blocks/basic-content-wrapper.php*<br>
     NOTE: Remember to name the block pattern block elements in the block editor before saving.
-3. [ ] Delete the files used in Step #2 from the remote server
+3. Delete the files used in Step #2 from the remote server
 
 At this point, you simply have to add new CSS files for each additional custom block created.
 
@@ -112,8 +111,8 @@ At this point, you simply have to add new CSS files for each additional custom b
 
 The theme contains a handful of custom blocks.
 
-1. [ ] Update the name (`[CLIENT] Blocks`) of the block category to use the client name in the following file:
-    - [ ] Lines 5-6: */blocks/blocks.php*
+1. Update the name (`[CLIENT] Blocks`) of the block category to use the client name in the following file:
+    - Lines 5-6: */blocks/blocks.php*
 
 ## GreenSock Animation Support
 
@@ -122,17 +121,17 @@ GreenSock is the animation library we'd like to focus on using:<br>
 
 To enable GreenSock animation:
 
-1. [ ] Uncomment the following lines in the config.entry.public array of the *webpack.config.js* file:
-    - [ ] *./src/scss/animations.scss*
-    - [ ] *./src/scss/animations.js*
+1. Uncomment the following lines in the config.entry.public array of the *webpack.config.js* file:
+    - *./src/scss/animations.scss*
+    - *./src/scss/animations.js*
 
 NOTE: This handles the blocks and patterns that are built-into the theme, but you'll definitely need to add/modify/delete these based-on the changes you make.
 
 ## QUALITY ASSURANCE / WRAP-UP / MISC NOTES
 
-1. [ ] Check basic Search and Search Results templating
-2. [ ] Check 404 page templating
-3. [ ] */inc/custom-post-columns.php* shows you an example of how to customize the admin post listing columns and headers
+1. Check basic Search and Search Results templating
+2. Check 404 page templating
+3. */inc/custom-post-columns.php* shows you an example of how to customize the admin post listing columns and headers
 
 # Singular Plugin Installation Notes
 
