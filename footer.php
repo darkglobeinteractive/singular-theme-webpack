@@ -1,5 +1,5 @@
       </div>
-    </div>
+    </main>
     <footer id="footer">
       <div class="wrap">
         <?php include( locate_template( 'templates/vcard.php', false, false ) ); ?>

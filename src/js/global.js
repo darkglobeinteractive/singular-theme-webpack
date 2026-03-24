@@ -76,7 +76,8 @@ jQuery(document).ready(function($) {
     });
 
     // Configure the mobile menu
-    var mmenu = new Mmenu( '#navigation', {
+    var mmenu = new Mmenu( '#navigation', 
+    { // Options
       'offCanvas': {
         'position': 'right-front'
       },
@@ -92,7 +93,7 @@ jQuery(document).ready(function($) {
           ]
         }
       ]
-    },{
+    },{ // Configuration
       'offCanvas': {
         'clone': true
       }
@@ -106,6 +107,13 @@ jQuery(document).ready(function($) {
       } else {
         mmenu_api.open();
       }
+    });
+
+    // Correct the aria-label and remove the redundant role attribute
+    $('nav.mm-menu').each(function() {
+      $(this).attr({
+        'aria-label': 'Mobile Navigation'
+      }).removeAttr('role');
     });
 
   });

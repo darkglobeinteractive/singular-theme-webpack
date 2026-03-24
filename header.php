@@ -36,7 +36,8 @@ $gv = singular_global_vars();
 						'theme_location' => 'main-menu-nav',
 						'menu_class' => 'menu',
 						'container' => 'nav',
-	          'container_id' => 'navigation'
+	          'container_id' => 'navigation',
+						'container_aria_label' => 'Primary Navigation'
 					) );
 					?>
 					<button id="mm-trigger" aria-label="Mobile Menu Toggle">
@@ -57,5 +58,5 @@ $gv = singular_global_vars();
 			<?php else: ?>
 				<?php include( locate_template( 'templates/banner-simple.php', false, false ) ); ?>
 			<?php endif; ?>
-      <div id="main" role="main">
+      <main id="main" role="main">
 				<div id="main-wrap">
