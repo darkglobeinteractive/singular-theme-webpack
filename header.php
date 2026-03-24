@@ -25,7 +25,9 @@ $gv = singular_global_vars();
 	$additional_classes = [];
 	body_class( $additional_classes ); ?>>
 		<?php include( locate_template( 'inc/analytics-body-top.php', false, false ) ); ?>
-		<a href="#main" class="skip-main">Skip to Main Content</a>		
+		<nav aria-label="Skip Links">
+			<a href="#main" class="skip-main">Skip to Main Content</a>		
+		</nav>
     <div id="page">
 			<?php include( locate_template( 'templates/alert-banner.php', false, false ) ); ?>
       <header id="header">
