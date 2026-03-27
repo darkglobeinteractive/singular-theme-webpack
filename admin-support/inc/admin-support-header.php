@@ -4,7 +4,7 @@
       <div class="title">[THEME NAME] Theme Support</div>
     </div>
   </div>
-  <nav class="sts-navigation">
+  <nav class="sts-navigation" aria-label="Site Support Navigation">
     <ul>
       <li class="home"><a href="/wp-admin/admin.php?page=sts-home">Home</a></li>
       <li><a href="/wp-admin/admin.php?page=sts-sub-page">Sub-Page</a></li>
