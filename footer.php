@@ -1,6 +1,6 @@
       </div>
     </main>
-    <footer id="footer">
+    <footer id="footer" role="contentinfo">
       <div class="wrap">
         <?php include( locate_template( 'templates/vcard.php', false, false ) ); ?>
         <div class="copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo(); ?>, All Rights Reserved.</div>
