@@ -2,8 +2,8 @@
 // ASSEMBLE LINK: Receives a link field and returns the assembled element
 // $link_object: The link field which contains the url, title and target variables
 // $default_title: In case the title isn't set by the link field
-// $add_id, $add_class: Optional attributes
-function singular_assemble_link( $link_object, $add_class = false, $add_id = false, $default_title = 'Learn More' ) {
+// $add_id, $add_class, $aria_label: Optional attributes
+function singular_assemble_link( $link_object, $add_class = false, $add_id = false, $default_title = 'Learn More', $aria_label = false ) {
 
   // Set the three variables from the link object
   $url = $link_object['url'];
@@ -14,7 +14,10 @@ function singular_assemble_link( $link_object, $add_class = false, $add_id = fal
   $id = ( $add_id ? ' id="'.$add_id.'"' : '' );
   $class = ( $add_class ? ' class="'.$add_class.'"' : '' );
 
-  return '<a href="'.$url.'"'.$id.$class.$target.'>'.$title.'</a>';
+  // Check for a custom aria-label
+  $aria_label = ( $aria_label ? ' aria-label="'.$aria_label.'"' : '' );
+
+  return '<a href="'.$url.'"'.$id.$class.$target.$aria_label.'>'.$title.'</a>';
 
 }
 
