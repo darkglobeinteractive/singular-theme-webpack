@@ -79,7 +79,7 @@ Advanced Custom Fields PRO is required by this theme.
 
 ## Disabling Comments
 
-If this site will not allow discussions, follow these instructions for effectively removing the functionality from the site:
+Follow these instructions for effectively removing the commenting functionality from the site:
 
 1. Goto *Admin > Settings > Discussion* and uncheck the checkbox for *"Allow people to submit comments on new posts"*
 2. Uncomments the following line in *functions.php*:
