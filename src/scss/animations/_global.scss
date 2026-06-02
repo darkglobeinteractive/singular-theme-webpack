@@ -1,5 +1,5 @@
 /* GLOBAL ELEMENTS ---------------------------------------------- */
-#footer > .wrap {
+html.js #footer > .wrap {
   opacity: 0;
 }
 
@@ -9,7 +9,7 @@
 
 
 // fade-in
-.st-animate.fade-in {
+html.js .st-animate.fade-in {
   opacity: 0;
 }
 
@@ -18,12 +18,12 @@
 .im-animate { }
 
 // fade-in
-.im-animate.fade-in {
+html.js .im-animate.fade-in {
   opacity: 0;
 }
 
 // stagger fade
-.im-animate.stagger-fade {
+html.js .im-animate.stagger-fade {
   opacity: 0;
 }
 
@@ -31,21 +31,21 @@
 /* GLOBAL/STANDARD BLOCKS AND SITUATIONS ------------------------ */
 
 // basic content wrapper
-.wp-block-singular > .wp-block-group__inner-container {
+html.js .wp-block-singular > .wp-block-group__inner-container {
   opacity: 0;
 }
 
 // accordions
-.wp-block-singular.accordion-container > .wp-block-group__inner-container {
+html.js .wp-block-singular.accordion-container > .wp-block-group__inner-container {
   opacity: 1;
 }
-.wp-block-singular.accordion-container .accordion-item { 
+html.js .wp-block-singular.accordion-container .accordion-item { 
   opacity: 0;
 }
 
 // post banners
-#banner-post .content-wrap > *,
-#banner-post .post-banner-section {
+html.js #banner-post .content-wrap > *,
+html.js #banner-post .post-banner-section {
   opacity: 0;
 }
 #banner-post .content-wrap > * {
@@ -54,17 +54,21 @@
 
 // rich banners 
 .banner-rich .content-wrap > * {
-  opacity: 0;
   position: relative;
+}
+html.js .banner-rich .content-wrap > * {
+  opacity: 0;
 }
 
 // search results
-#search-results .search-result {
+html.js #search-results .search-result {
   opacity: 0;
 }
 
 // simple banner
 .banner .content > * {
-  opacity: 0;
   position: relative;
+}
+html.js .banner .content > * {
+  opacity: 0;
 }
