@@ -142,6 +142,16 @@ function singular_display_search_form() {
 add_shortcode( 'display_search_form', 'singular_display_search_form' );
 
 
+/* SLICK SLIDER ENHANCEMENT ------------------------------------- */
+function singular_prefetch() {
+
+  // If JavaScript is not enabled, this forces items intended for Slick Sliders to be visible
+  echo '<noscript><style>.slick-loading { overflow: visible !important; } .slick-loading > * { display: block !important; }</style></noscript>';
+
+}
+add_action( 'wp_head', 'singular_prefetch' );
+
+
 /* WP CORE CUSTOM FIELDS ---------------------------------------- */
 /* Un-comment the following line if you need to use WordPress core "Custom Fields" */
 /* The "Advanced Custom Themes" plugin hides the option by default */
