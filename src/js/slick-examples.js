@@ -10,6 +10,7 @@ jQuery(document).ready(function($) {
   /* STANDARD EXAMPLE ------------------------------------------- */
   /* Includes responsive breakpoints and custom SVG arrows */
   $('.slick-slider').slick({
+    regionLabel: 'Custom Aria Label Text',
     arrows: true,
     dots: true,
     infinite: true,
@@ -53,6 +54,7 @@ jQuery(document).ready(function($) {
   /* CENTERMODE EXAMPLE ----------------------------------------- */
   /* Notes: Slides to show should always be odd and centerPadding is how much of the prev/next slides are shown */
   $('.slick-slider').slick({
+    regionLabel: 'Custom Aria Label Text',
     arrows: true,
     dots: false,
     infinite: true,
@@ -75,6 +77,7 @@ jQuery(document).ready(function($) {
   /* PARTIAL RIGHT-ALIGNED SLIDE -------------------------------- */
   /* Notes: This will show 150px of a partial slide off to the right */
   $('.slick-slider').slick({
+    regionLabel: 'Custom Aria Label Text',
     arrows: false,
     dots: true,
     infinite: false,
