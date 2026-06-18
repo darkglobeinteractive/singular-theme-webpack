@@ -33,6 +33,9 @@ if ( $autoplay_check ) {
   $classes_array[] = 'autoplay-slider';
 }
 
+// Handle custom aria-label value
+$image_slider_aria_label = ( get_field( 'image_slider_aria_label' ) ?: false );
+
 // Handle styles and classes
 $block_classes = singular_attribute_builder( $classes_array, 'class' );
 $block_classes_inner = singular_attribute_builder( $classes_inner_array, 'class' );
@@ -68,7 +71,7 @@ $block_styles = singular_attribute_builder( $styles_array, 'style' );
               </button>
             </div>
             <div class="slider">
-              <div class="wrap">
+              <div class="wrap slick-loading"<?php echo ( $image_slider_aria_label ? ' data-aria-label="'.$image_slider_aria_label.'"' : '' ); ?>>
 
                 <?php while ( have_rows( 'image_slider' ) ): the_row(); ?>
 

@@ -201,6 +201,27 @@
             "delay": 0
         },
         {
+            "key": "field_6a33fe174e4e0",
+            "label": "Custom aria-label Text",
+            "name": "image_slider_aria_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter text describing the nature of this slider for better accessibility",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_6651de017d3fe",
             "label": "Slides",
             "name": "",
@@ -377,5 +398,7 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1772048841
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1781792330
 }

@@ -75,6 +75,7 @@ jQuery(document).ready(function($) {
       dots: false,
       arrows: false,
       infinite: true,
+      regionLabel: 'Multi-Slider',
       slidesToShow: 5,
       slidesToScroll: 1,
       responsive: [
