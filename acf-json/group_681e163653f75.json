@@ -226,7 +226,15 @@
             "type": "image",
             "instructions": "This image will provide a backup for video loop background types.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_681e163665317",
+                        "operator": "==",
+                        "value": "Yes"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -384,6 +392,27 @@
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_6a3a7ff31b11f",
+            "label": "Max-Width of Content Area",
+            "name": "rich_banner_content_width",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter the value and unit for the max-width of the content area (e.g. <strong>1000px<\/strong>, <strong>50em<\/strong>, etc.)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -405,5 +434,7 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1772051648
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1782218799
 }

@@ -1,17 +1,24 @@
 <?php
 // Grab global variables from custom function.php function
 $gv = singular_global_vars();
+$qid = $gv['qid'];
 
 // Create arrays for banner classes and styles
 $classes_array = array( 'banner-rich', 'has-black-background-color', 'has-background' );
 $styles_array = array();
+$content_styles_array = array();
 $btn_array = array( 'btn' );
+
+// Handle the content area max-width
+if ( get_field( 'rich_banner_content_width', $qid ) ) {
+  $content_styles_array[] = 'max-width: '.get_field( 'rich_banner_content_width', $qid );
+}
 
 // Set banner mask to 'false' by default
 $rich_banner_mask = false;
 
 // Determine the full background type, defaulting to a static image
-$rich_banner_background_type = ( get_field( 'rich_banner_background_type', $gv['qid'] ) ?: 'static-image' );
+$rich_banner_background_type = ( get_field( 'rich_banner_background_type', $qid ) ?: 'static-image' );
 
 // Add full background type to classes array
 $classes_array[] = $rich_banner_background_type;
@@ -20,37 +27,38 @@ $classes_array[] = $rich_banner_background_type;
 if ( $rich_banner_background_type == 'video' ) {
 
   // Check for videos
-  $rich_banner_videos = ( have_rows( 'rich_banner_videos', $gv['qid'] ) ? true : false );
+  $rich_banner_videos = ( have_rows( 'rich_banner_videos', $qid ) ? true : false );
 
   // Set video background position
-  $rich_banner_videos_horizontal = ( get_field( 'rich_banner_videos_horizontal', $gv['qid'] ) ?: 'horizontal-center' );
-  $rich_banner_videos_vertical = ( get_field( 'rich_banner_videos_vertical', $gv['qid'] ) ?: 'vertical-center' );
+  $rich_banner_videos_horizontal = ( get_field( 'rich_banner_videos_horizontal', $qid ) ?: 'horizontal-center' );
+  $rich_banner_videos_vertical = ( get_field( 'rich_banner_videos_vertical', $qid ) ?: 'vertical-center' );
   $rich_banner_videos_background_position = $rich_banner_videos_horizontal.' '.$rich_banner_videos_vertical;
 
 }
 
 // Set banner mask
-$rich_banner_mask = ( get_field( 'rich_banner_mask', $gv['qid'] ) == 'Yes' ? true : false );
+$rich_banner_mask = ( get_field( 'rich_banner_mask', $qid ) == 'Yes' ? true : false );
 
 // Handle static image background position, defaulting to 'center center'
-$rich_banner_background_position = ( get_field( 'rich_banner_background_position', $gv['qid'] ) ?: 'center center' );
+$rich_banner_background_position = ( get_field( 'rich_banner_background_position', $qid ) ?: 'center center' );
 
 // Handle banner image
-$rich_banner_image_object = ( get_field( 'rich_banner_image', $gv['qid'] ) ? wp_get_attachment_image( get_field( 'rich_banner_image', $gv['qid'] ), 'banner-bg', false, array( 'class' => 'banner-bg-image', 'style' => 'object-position: '.$rich_banner_background_position ) ) : '' );
+$rich_banner_image_object = ( get_field( 'rich_banner_image', $qid ) ? wp_get_attachment_image( get_field( 'rich_banner_image', $qid ), 'banner-bg', false, array( 'class' => 'banner-bg-image', 'style' => 'object-position: '.$rich_banner_background_position ) ) : '' );
 
 // Create classes and styles code
 $block_classes = singular_attribute_builder( $classes_array, 'class' );
 $block_styles = singular_attribute_builder( $styles_array, 'style' );
+$content_styles = singular_attribute_builder( $content_styles_array, 'style' );
 $btn_classes = implode( ' ', $btn_array );
 
 // Handle banner text and button
-$rich_banner_text = ( get_field( 'rich_banner_text', $gv['qid'] ) ?: false );
-$rich_banner_button = ( get_field( 'rich_banner_button', $gv['qid'] ) ? singular_assemble_link( get_field( 'rich_banner_button' ), $btn_classes ) : false );
+$rich_banner_text = ( get_field( 'rich_banner_text', $qid ) ?: false );
+$rich_banner_button = ( get_field( 'rich_banner_button', $qid ) ? singular_assemble_link( get_field( 'rich_banner_button' ), $btn_classes ) : false );
 ?>
 <div id="banner-rich"<?php echo $block_classes; ?><?php echo $block_styles; ?>>
   <div class="wrap">
     <div class="content">
-      <div class="content-wrap">
+      <div class="content-wrap"<?php echo $content_styles; ?>>
         <?php echo $rich_banner_text; ?>
         <?php if ( $rich_banner_button ): ?>
           <div class="button-wrap">
@@ -62,7 +70,7 @@ $rich_banner_button = ( get_field( 'rich_banner_button', $gv['qid'] ) ? singular
   </div>
   <?php if ( $rich_banner_background_type == 'video' && $rich_banner_videos ): ?>
     <video class="video-bg <?php echo $rich_banner_videos_background_position; ?>" autoplay loop muted width="100%">
-      <?php while ( have_rows( 'rich_banner_videos', $gv['qid'] ) ): the_row(); ?>
+      <?php while ( have_rows( 'rich_banner_videos', $qid ) ): the_row(); ?>
         <?php 
         // Get url to video file
         $rich_banner_video_url = get_sub_field( 'video_file' )['url'];
