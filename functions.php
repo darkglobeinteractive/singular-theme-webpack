@@ -107,7 +107,7 @@ function singular_admin_styles() {
   wp_enqueue_style( 'admin-css', get_template_directory_uri().'/assets/admin.css', array(), singular_theme_filemtime('/assets/admin.css' ) );
   wp_enqueue_script( 'admin-js', get_template_directory_uri().'/assets/admin.min.js', array( 'jquery' ), singular_theme_filemtime('/assets/admin.min.js' ) );
 }
-add_action( 'admin_enqueue_scripts', 'singular_admin_styles' );
+add_action( 'enqueue_block_assets', 'singular_admin_styles' );
 
 
 /* LOGIN PAGE UPDATES ------------------------------------------- */
