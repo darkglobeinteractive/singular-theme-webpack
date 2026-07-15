@@ -24,6 +24,9 @@ const config = {
     admin: [
       './src/scss/admin.scss',
       './src/js/acf-api.js'
+    ],
+    blockeditor: [
+      './src/scss/admin-block-editor.scss'
     ]
   },
   output: {

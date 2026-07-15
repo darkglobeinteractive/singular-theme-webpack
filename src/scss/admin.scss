@@ -1,17 +1,11 @@
+/* ADMIN STYLES ------------------------------------------------- */
+// Formatting of the admin interface and admin support section
+
 // Include Utilities
 @import "utility/_globals";
 @import "utility/_functions";
 @import "utility/_mixins";
 
-// Block Patterns + Custom Blocks
-@import "../../block-patterns/scss/block-patterns-admin";
-@import "../../blocks/blocks-admin";
-
 // Admin Styles
 @import "../../admin-support/styles";
-@import "../../fonts/style";
-@import "public/color-palette";
-@import "public/buttons";
-@import "../../svg/style";
 @import "admin/admin-styles";
-@import "admin/editor-styles";

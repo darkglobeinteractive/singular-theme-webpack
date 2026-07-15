@@ -14,7 +14,10 @@
 }
 
 
-/* MISCELLANEOUS STYLES AND OVERRIDES --------------------------- */
+/* BLOCK EDITOR FONT STYLES ------------------------------------- */
 .editor-styles-wrapper {
+  font-family: $font-standard;
+}
+.editor-styles-wrapper h1:not(.wp-block-post-title) {
   font-family: $font-standard;
 }

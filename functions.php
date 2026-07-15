@@ -103,11 +103,21 @@ add_action( 'wp_enqueue_scripts', 'singular_public_styles_scripts' );
 
 
 /* ADMIN STYLES + SCRIPTS --------------------------------------- */
+
+// Global admin-based styles and scripting
 function singular_admin_styles() {
-  wp_enqueue_style( 'admin-css', get_template_directory_uri().'/assets/admin.css', array(), singular_theme_filemtime('/assets/admin.css' ) );
-  wp_enqueue_script( 'admin-js', get_template_directory_uri().'/assets/admin.min.js', array( 'jquery' ), singular_theme_filemtime('/assets/admin.min.js' ) );
+  wp_enqueue_style( 'admin-css', get_template_directory_uri().'/assets/admin.css', array(), singular_theme_filemtime( '/assets/admin.css' ) );
+  wp_enqueue_script( 'admin-js', get_template_directory_uri().'/assets/admin.min.js', array( 'jquery' ), singular_theme_filemtime( '/assets/admin.min.js' ) );
 }
-add_action( 'enqueue_block_assets', 'singular_admin_styles' );
+add_action( 'admin_enqueue_scripts', 'singular_admin_styles' );
+
+// Styles for the admin block editor
+if ( is_admin() ) {
+  function singular_admin_block_editor_styles() {
+    wp_enqueue_style( 'admin-block-editor-css', get_template_directory_uri().'/assets/blockeditor.css', array(), singular_theme_filemtime( '/assets/blockeditor.css' ) );
+  }
+  add_action( 'enqueue_block_assets', 'singular_admin_block_editor_styles' );
+}
 
 
 /* LOGIN PAGE UPDATES ------------------------------------------- */

@@ -1,0 +1,17 @@
+/* ADMIN BLOCK EDITOR STYLES ------------------------------------ */
+// Adds theme styles to the block editor
+
+// Include Utilities
+@import "utility/_globals";
+@import "utility/_functions";
+@import "utility/_mixins";
+
+// Block Patterns + Custom Blocks
+@import "../../block-patterns/scss/block-patterns-admin";
+@import "../../blocks/blocks-admin";
+
+// Block Editor Styles
+@import "public/color-palette";
+@import "public/buttons";
+@import "../../svg/style";
+@import "admin/editor-styles";
