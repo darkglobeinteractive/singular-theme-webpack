@@ -72,6 +72,14 @@ function singular_setup_theme_supported_features() {
 add_action( 'after_setup_theme', 'singular_setup_theme_supported_features' );
 
 
+/* FIX TO ALLOW DRAG-AND-DROP IN EDITOR ------------------------- */
+function singular_fix_block_editor( $settings ) {
+  $settings['disableContentOnlyForUnsyncedPatterns'] = true;
+  return $settings;
+}
+add_filter( 'block_editor_settings_all', 'singular_fix_block_editor' );
+
+
 /* ADD BANNER BG TO SRCSET -------------------------------------- */
 function singular_banner_bg_max( $max_width, $size_array ) {
   return 2560;
