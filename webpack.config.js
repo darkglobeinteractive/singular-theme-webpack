@@ -23,7 +23,8 @@ const config = {
     ],
     admin: [
       './src/scss/admin.scss',
-      './src/js/acf-api.js'
+      './src/js/acf-api.js',
+      './block-patterns/js/block-patterns.js'
     ],
     blockeditor: [
       './src/scss/admin-block-editor.scss'
