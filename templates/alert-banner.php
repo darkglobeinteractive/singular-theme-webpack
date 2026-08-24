@@ -50,7 +50,7 @@ if ( $alert_banner_check && $alert_banner_content ) {
 }
 ?>
 <?php if ( $show_alert_banner ): ?>
-  <div<?php echo $block_classes; ?>>
+  <div<?php echo $block_classes; ?> role="region">
     <div class="wrap">
       <div class="content"<?php echo $content_styles; ?>><?php echo $alert_banner_content; ?></div>
     </div>
