@@ -6,8 +6,8 @@
   "icon": "businessperson",
   "keywords": ["testimoinal"],
   "acf": {
-      "mode": "edit",
-      "renderTemplate": "testimonial.php"
+    "blockVersion": 3,  
+    "renderTemplate": "testimonial.php"
   },
   "supports": { }
 }

@@ -6,7 +6,7 @@
     "icon": "admin-users",
     "keywords": ["tean"],
     "acf": {
-        "mode": "edit",
+        "blockVersion": 3,
         "renderTemplate": "team-members-block.php"
     },
     "supports": { }

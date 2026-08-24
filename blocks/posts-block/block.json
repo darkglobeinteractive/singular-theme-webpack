@@ -6,7 +6,7 @@
   "icon": "grid-view",
   "keywords": ["posts"],
   "acf": {
-      "mode": "edit",
+      "blockVersion": 3,
       "renderTemplate": "posts-block.php"
   },
   "supports": { }

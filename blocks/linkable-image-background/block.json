@@ -6,7 +6,7 @@
   "icon": "format-image",
   "keywords": ["image","background","modal"],
   "acf": {
-      "mode": "edit",
+      "blockVersion": 3,
       "renderTemplate": "linkable-image-background.php"
   },
   "supports": { }
