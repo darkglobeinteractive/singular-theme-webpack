@@ -3,6 +3,7 @@ coverage/
 assets/*
 node_modules/
 *.log
+_development/
 
 # OS generated files
 .DS_Store
