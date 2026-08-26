@@ -55,7 +55,7 @@ $btn_classes = implode( ' ', $btn_array );
 $rich_banner_text = ( get_field( 'rich_banner_text', $qid ) ?: false );
 $rich_banner_button = ( get_field( 'rich_banner_button', $qid ) ? singular_assemble_link( get_field( 'rich_banner_button' ), $btn_classes ) : false );
 ?>
-<div id="banner-rich" role="region"<?php echo $block_classes; ?><?php echo $block_styles; ?>>
+<div id="banner-rich"<?php echo $block_classes; ?><?php echo $block_styles; ?> role="region" aria-label="Page Banner">
   <div class="wrap">
     <div class="content">
       <div class="content-wrap"<?php echo $content_styles; ?>>
