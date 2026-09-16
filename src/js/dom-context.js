@@ -91,16 +91,44 @@ the relevant webpack entry array(s) *before* any script that calls
 
     throttle_ms = throttle_ms || 500;
 
-    var iframes = document.querySelectorAll(CANVAS_IFRAME_SELECTOR);
+    // Run once against the top-level document immediately. On the front end
+    // this is the only context that ever exists. In the block editor it's a
+    // harmless no-op here, since block markup lives inside the canvas
+    // iframe, not in this document.
+    callback(document);
 
-    if (!iframes.length) {
-      callback(document);
+    // The canvas iframe only ever exists in wp-admin, so skip watching for
+    // it entirely on the front end -- no need to pay for a body-wide
+    // MutationObserver there. WordPress always sets this body class
+    // server-side, so unlike the iframe itself there's no mount-timing race
+    // to worry about here.
+    if (!document.body.classList.contains('wp-admin')) {
       return;
     }
 
-    Array.prototype.forEach.call(iframes, function(iframe_el) {
+    // The canvas iframe doesn't exist yet at this point in the block editor
+    // -- React mounts it asynchronously, well after document.ready fires --
+    // so watch for it rather than checking once and giving up. This also
+    // picks up iframes that get remounted later (e.g. switching between the
+    // visual and code editor).
+    var handled_iframes = [];
+
+    function maybe_watch(iframe_el) {
+
+      if (handled_iframes.indexOf(iframe_el) !== -1) {
+        return;
+      }
+      handled_iframes.push(iframe_el);
+
       watch_iframe(iframe_el, callback, throttle_ms);
-    });
+
+    }
+
+    Array.prototype.forEach.call(document.querySelectorAll(CANVAS_IFRAME_SELECTOR), maybe_watch);
+
+    new MutationObserver(function() {
+      Array.prototype.forEach.call(document.querySelectorAll(CANVAS_IFRAME_SELECTOR), maybe_watch);
+    }).observe(document.body, { childList: true, subtree: true });
 
   }
 
