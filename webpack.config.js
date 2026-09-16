@@ -7,8 +7,11 @@ const config = {
     public: [
       './src/scss/public.scss',
       './libs/mmenu/dist/mmenu.js',
-      './block-patterns/js/block-patterns.js',
-      './blocks/blocks.js',
+      './src/js/dom-context.js',
+      './block-patterns/js/block-patterns-shared.js',
+      './block-patterns/js/block-patterns-public.js',
+      './blocks/blocks-shared.js',
+      './blocks/blocks-public.js',
       './src/js/global.js',
       './src/js/ninja-forms.js',
       // './src/js/counterup.js', // GSAP and ScrollTrigger are required for Counter Up to work
@@ -24,7 +27,9 @@ const config = {
     admin: [
       './src/scss/admin.scss',
       './src/js/acf-api.js',
-      './block-patterns/js/block-patterns.js'
+      './src/js/dom-context.js',
+      './block-patterns/js/block-patterns-shared.js',
+      './blocks/blocks-shared.js'
     ],
     blockeditor: [
       './src/scss/admin-block-editor.scss'
