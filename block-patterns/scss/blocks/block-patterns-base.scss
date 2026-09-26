@@ -9,16 +9,28 @@
 [class*='max-width-'] {
   width: 100%;
 }
-.max-width-1450 {
+.wp-block-singular.max-width-1450 > .wp-block-group__inner-container,
+.max-width-1450:not(.wp-block-singular) {
   max-width: 1450px !important;
 }
-.max-width-1000 {
+.wp-block-singular.max-width-1200 > .wp-block-group__inner-container,
+.max-width-1200:not(.wp-block-singular) {
+  max-width: 1200px !important;
+}
+.wp-block-singular.max-width-1000 > .wp-block-group__inner-container,
+.max-width-1000:not(.wp-block-singular) {
   max-width: 1000px !important;
 }
-.max-width-800 {
+.wp-block-singular.max-width-1024 > .wp-block-group__inner-container,
+.max-width-1024:not(.wp-block-singular) {
+  max-width: 1024px !important;
+}
+.wp-block-singular.max-width-800 > .wp-block-group__inner-container,
+.max-width-800:not(.wp-block-singular) {
   max-width: 800px !important;
 }
-.max-width-600 {
+.wp-block-singular.max-width-600 > .wp-block-group__inner-container,
+.max-width-600:not(.wp-block-singular) {
   max-width: 600px !important;
 }
 ul.custom-list {
