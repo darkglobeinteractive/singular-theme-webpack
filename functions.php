@@ -149,7 +149,7 @@ function singular_global_vars() {
   if ( empty( $global_vars ) ) {
     $global_vars = array( 'queried_object' => get_queried_object() );
     $global_vars['qoc'] = ( is_object( $global_vars['queried_object'] ) ? true : false );
-    $global_vars['qid'] = ( is_object( $global_vars['queried_object'] ) ? $global_vars['queried_object']->ID : false );
+    $global_vars['qid'] = ( is_object( $global_vars['queried_object'] ) && isset( $global_vars['queried_object']->ID ) ? $global_vars['queried_object']->ID : false );
   }
   return $global_vars;
 }
