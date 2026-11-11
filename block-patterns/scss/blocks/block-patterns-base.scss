@@ -9,6 +9,10 @@
 [class*='max-width-'] {
   width: 100%;
 }
+.wp-block-singular.max-width-1600 > .wp-block-group__inner-container,
+.max-width-1600:not(.wp-block-singular) {
+  max-width: 1600px !important;
+}
 .wp-block-singular.max-width-1450 > .wp-block-group__inner-container,
 .max-width-1450:not(.wp-block-singular) {
   max-width: 1450px !important;
@@ -28,6 +32,10 @@
 .wp-block-singular.max-width-800 > .wp-block-group__inner-container,
 .max-width-800:not(.wp-block-singular) {
   max-width: 800px !important;
+}
+.wp-block-singular.max-width-768 > .wp-block-group__inner-container,
+.max-width-768:not(.wp-block-singular) {
+  max-width: 768px !important;
 }
 .wp-block-singular.max-width-600 > .wp-block-group__inner-container,
 .max-width-600:not(.wp-block-singular) {
