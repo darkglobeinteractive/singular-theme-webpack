@@ -84,6 +84,18 @@ function singular_fix_block_editor( $settings ) {
 add_filter( 'block_editor_settings_all', 'singular_fix_block_editor' );
 
 
+/* 404 AUTHOR + DATE ARCHIVES ----------------------------------- */
+function singular_disable_unused_archives() {
+  if ( is_author() || is_date() ) {
+    global $wp_query;
+    $wp_query->set_404();
+    status_header( 404 );
+    nocache_headers();
+  }
+}
+add_action( 'template_redirect', 'singular_disable_unused_archives', 1 );
+
+
 /* ADD BANNER BG TO SRCSET -------------------------------------- */
 function singular_banner_bg_max( $max_width, $size_array ) {
   return 2560;
