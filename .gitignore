@@ -4,6 +4,7 @@ assets/*
 node_modules/
 *.log
 _development/
+*.bak.*
 
 # OS generated files
 .DS_Store
