@@ -63,7 +63,7 @@ Advanced Custom Fields PRO is required by this theme.
 2. If you're not using Yoast SEO, create the sitemap page and update template file (*page-search.php*) to use page ID (page-[id].php)
     - If you ARE using Yoast SEO, delete the sitemap page template 
 3. Create home page and use customizer to set this page to the front page
-4. Delete existing widgets
+4. (Optional) Clear inactive widgets left over from the default WordPress install. The theme registers no widget areas, so Appearance > Widgets won't appear in the admin.
 
 ## Login Page Customizations
 
