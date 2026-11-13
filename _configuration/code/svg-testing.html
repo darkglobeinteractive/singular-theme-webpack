@@ -1,0 +1,181 @@
+<style>
+  .svg-test-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 24px; margin: 24px 0; }
+  .svg-test-grid .svg-test-item { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 12px; padding: 20px; border: 1px dashed #ccc; min-height: 180px; }
+  .svg-test-grid .svg-test-label { font: 13px/1.3 monospace; text-align: center; }
+  .svg-test-grid .svg-test-box { display: flex; align-items: center; justify-content: center; }
+  .svg-test-grid .size-48 { width: 48px; height: 48px; }
+  .svg-test-grid .size-40 { width: 40px; }
+  .svg-test-grid .size-40 .svg-icon, .svg-test-grid .size-40 svg { width: 100%; height: auto; }
+</style>
+
+<div class="svg-test-grid">
+
+  <!-- ARROW IN CIRCLE (no hover state defined) -->
+  <div class="svg-test-item">
+    <div class="svg-test-box">
+      <span class="svg-icon arrow-in-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 103" role="img" aria-label="Arrow In Circle Icon">
+          <title>Arrow In Circle Icon</title>
+          <g class="wrap" data-name="Arrow in circle" transform="translate(-506 -1213)">
+            <g class="circle" transform="translate(506 1213)">
+              <circle cx="51" cy="51" r="49" stroke-width="4" />
+            </g>
+            <path class="arrow" d="M31.707,39.134,47.2,24.454H0V18.729H47.2L31.707,4.048,35.978,0,54.488,17.543l4.271,4.048L54.488,25.64h0L35.978,43.183Z" transform="translate(528.121 1242.909)"/>
+          </g>
+        </svg>
+      </span>
+    </div>
+    <div class="svg-test-label">arrow-in-circle<br>(no hover)</div>
+  </div>
+
+  <!-- CLOSE BUTTON (no hover state defined) -->
+  <div class="svg-test-item">
+    <div class="svg-test-box size-48">
+      <span class="svg-icon close-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Close Button">
+          <title>Close Button</title>
+          <circle class="circle" cx="24" cy="24" r="24"/>
+          <g transform="translate(-1248.394 -1408.394)">
+            <line class="path" x2="30" transform="translate(1261.394 1421.394) rotate(45)"/>
+            <line class="path" x2="30" transform="translate(1261.394 1442.606) rotate(-45)"/>
+          </g>
+        </svg>
+      </span>
+    </div>
+    <div class="svg-test-label">close-button<br>(no hover)</div>
+  </div>
+
+  <!-- MAGNIFYING GLASS -->
+  <div class="svg-test-item">
+    <div class="svg-test-box size-40">
+      <span class="svg-icon magnifying-glass">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" role="img" aria-label="Magnifying Glass Icon">
+          <title>Magnifying Glass Icon</title>
+          <path class="path" d="M2.375,8.313A5.88,5.88,0,0,1,8.313,2.375,5.88,5.88,0,0,1,14.25,8.313,5.88,5.88,0,0,1,8.313,14.25,5.88,5.88,0,0,1,2.375,8.313ZM16.981,18.644a1.176,1.176,0,0,0,1.662-1.662L14.963,13.3a8.131,8.131,0,0,0,1.662-4.988A8.261,8.261,0,0,0,8.313,0,8.261,8.261,0,0,0,0,8.313a8.261,8.261,0,0,0,8.313,8.313A8.131,8.131,0,0,0,13.3,14.963Z"/>
+        </svg>
+      </span>
+    </div>
+    <div class="svg-test-label">magnifying-glass</div>
+  </div>
+
+  <!-- PLAY BUTTON -->
+  <div class="svg-test-item">
+    <div class="svg-test-box">
+      <span class="svg-icon play-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 124" role="img" aria-label="Play Button Icon">
+          <title>Play Button Icon</title>
+          <g>
+            <path class="circle" d="M66.7,957.4a62,62,0,1,0,62,62A61.917,61.917,0,0,0,66.7,957.4Z" transform="translate(-4.7 -957.4)"/>
+          </g>
+          <path class="path" d="M36.7,28.7,88.382,59.709,36.7,90.719Z" transform="translate(5.762 2.241)"/>
+        </svg>
+      </span>
+    </div>
+    <div class="svg-test-label">play-button</div>
+  </div>
+
+  <!-- SLIDER ARROW LEFT -->
+  <div class="svg-test-item">
+    <div class="svg-test-box">
+      <span class="svg-icon slider-arrow arrow-left">
+        <svg data-name="Group 145" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.892 28.45" role="img" aria-label="Navigation Left Icon">
+          <title>Navigation Left Arrow</title>
+          <path class="path" data-name="Line 6" d="M3.772,0H0V20.117H3.772Z" transform="translate(16.892 25.783) rotate(135)" fill="#ba1f3b"/>
+          <path class="path" data-name="Line 7" d="M3.772,0H0V20.117H3.772Z" transform="translate(14.225 0) rotate(45)" fill="#ba1f3b"/>
+        </svg>
+      </span>
+    </div>
+    <div class="svg-test-label">slider-arrow<br>arrow-left</div>
+  </div>
+
+  <!-- SLIDER ARROW RIGHT -->
+  <div class="svg-test-item">
+    <div class="svg-test-box">
+      <span class="svg-icon slider-arrow arrow-right">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.892 28.45" role="img" aria-label="Navigation Right Icon">
+          <title>Navigation Right Arrow</title>
+          <g data-name="Group 144" transform="translate(-436.299 -1264.186)">
+            <path class="path" data-name="Line 6" d="M3.772,20.117H0V0H3.772Z" transform="translate(450.524 1275.744) rotate(45)" fill="#ba1f3b"/>
+            <path class="path" data-name="Line 7" d="M3.772,20.117H0V0H3.772Z" transform="translate(453.191 1278.411) rotate(135)" fill="#ba1f3b"/>
+          </g>
+        </svg>
+      </span>
+    </div>
+    <div class="svg-test-label">slider-arrow<br>arrow-right</div>
+  </div>
+
+  <!-- SOCIAL: FACEBOOK -->
+  <div class="svg-test-item">
+    <div class="svg-test-box size-40">
+      <span class="svg-icon social-media-icon facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Facebook Icon">
+          <title>Facebook Icon</title>
+          <path class="background" d="M400,200c0,110.46-89.54,200-200,200h0C89.54,400,0,310.46,0,200h0C0,89.54,89.54,0,200,0h0c110.46,0,200,89.54,200,200h0Z"/>
+          <path class="foreground" d="M259.26,184.480l-3.33,26.75c-.56,4.470-4.350,7.830-8.840,7.830h-43.340v111.870c-4.570.410-9.200.620-13.880.620-10.460,0-20.690-1.050-30.570-3.040v-109.450h-33.330c-3.060,0-5.560-2.510-5.560-5.580v-33.480c0-3.070,2.500-5.580,5.560-5.580h33.330v-50.210c0-30.810,24.880-55.790,55.560-55.790h38.890c3.060,0,5.560,2.510,5.560,5.580v33.480c0,3.070-2.500,5.580-5.560,5.580h-27.780c-12.270,0-22.220,9.990-22.220,22.320v39.050h46.670c5.360,0,9.500,4.710,8.840,10.040Z"/>
+        </svg>
+      </span>
+    </div>
+    <div class="svg-test-label">social-media-icon<br>facebook</div>
+  </div>
+
+  <!-- SOCIAL: INSTAGRAM -->
+  <div class="svg-test-item">
+    <div class="svg-test-box size-40">
+      <span class="svg-icon social-media-icon instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Instagram Icon">
+          <title>Instagram Icon</title>
+          <path class="background" d="M400,200c0,110.46-89.54,200-200,200h0C89.54,400,0,310.46,0,200h0C0,89.54,89.54,0,200,0h0c110.46,0,200,89.54,200,200h0Z"/>
+          <path class="foreground" d="M254.26,95.09h-108.52c-27.96,0-50.64,22.68-50.64,50.64v108.52c0,27.96,22.68,50.64,50.640,50.64h108.52c27.96,0,50.64-22.68,50.64-50.64v-108.52c0-27.96-22.68-50.64-50.64-50.64ZM286.82,250.64c0,19.97-16.21,36.17-36.17,36.17h-101.29c-19.97,0-36.17-16.21-36.17-36.17v-101.29c0-19.97,16.21-36.17,36.17-36.17h101.29c19.97,0,36.17,16.21,36.17,36.17v101.29Z"/>
+          <path class="foreground" d="M200.1,145.74c-29.95,0-54.26,24.31-54.26,54.26s24.31,54.26,54.26,54.26,54.26-24.31,54.26-54.26-24.31-54.26-54.26-54.26ZM200.1,236.17c-19.93,0-36.17-16.24-36.17-36.170s16.24-36.17,36.17-36.17,36.17,16.24,36.17,36.17-16.24,36.17-36.17,36.17Z"/>
+          <path class="foreground" d="M257.98,152.97c-5.98,0-10.85-4.87-10.85-10.85s4.87-10.85,10.85-10.85,10.85,4.87,10.85,10.85-4.87,10.85-10.85,10.85Z"/>
+        </svg>
+      </span>
+    </div>
+    <div class="svg-test-label">social-media-icon<br>instagram</div>
+  </div>
+
+  <!-- SOCIAL: LINKEDIN -->
+  <div class="svg-test-item">
+    <div class="svg-test-box size-40">
+      <span class="svg-icon social-media-icon linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="LinkedIn Icon">
+          <title>LinkedIn Icon</title>
+          <path class="background" d="M400,200c0,110.46-89.54,200-200,200h0C89.54,400,0,310.46,0,200h0C0,89.54,89.54,0,200,0h0c110.46,0,200,89.54,200,200h0Z"/>
+          <circle class="foreground" cx="129.16" cy="120.77" r="25.76"/>
+          <rect class="foreground" x="107.7" y="163.7" width="42.93" height="128.8" rx="1.91" ry="1.91"/>
+          <path class="foreground" d="M296.6,210.93v72.98c0,4.72-3.86,8.59-8.59,8.59h-25.76c-4.72,0-8.59-3.86-8.59-8.59v-60.11c0-11.85-9.62-21.47-21.47-21.47s-21.47,9.62-21.47,21.47v60.11c0,4.72-3.86,8.59-8.59,8.59h-25.76c-4.72,0-8.59-3.86-8.59-8.59v-111.62c0-4.72,3.86-8.59,8.59-8.59h25.76c4.72,0,8.59,3.86,8.59,8.590v5.5c8.59-11.12,22.8-18.37,38.64-18.37,23.7,0,47.23,17.17,47.23,51.52Z"/>
+        </svg>
+      </span>
+    </div>
+    <div class="svg-test-label">social-media-icon<br>linkedin</div>
+  </div>
+
+  <!-- SOCIAL: TWITTER / X -->
+  <div class="svg-test-item">
+    <div class="svg-test-box size-40">
+      <span class="svg-icon social-media-icon twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Twitter Icon">
+          <title>Twitter X Icon</title>
+          <path class="background" d="M400,200c0,110.46-89.54,200-200,200h0C89.54,400,0,310.46,0,200h0C0,89.54,89.54,0,200,0h0c110.46,0,200,89.54,200,200h0Z"/>
+          <path class="foreground" d="M228.86,181.63l80.91-86.54h-30.73l-63.5,67.92-48.63-67.92h-84.03l85.07,118.83-85.07,90.99h30.73l67.67-72.38,51.82,72.38h84.03l-88.26-123.28ZM126.18,117.34h29.3l118.35,165.31h-29.3L126.18,117.34Z"/>
+        </svg>
+      </span>
+    </div>
+    <div class="svg-test-label">social-media-icon<br>twitter</div>
+  </div>
+
+  <!-- SOCIAL: YOUTUBE -->
+  <div class="svg-test-item">
+    <div class="svg-test-box size-40">
+      <span class="svg-icon social-media-icon youtube">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="YouTube Icon">
+          <title>YouTube Icon</title>
+          <path class="background" d="M400,200c0,110.46-89.54,200-200,200h0C89.54,400,0,310.46,0,200h0C0,89.54,89.54,0,200,0h0c110.46,0,200,89.54,200,200h0Z"/>
+          <path class="foreground" d="M286.19,115.26H113.81c-17.03,0-30.84,13.81-30.84,30.83v107.82c0,17.03,13.81,30.83,30.84,30.83h172.38c17.02,0,30.83-13.8,30.83-30.83v-107.82c0-17.02-13.81-30.83-30.83-30.83ZM227.69,207.44l-47.93,23.95c-5.53,2.77-12.04-1.25-12.04-7.43v-47.92c0-6.18,6.51-10.2,12.04-7.44l47.93,23.96c6.12,3.06,6.12,11.8,0,14.87Z"/>
+        </svg>
+      </span>
+    </div>
+    <div class="svg-test-label">social-media-icon<br>youtube</div>
+  </div>
+
+</div>

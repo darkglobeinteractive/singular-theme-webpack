@@ -9,7 +9,12 @@ function singular_register_block_category( $cats ) {
     array(
       'slug' => 'client-pattern-blocks',
       'title' => '[CLIENT] Pattern Blocks'
-    ) 
+    )
+  );
+  // Developer-only blocks go at the end of the list
+  $cats[] = array(
+    'slug' => 'developer-blocks',
+    'title' => 'Developer'
   );
   return $cats;
 }
@@ -22,6 +27,7 @@ function singular_register_acf_blocks() {
   register_block_type( __DIR__ .'/linkable-image-background' );  
   register_block_type( __DIR__ .'/multi-slider' );
   register_block_type( __DIR__ .'/posts-block' );
+  register_block_type( __DIR__ .'/style-tester' );
   register_block_type( __DIR__ .'/team-members-block' );
   register_block_type( __DIR__ .'/testimonial' );  
 }

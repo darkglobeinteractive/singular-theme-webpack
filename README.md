@@ -100,10 +100,10 @@ Custom block patterns should be created and managed via core WordPress functiona
 1. Update the block pattern category name (`[CLIENT] Patterns`) in the following file to use the client name:
     - Line 12: */block-patterns/block-patterns.php*
 2. Migrate the following block pattern code into the block editor and save as WP Core patterns:
-    - */block-patterns/blocks/accordion.php*
-    - */block-patterns/blocks/basic-content-wrapper.php*<br>
+    - */blocks/style-tester/_source/accordion.php*
+    - */blocks/style-tester/_source/basic-content-wrapper.php*<br>
     NOTE: Remember to name the block pattern block elements in the block editor before saving.
-3. Delete the files used in Step #2 from the remote server
+3. Keep the files used in Step #2 — they are rendered by the developer-only **Style Tester** block (*/blocks/style-tester/*)
 
 At this point, you simply have to add new CSS files for each additional custom block created.
 

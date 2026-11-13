@@ -1,0 +1,13 @@
+{
+  "name": "acf/style-tester",
+  "title": "Style Tester",
+  "description": "A developer block that outputs the style guide, sample block patterns and every SVG in /svg/ for style testing.",
+  "category": "developer-blocks",
+  "icon": "admin-appearance",
+  "keywords": ["style", "guide", "test", "developer", "svg"],
+  "acf": {
+    "blockVersion": 3,
+    "renderTemplate": "style-tester.php"
+  },
+  "supports": { }
+}

@@ -1,0 +1,63 @@
+/* STYLE TESTER (DEVELOPER BLOCK) ------------------------------- */
+.style-tester-block .style-tester-separator {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 60px auto 30px;
+  padding: 0 20px;
+  font: 700 13px/1 monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #999;
+}
+.style-tester-block .style-tester-separator::before,
+.style-tester-block .style-tester-separator::after {
+  content: "";
+  flex: 1;
+  border-top: 2px dashed #ccc;
+}
+.style-tester-block .style-tester-missing {
+  color: #c00;
+  font-family: monospace;
+  text-align: center;
+}
+
+/* SVG grid */
+.style-tester-block .svg-test-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 24px;
+  margin: 24px 0;
+}
+.style-tester-block .svg-test-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px;
+  border: 1px dashed #ccc;
+  min-height: 180px;
+}
+.style-tester-block .svg-test-label {
+  font: 13px/1.3 monospace;
+  text-align: center;
+}
+.style-tester-block .svg-test-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.style-tester-block .size-48 {
+  width: 48px;
+  height: 48px;
+}
+.style-tester-block .size-40 {
+  width: 40px;
+}
+.style-tester-block .size-40 .svg-icon,
+.style-tester-block .size-40 svg {
+  width: 100%;
+  height: auto;
+}
