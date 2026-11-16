@@ -43,7 +43,8 @@ $gv = singular_global_vars();
 						'menu_class' => 'menu',
 						'container' => 'nav',
 	          'container_id' => 'navigation',
-						'container_aria_label' => 'Primary Navigation'
+						'container_aria_label' => 'Primary Navigation',
+						'depth' => 2
 					) );
 					?>
 					<button id="mm-trigger" aria-label="Mobile Menu Toggle">
