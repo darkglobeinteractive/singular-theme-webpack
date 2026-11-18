@@ -159,7 +159,7 @@ add_filter( 'login_headerurl', 'singular_login_url' );
 function singular_global_vars() {
   static $global_vars = NULL;
   if ( empty( $global_vars ) ) {
-    $global_vars = array( 'queried_object' => get_queried_object() );
+    $global_vars = array( 'queried_object' => get_queried_object(), 'home_url' => esc_url( home_url( '/' ) ) );
     $global_vars['qoc'] = ( is_object( $global_vars['queried_object'] ) ? true : false );
     $global_vars['qid'] = ( isset( $global_vars['queried_object']->ID ) ? $global_vars['queried_object']->ID : false );
   }
