@@ -21,12 +21,14 @@
 
             <div class="blurb"><?php
               $excerpt = get_the_excerpt();
-              $excerpt = substr( $excerpt, 0, 260);
-              $result = substr( $excerpt, 0, strrpos( $excerpt, ' ') );
-              echo $result.'...';
+              if ( strlen( $excerpt ) > 260 ) {
+                $excerpt = substr( $excerpt, 0, 260);          
+                $excerpt = substr( $excerpt, 0, strrpos( $excerpt, ' ') ).'...';
+              }
+              echo $excerpt;
             ?></div>
 
-            <div class="more"><a href="<?php echo get_the_permalink(); ?>">More</a></div>
+            <div class="more"><a href="<?php echo get_the_permalink(); ?>" aria-label="<?php the_title_attribute( array( 'before' => 'More about ' ) ); ?>">More</a></div>
 
           </div>
 
